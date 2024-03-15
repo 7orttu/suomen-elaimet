@@ -1,15 +1,22 @@
-#container {
+#scene {
     width: 100vw;
-    height: 250px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+
     text-align: center;
     margin-bottom: 20px;
     background-color: rgb(157, 157, 168);
 }
-#animal-image {
-    width: 200px;
-    height: 200px;
-    text-align: center;
+#text-container{
+    width: 100vw;
+    position: absolute;
+    top: 200px;
 }
+#image-container img {
+    width: 100vw;
+}
+
 #control-container{
     width: 100vw;
     position: absolute;
@@ -21,21 +28,23 @@
 }
 #next-btn {
     background-image: url("Materials/Napit/Seuraava.png");
-    margin-left: 50px;
+    margin-left: 100px;
 }
 #prev-btn {
     background-image: url("Materials/Napit/Edellinen.jpg");
-    margin-right: 50px;
+    margin-right: 100px;
 }
+
+
 
 .buttons {
     width: 296px;
     height: 88px;
 }
 
+
+
 html, body {
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
 }
