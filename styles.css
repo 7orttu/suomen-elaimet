@@ -9,16 +9,21 @@
     height: 200px;
 }
 #control-container{
-    width: auto;
-    height: auto;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+
     text-align: center;
     background-color: red;
 }
 #next-btn {
     background-image: url("Materials/Napit/Seuraava.png");
+    margin-left: 50px;
 }
 #prev-btn {
     background-image: url("Materials/Napit/Edellinen.jpg");
+    margin-right: 50px;
 }
 
 .buttons {
