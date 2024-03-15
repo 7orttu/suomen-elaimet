@@ -2,16 +2,21 @@
     text-align: center;
     margin-bottom: 20px;
 }
-
 #animal-image {
     text-align: center;
     width: 200px;
     height: 200px;
 }
-
 #next-btn {
-    display: block;
-    margin: 0 auto;
+    background-image: url("Materials/Napit/Seuraava.png");
+}
+#prev-btn {
+    background-image: url("Materials/Napit/Edellinen.jpg");
+}
+
+.buttons {
+    width: 296px;
+    height: 88px;
 }
 
 html, body {
