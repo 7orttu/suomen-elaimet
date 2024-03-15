@@ -5,7 +5,7 @@ const animals = [
     },
     {
         name: "Kettu",
-        image: "Materials/kettu-sisältökuva"
+        image: "Materials/kettu-sisältökuva.jpg"
     },
 ]
 
