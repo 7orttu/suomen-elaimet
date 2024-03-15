@@ -26,15 +26,25 @@ const scenes = [
     }
 ]
 
-let animalArrayID = 0;
+let currentSceneIndex = 0;
 
-function sceneChangerNext(){
-    const currentAnimal = animals[animalArrayID];
-    const imageToSet = animals[animalArrayID].image;
-
-    const currentImage = document.getElementById("animal-image");
-    currentImage.src = imageToSet;
-
-    animalArrayID = (animalArrayID + 1) % animals.length;
+function displayScene(index) {
+    const currentScene = scenes[index];
+    document.getElementById('image-container').innerHTML = `<img src="${currentScene.image}">`;
+    document.getElementById('text-container').innerText = currentScene.text;
 }
+displayScene(currentSceneIndex);
+  
+
+// NEXT BTN
+document.getElementById('next-btn').addEventListener('click', function() {
+    currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
+    displayScene(currentSceneIndex);
+});
+
+// PREVIOUS BTN
+document.getElementById('prev-btn').addEventListener('click', function() {
+    currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
+    displayScene(currentSceneIndex);
+});
 
