@@ -1,12 +1,29 @@
-const animals = [
+const scenes = [
+    {
+        name: "main",
+        image: "Materials/karhu-pääkuva.jpg",
+        text: "pelin nimi"
+    },
+    {
+        name: "ohjeet",
+        image: "Materials/karhu-pääkuva.jpg",
+        text: "ohjeet"
+    },
     {
         name: "Susi",
-        image: "Materials/susi-sisältökuva.jpg"
+        image: "Materials/susi-sisältökuva.jpg",
+        text: "Sudesta fakta"
     },
     {
         name: "Kettu",
-        image: "Materials/kettu-sisältökuva.jpg"
+        image: "Materials/kettu-sisältökuva.jpg",
+        text: "Ketusta fakta"
     },
+    {
+        name: "end",
+        image: "Materials/karhu-pääkuva.jpg",
+        text: "Karhusta fakta"
+    }
 ]
 
 let animalArrayID = 0;
