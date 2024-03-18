@@ -20,9 +20,24 @@ const scenes = [
         text: "Ketusta fakta"
     },
     {
+        name: "Karhu",
+        image: "Materials/karhu-sisältökuva.jpg",
+        text: "Karhusta fakta"
+    },
+    {
+        name: "Metsäkauris",
+        image: "Materials/metsäkauris-sisältökuva.jpg",
+        text: "Metsäkauriksesta fakta"
+    },
+    {
+        name: "Hirvi",
+        image: "Materials/hirvi-sisältökuva.jpg",
+        text: "Hirvestä fakta"
+    },
+    {
         name: "end",
         image: "Materials/karhu-pääkuva.jpg",
-        text: "Karhusta fakta"
+        text: "LOPPU"
     }
 ]
 
