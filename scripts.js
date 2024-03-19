@@ -2,67 +2,80 @@ const scenes = [
     {
         name: "main",
         image: "Materials/karhu-pääkuva.jpg",
-        text: "pelin nimi"
+        text: "pelin nimi",
+        buttonText: ["LOPETA", "ALOITA"]
     },
     {
         name: "ohjeet",
         image: "Materials/karhu-pääkuva.jpg",
-        text: "ohjeet"
+        text: "ohjeet",
+        buttonText: ["TAKAISIN", "JATKA"]
     },
     {   // preview
         name:"Susi-pre",
         image: "Materials/susi-sisältökuva.jpg",
-        text: ""
+        text: "",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
         name: "Susi",
         image: "Materials/susi-sisältökuva.jpg",
-        text: "Sudesta fakta"
+        text: "Sudesta fakta",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
         name: "Kettu-pre",
         image: "Materials/kettu-sisältökuva.jpg",
-        text: ""
+        text: "",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
         name: "Kettu",
         image: "Materials/kettu-sisältökuva.jpg",
-        text: "Ketusta fakta"
+        text: "Ketusta fakta",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
         name: "Karhu-pre",
         image: "Materials/karhu-sisältökuva.jpg",
-        text: ""
+        text: "",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
         name: "Karhu",
         image: "Materials/karhu-sisältökuva.jpg",
-        text: "Karhusta fakta"
+        text: "Karhusta fakta",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
         name: "Metsäkauris-pre",
         image: "Materials/metsäkauris-sisältökuva.jpg",
-        text: ""
+        text: "",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
         name: "Metsäkauris",
         image: "Materials/metsäkauris-sisältökuva.jpg",
-        text: "Metsäkauriksesta fakta"
+        text: "Metsäkauriksesta fakta",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
         name: "Hirvi-pre",
         image: "Materials/hirvi-sisältökuva.jpg",
-        text: ""
+        text: "",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
         name: "Hirvi",
         image: "Materials/hirvi-sisältökuva.jpg",
-        text: "Hirvestä fakta"
+        text: "Hirvestä fakta",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
         name: "end",
         image: "Materials/karhu-pääkuva.jpg",
-        text: "LOPPU"
+        text: "LOPPU",
+        buttonText: ["ALOITA ALUSTA", "LOPETA"]
     }
 ]
 
@@ -72,6 +85,8 @@ function displayScene(index) {
     const currentScene = scenes[index];
     document.getElementById('image-container').innerHTML = `<img src="${currentScene.image}">`;
     document.getElementById('text-container').innerText = currentScene.text;
+    document.getElementById('prev-btn').innerText = currentScene.buttonText[0];
+    document.getElementById('next-btn').innerText = currentScene.buttonText[1];
 }
 displayScene(currentSceneIndex);
   
