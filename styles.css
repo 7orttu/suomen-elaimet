@@ -1,4 +1,15 @@
-#scene {
+#language{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+#language img{
+    padding-right: 40px;
+    padding-top: 40px;
+}
+
+#scene{
     width: 100vw;
     position: fixed;
     bottom: 0;
@@ -13,7 +24,7 @@
     position: absolute;
     top: 200px;
 }
-#image-container img {
+#image-container img{
     width: 100vw;
 }
 
@@ -26,13 +37,13 @@
     text-align: center;
     background-color: red;
 }
-#next-btn {
+#next-btn{
     background-image: linear-gradient(to right, rgb(122, 122, 122), rgb(61, 61, 61));
     margin-left: 100px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
 }
-#prev-btn {
+#prev-btn{
     background-image: linear-gradient(to right, rgb(122, 122, 122), rgb(61, 61, 61));
     margin-right: 100px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -41,14 +52,14 @@
 
 
 
-.buttons {
+.buttons{
     width: 296px;
     height: 88px;
 }
 
 
 
-html, body {
+html, body{
     padding: 0;
     margin: 0;
 }
