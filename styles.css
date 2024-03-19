@@ -27,12 +27,16 @@
     background-color: red;
 }
 #next-btn {
-    background-image: url("Materials/Napit/Seuraava.png");
+    background-image: linear-gradient(to right, rgb(122, 122, 122), rgb(61, 61, 61));
     margin-left: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
 }
 #prev-btn {
-    background-image: url("Materials/Napit/Edellinen.jpg");
+    background-image: linear-gradient(to right, rgb(122, 122, 122), rgb(61, 61, 61));
     margin-right: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
 }
 
 
