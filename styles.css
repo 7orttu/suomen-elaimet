@@ -23,9 +23,22 @@
     width: 100vw;
     position: absolute;
     top: 200px;
+    z-index: 1;
+
+    font-size: 50px;
 }
 #image-container img{
     width: 100vw;
+    height: 100%;
+}
+#animal-image{
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #control-container{
@@ -33,9 +46,9 @@
     position: absolute;
     bottom: 0;
     margin-bottom: 20px;
+    z-index: 1;
 
     text-align: center;
-    background-color: red;
 }
 #next-btn{
     background-image: linear-gradient(to right, rgb(122, 122, 122), rgb(61, 61, 61));
