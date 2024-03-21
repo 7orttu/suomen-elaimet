@@ -75,18 +75,29 @@ const scenes = [
         name: "end",
         image: "Materials/karhu-pääkuva.jpg",
         text: "LOPPU",
-        buttonText: ["ALOITA ALUSTA", "LOPETA"]
+        buttonText: ["TAKAISIN", "LOPETA"]
     }
 ]
 
 let currentSceneIndex = 0;
 
+
 function displayScene(index) {
     const currentScene = scenes[index];
-    document.getElementById('image-container').innerHTML = `<img src="${currentScene.image}">`;
-    document.getElementById('text-container').innerText = currentScene.text;
+    document.getElementById('animal-image').src=currentScene.image;
+    document.getElementById('animal-text').innerText = currentScene.text;
     document.getElementById('prev-btn').innerText = currentScene.buttonText[0];
     document.getElementById('next-btn').innerText = currentScene.buttonText[1];
+
+    if (currentSceneIndex == 1) {
+        document.getElementById('text-container').style.backgroundColor = "white";
+    }
+    else if (currentSceneIndex == 0) {
+        document.getElementById('text-container').style.backgroundColor = "transparent";
+    }
+    else {
+        document.getElementById('text-container').style.backgroundColor = "white";
+    }
 }
 displayScene(currentSceneIndex);
   
@@ -95,11 +106,13 @@ displayScene(currentSceneIndex);
 document.getElementById('next-btn').addEventListener('click', function() {
     currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
     displayScene(currentSceneIndex);
+    console.log(currentSceneIndex);
 });
 
 // PREVIOUS BTN
 document.getElementById('prev-btn').addEventListener('click', function() {
     currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
     displayScene(currentSceneIndex);
+    console.log(currentSceneIndex);
 });
 
