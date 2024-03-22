@@ -89,10 +89,11 @@ function displayScene(index) {
     document.getElementById('prev-btn').innerText = currentScene.buttonText[0];
     document.getElementById('next-btn').innerText = currentScene.buttonText[1];
 
-    if (currentSceneIndex == 1) {
+
+    if (currentSceneIndex % 2 == 1) {
         document.getElementById('text-container').style.backgroundColor = "white";
-    }
-    else if (currentSceneIndex == 0) {
+    } 
+    else {
         document.getElementById('text-container').style.backgroundColor = "transparent";
     }
     else {
