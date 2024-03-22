@@ -105,8 +105,13 @@ function DisplayScene(index) {
     else {
         document.getElementById('text-container').style.backgroundColor = "transparent";
     }
+
+
+    if (currentSceneIndex === 0 || currentSceneIndex === 1) {
+        document.getElementById('language').style.opacity=1;
+    }
     else {
-        document.getElementById('text-container').style.backgroundColor = "white";
+        document.getElementById('language').style.opacity=0;
     }
 }
 function SetControlsVisibility(choice) {
