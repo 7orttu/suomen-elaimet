@@ -101,6 +101,29 @@ function DisplayScene(index) {
         document.getElementById('text-container').style.backgroundColor = "white";
     }
 }
+function SetControlsVisibility(choice) {
+    var end = document.getElementById('end-container');
+    var control = document.getElementById('control-container');
+
+    if (choice === "hide") {
+        end.style.visibility = 'hidden';
+        end.disabled = true;
+    } 
+    else if (choice === "show"){
+        end.style.visibility = 'visible';
+        end.disabled = false;
+    }
+
+    if (choice === "hide-control") {
+        control.style.visibility = 'hidden';
+        control.disabled = true;
+    }
+    else if (choice === "show-control") {
+        control.style.visibility = 'visible';
+        control.disabled = false;
+    }
+}
+
 
 // NEXT BTN
 document.getElementById('next-btn').addEventListener('click', function() {
