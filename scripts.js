@@ -101,8 +101,6 @@ function DisplayScene(index) {
         document.getElementById('text-container').style.backgroundColor = "white";
     }
 }
-displayScene(currentSceneIndex);
-  
 
 // NEXT BTN
 document.getElementById('next-btn').addEventListener('click', function() {
@@ -116,5 +114,8 @@ document.getElementById('prev-btn').addEventListener('click', function() {
     currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
     displayScene(currentSceneIndex);
     console.log(currentSceneIndex);
+// DOM
+document.addEventListener('DOMContentLoaded', function() {
+    DisplayScene(currentSceneIndex);
 });
 
