@@ -50,17 +50,13 @@
 
     text-align: center;
 }
-#next-btn{
-    background-image: linear-gradient(to right, rgb(122, 122, 122), rgb(61, 61, 61));
-    margin-left: 100px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 50px;
-}
-#prev-btn{
-    background-image: linear-gradient(to right, rgb(122, 122, 122), rgb(61, 61, 61));
-    margin-right: 100px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 50px;
+#end-container{
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+
+    text-align: center;
 }
 
 
@@ -68,6 +64,12 @@
 .buttons{
     width: 296px;
     height: 88px;
+
+    background-image: linear-gradient(to right, rgb(122, 122, 122), rgb(61, 61, 61));
+    margin-right: 100px;
+    margin-left: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
 }
 
 
