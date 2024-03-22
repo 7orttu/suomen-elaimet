@@ -105,15 +105,15 @@ function DisplayScene(index) {
 // NEXT BTN
 document.getElementById('next-btn').addEventListener('click', function() {
     currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
-    displayScene(currentSceneIndex);
-    console.log(currentSceneIndex);
+    DisplayScene(currentSceneIndex);
 });
 
 // PREVIOUS BTN
 document.getElementById('prev-btn').addEventListener('click', function() {
     currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
-    displayScene(currentSceneIndex);
-    console.log(currentSceneIndex);
+    DisplayScene(currentSceneIndex);
+});
+
 // DOM
 document.addEventListener('DOMContentLoaded', function() {
     DisplayScene(currentSceneIndex);
