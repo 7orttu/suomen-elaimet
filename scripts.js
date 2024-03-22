@@ -90,6 +90,14 @@ function DisplayScene(index) {
     document.getElementById('prev-btn').innerText = currentScene.buttonText[0];
     document.getElementById('next-btn').innerText = currentScene.buttonText[1];
 
+    if (currentScene.name === 'end') {
+        SetControlsVisibility("show");
+        SetControlsVisibility("hide-control")
+    } 
+    else {
+        SetControlsVisibility("hide");
+        SetControlsVisibility("show-control")
+    }
 
     if (currentSceneIndex % 2 == 1) {
         document.getElementById('text-container').style.backgroundColor = "white";
