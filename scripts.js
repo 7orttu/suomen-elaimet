@@ -1,3 +1,4 @@
+
 const scenes = [
     {
         name: "main",
@@ -82,9 +83,9 @@ const scenes = [
 let currentSceneIndex = 0;
 
 
-function displayScene(index) {
+function DisplayScene(index) {
     const currentScene = scenes[index];
-    document.getElementById('animal-image').src=currentScene.image;
+    document.getElementById('animal-image').src = currentScene.image;
     document.getElementById('animal-text').innerText = currentScene.text;
     document.getElementById('prev-btn').innerText = currentScene.buttonText[0];
     document.getElementById('next-btn').innerText = currentScene.buttonText[1];
