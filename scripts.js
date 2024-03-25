@@ -154,6 +154,12 @@ document.getElementById('restart-btn').addEventListener('click', function() {
     currentSceneIndex = 0;
     DisplayScene(currentSceneIndex);
 });
+
+// END BTN
+document.getElementById('end-btn').addEventListener('click', function() {
+    
+});
+
 // DOM
 document.addEventListener('DOMContentLoaded', function() {
     DisplayScene(currentSceneIndex);
