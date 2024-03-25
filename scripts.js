@@ -137,7 +137,6 @@ function SetControlsVisibility(choice) {
     }
 }
 
-
 // NEXT BTN
 document.getElementById('next-btn').addEventListener('click', function() {
     currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
@@ -150,6 +149,11 @@ document.getElementById('prev-btn').addEventListener('click', function() {
     DisplayScene(currentSceneIndex);
 });
 
+// RESTART BTN
+document.getElementById('restart-btn').addEventListener('click', function() {
+    currentSceneIndex = 0;
+    DisplayScene(currentSceneIndex);
+});
 // DOM
 document.addEventListener('DOMContentLoaded', function() {
     DisplayScene(currentSceneIndex);
