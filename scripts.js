@@ -33,7 +33,7 @@ const scenes = [
     {
         name: "Kettu",
         image: "Materials/kettu-sisältökuva.jpg",
-        text: "Ketusta fakta",
+        text: "Noin 10% Suomen ketuista on 'hopeakettuja', niiden turkin väri vaihtelee hopeanvärisestä lähes mustaan.",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
