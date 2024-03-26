@@ -21,7 +21,7 @@ const scenes = [
     {
         name: "Susi",
         image: "Materials/susi-sisältökuva.jpg",
-        text: "Sudesta fakta",
+        text: "Tiesitkö, että susi on yöeläin? Tämä tarkoittaa että ne liikkuvat pääosin öisin ja hämärällä. Sudet myös saalistavat usein yöllä.",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
