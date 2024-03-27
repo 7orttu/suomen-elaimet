@@ -45,7 +45,7 @@ const scenes = [
     {
         name: "Karhu",
         image: "Materials/karhu-sisältökuva.jpg",
-        text: "Karhusta fakta",
+        text: "Tiesitkö, että karhu ei ole ainoastaan Suomen suurin petoeläin, vaan koko Euroopan!",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
