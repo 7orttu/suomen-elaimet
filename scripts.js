@@ -57,7 +57,7 @@ const scenes = [
     {
         name: "Metsäkauris",
         image: "Materials/metsäkauris-sisältökuva.jpg",
-        text: "Metsäkauriksesta fakta",
+        text: "Metsäkauriit ovat taitavia uimareita!",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
