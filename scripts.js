@@ -69,7 +69,7 @@ const scenes = [
     {
         name: "Hirvi",
         image: "Materials/hirvi-sisältökuva.jpg",
-        text: "Hirvestä fakta",
+        text: "Aikuinen hirvi voi painaa jopa huimat 800 kilogrammaa! Se on noin kolme moottoripyörää!",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
