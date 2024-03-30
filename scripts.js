@@ -72,6 +72,12 @@ const scenes = [
         text: "Aikuinen hirvi voi painaa jopa huimat 800 kilogrammaa! Se on noin kolme moottoripyörää!",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
+    {   // preview
+        name: "Majava-pre",
+        image: "Materials/majava-sisältökuva.jpg",
+        text: "",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
+    },
     {
         name: "end",
         image: "Materials/karhu-pääkuva.jpg",
@@ -105,7 +111,6 @@ function DisplayScene(index) {
     else {
         document.getElementById('text-container').style.backgroundColor = "transparent";
     }
-
 
     if (currentSceneIndex === 0 || currentSceneIndex === 1) {
         document.getElementById('language').style.opacity=1;
