@@ -111,6 +111,15 @@ function DisplayScene(index) {
         SetControlsVisibility("show-control")
     }
 
+    if (currentScene.name === 'main') {
+        prevBtn = document.getElementById('prev-btn');
+        prevBtn.disabled = true;
+    } 
+    else {
+        prevBtn2 = document.getElementById('prev-btn');
+        prevBtn2.disabled = false;
+    }
+
     if (currentSceneIndex % 2 == 1) {
         document.getElementById('text-container').style.backgroundColor = "white";
     } 
