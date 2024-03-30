@@ -79,6 +79,12 @@ const scenes = [
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
+        name: "Majava",
+        image: "Materials/majava-sisältökuva.jpg",
+        text: "Tiesitkö, että majavat voivat elää jopa yli 20 vuotiaiksi?",
+        buttonText: ["TAKAISIN", "SEURAAVA"]
+    },
+    {
         name: "end",
         image: "Materials/karhu-pääkuva.jpg",
         text: "LOPPU",
