@@ -3,13 +3,13 @@ const scenes = [
     {
         name: "main",
         image: "Materials/karhu-pääkuva.jpg",
-        text: "pelin nimi",
+        text: "Suomen Eläimet",
         buttonText: ["LOPETA", "ALOITA"]
     },
     {
         name: "ohjeet",
         image: "Materials/karhu-pääkuva.jpg",
-        text: "ohjeet",
+        text: "OHJEET \n Paina 'seuraava' ja 'edellinen' nappeja vaihtaaksesi ruutuja!",
         buttonText: ["TAKAISIN", "JATKA"]
     },
     {   // preview
@@ -21,7 +21,7 @@ const scenes = [
     {
         name: "Susi",
         image: "Materials/susi-sisältökuva.jpg",
-        text: "Tiesitkö, että susi on yöeläin? Tämä tarkoittaa että ne liikkuvat pääosin öisin ja hämärällä. Sudet myös saalistavat usein yöllä.",
+        text: "SUSI \n Tiesitkö, että susi on yöeläin? Tämä tarkoittaa että ne liikkuvat pääosin öisin ja hämärällä. Sudet myös saalistavat usein yöllä.",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
@@ -33,7 +33,7 @@ const scenes = [
     {
         name: "Kettu",
         image: "Materials/kettu-sisältökuva.jpg",
-        text: "Noin 10% Suomen ketuista on 'hopeakettuja', niiden turkin väri vaihtelee hopeanvärisestä lähes mustaan.",
+        text: "KETTU \n Noin 10% Suomen ketuista on 'hopeakettuja', niiden turkin väri vaihtelee hopeanvärisestä lähes mustaan.",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
@@ -45,7 +45,7 @@ const scenes = [
     {
         name: "Karhu",
         image: "Materials/karhu-sisältökuva.jpg",
-        text: "Tiesitkö, että karhu ei ole ainoastaan Suomen suurin petoeläin, vaan koko Euroopan!",
+        text: "KARHU \n Tiesitkö, että karhu ei ole ainoastaan Suomen suurin petoeläin, vaan koko Euroopan!",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
@@ -57,7 +57,7 @@ const scenes = [
     {
         name: "Metsäkauris",
         image: "Materials/metsäkauris-sisältökuva.jpg",
-        text: "Metsäkauriit ovat taitavia uimareita!",
+        text: "METSÄKAURIS \n Metsäkauriit ovat taitavia uimareita!",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
@@ -69,7 +69,7 @@ const scenes = [
     {
         name: "Hirvi",
         image: "Materials/hirvi-sisältökuva.jpg",
-        text: "Aikuinen hirvi voi painaa jopa huimat 800 kilogrammaa! Se on noin kolme moottoripyörää!",
+        text: "HIRVI \n Aikuinen hirvi voi painaa jopa huimat 800 kilogrammaa! Se on noin kolme moottoripyörää!",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {   // preview
@@ -81,7 +81,7 @@ const scenes = [
     {
         name: "Majava",
         image: "Materials/majava-sisältökuva.jpg",
-        text: "Tiesitkö, että majavat voivat elää jopa yli 20 vuotiaiksi?",
+        text: "MAJAVA \n Tiesitkö, että majavat voivat elää jopa yli 20 vuotiaiksi?",
         buttonText: ["TAKAISIN", "SEURAAVA"]
     },
     {
