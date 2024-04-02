@@ -4,7 +4,7 @@ const scenes = [
         name: "main",
         image: "Materials/karhu-pääkuva.jpg",
         text: "Suomen Eläimet",
-        buttonText: ["LOPETA", "ALOITA"]
+        buttonText: ["", "ALOITA"]
     },
     {
         name: "ohjeet",
@@ -142,7 +142,7 @@ function SetControlsVisibility(choice) {
         end.style.visibility = 'hidden';
         end.disabled = true;
     } 
-    else if (choice === "show"){
+    else if (choice === "show") {
         end.style.visibility = 'visible';
         end.disabled = false;
     }
