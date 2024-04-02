@@ -114,10 +114,14 @@ function DisplayScene(index) {
     if (currentScene.name === 'main') {
         prevBtn = document.getElementById('prev-btn');
         prevBtn.disabled = true;
+
+        document.getElementById('animal-text').style.fontSize = '100px';
     } 
     else {
-        prevBtn2 = document.getElementById('prev-btn');
-        prevBtn2.disabled = false;
+        prevBtn = document.getElementById('prev-btn');
+        prevBtn.disabled = false;
+
+        document.getElementById('animal-text').style.fontSize = '50px';
     }
 
     if (currentSceneIndex % 2 == 1) {
