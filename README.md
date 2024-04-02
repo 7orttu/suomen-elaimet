@@ -1,2 +1,2 @@
 # suomen-elaimet
-Suomen eäimistä tehty HTML, CSS ja JS peli. 
+Suomen eläimistä tehty HTML, CSS ja JS peli. 
