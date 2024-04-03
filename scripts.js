@@ -102,51 +102,55 @@ function DisplayScene(index) {
     document.getElementById('prev-btn').innerText = currentScene.buttonText[0];
     document.getElementById('next-btn').innerText = currentScene.buttonText[1];
 
-    if (currentScene.name === 'end') {
-        SetControlsVisibility("show");
-        SetControlsVisibility("hide-control")
-    } 
-    else {
-        SetControlsVisibility("hide");
-        SetControlsVisibility("show-control")
-    }
 
     if (currentScene.name === 'main') {
         prevBtn = document.getElementById('prev-btn');
         prevBtn.disabled = true;
 
-        document.getElementById('animal-text').style.fontSize = '100px';
+        document.getElementById('animal-text').style.fontSize = '70px';
     } 
     else {
         prevBtn = document.getElementById('prev-btn');
         prevBtn.disabled = false;
 
-        document.getElementById('animal-text').style.fontSize = '50px';
+        document.getElementById('animal-text').style.fontSize = '35px';
     }
+    // --- // --- //
 
+    if (currentScene.name === 'main' || currentScene.name === 'ohjeet') {
+        document.getElementById('language').style.opacity=1;
+    }
+    else {
+        document.getElementById('language').style.opacity=0;
+    }
+    // --- // --- //
+
+    if (currentScene.name === 'end') {
+        SetControlsVisibility("show-end");
+        SetControlsVisibility("hide-control")
+    } 
+    else {
+        SetControlsVisibility("hide-end");
+        SetControlsVisibility("show-control")
+    }
+    // --- // --- //
+    
     if (currentSceneIndex % 2 == 1) {
         document.getElementById('text-container').style.backgroundColor = "white";
     } 
     else {
         document.getElementById('text-container').style.backgroundColor = "transparent";
     }
-
-    if (currentSceneIndex === 0 || currentSceneIndex === 1) {
-        document.getElementById('language').style.opacity=1;
-    }
-    else {
-        document.getElementById('language').style.opacity=0;
-    }
 }
 function SetControlsVisibility(choice) {
     var end = document.getElementById('end-container');
     var control = document.getElementById('control-container');
 
-    if (choice === "hide") {
+    if (choice === "hide-end") {
         end.style.visibility = 'hidden';
         end.disabled = true;
     } 
-    else if (choice === "show") {
+    else if (choice === "show-end") {
         end.style.visibility = 'visible';
         end.disabled = false;
     }
