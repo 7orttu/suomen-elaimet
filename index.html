@@ -9,29 +9,33 @@
 
 
 <body>
-    <div id="language">
-        <img src="Materials/s-lippu.png" alt="SUOMI" width="150" height="100">
-    </div>
-    <div id="scene">
-        <div id="text-container">
-            <p id="animal-text"></p>
+    <div id="screen">
+
+        <div id="language">
+            <img src="Materials/s-lippu.png" alt="SUOMI">
         </div>
-        <div id="image-container">
-            <img id="animal-image" src="" alt="Eläin" width="200" height="200">
+        
+        <div id="scene">
+            <div id="text-container">
+                <p id="animal-text"></p>
+            </div>
+            <div id="image-container">
+                <img id="animal-image" src="" alt="Eläin">
+            </div>
         </div>
+    
+        <div id="control-container">
+            <button class="buttons" id="prev-btn" onclick="DisplayScene()">EDELLINEN</button>
+            <button class="buttons" id="next-btn" onclick="DisplayScene()">SEURAAVA</button>
+        </div>
+    
+        <div id="end-container">
+            <button class="buttons" id="restart-btn">ALOITA ALUSTA</button>
+            <button class="buttons" id="end-btn">LOPETA</button>
+        </div>
+    
+        <script src="scripts.js"></script>
     </div>
-
-    <div id="control-container">
-        <button class="buttons" id="prev-btn" onclick="DisplayScene()">EDELLINEN</button>
-        <button class="buttons" id="next-btn" onclick="DisplayScene()">SEURAAVA</button>
-    </div>
-
-    <div id="end-container">
-        <button class="buttons" id="restart-btn">ALOITA ALUSTA</button>
-        <button class="buttons" id="end-btn">LOPETA</button>
-    </div>
-
-    <script src="scripts.js"></script>
 </body>
 
 
