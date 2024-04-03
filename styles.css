@@ -1,4 +1,3 @@
-#language{
 #screen {
     position: relative;
     width: 700px;
@@ -14,11 +13,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
+    padding-right: 20px;
+    padding-top: 20px;
 }
-#language img{
-    padding-right: 40px;
-    padding-top: 40px;
+#language img {
+    width: 70px;
+    height: 50px;
+    z-index: 3;
 }
 
 #scene{
