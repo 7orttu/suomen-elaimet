@@ -14,26 +14,26 @@ function DisplayScene(index) {
     let imageContainer = document.getElementById('image-container');
     let languageContainer = document.getElementById('language-container');
 
+    animalImage.src = currentScene.image;
+    animalText.innerText = currentScene.text;
+    prevBtn.innerText = currentScene.buttonText[0];
+    nextBtn.innerText = currentScene.buttonText[1];
 
     if (currentScene.name === 'main') {
-        prevBtn = document.getElementById('prev-btn');
         prevBtn.disabled = true;
-
-        document.getElementById('animal-text').style.fontSize = '70px';
+        animalText.style.fontSize = '70px';
     } 
     else {
-        prevBtn = document.getElementById('prev-btn');
         prevBtn.disabled = false;
-
-        document.getElementById('animal-text').style.fontSize = '35px';
+        animalText.style.fontSize = '35px';
     }
     // --- // --- //
 
     if (currentScene.name === 'main' || currentScene.name === 'ohjeet') {
-        document.getElementById('language').style.opacity=1;
+        languageContainer.style.opacity=1;
     }
     else {
-        document.getElementById('language').style.opacity=0;
+        languageContainer.style.opacity=0;
     }
     // --- // --- //
 
@@ -48,10 +48,10 @@ function DisplayScene(index) {
     // --- // --- //
     
     if (currentSceneIndex % 2 == 1) {
-        document.getElementById('text-container').style.backgroundColor = "white";
+        textContainer.style.backgroundColor = "white";
     } 
     else {
-        document.getElementById('text-container').style.backgroundColor = "transparent";
+        textContainer.style.backgroundColor = "transparent";
     }
 }
 function SetControlsVisibility(choice) {
