@@ -5,10 +5,14 @@ let currentSceneIndex = 0;
 
 function DisplayScene(index) {
     const currentScene = scenes[index];
-    document.getElementById('animal-image').src = currentScene.image;
-    document.getElementById('animal-text').innerText = currentScene.text;
-    document.getElementById('prev-btn').innerText = currentScene.buttonText[0];
-    document.getElementById('next-btn').innerText = currentScene.buttonText[1];
+
+    let prevBtn = document.getElementById('prev-btn');  // Previous button variable
+    let nextBtn = document.getElementById('next-btn')   // Next button variable
+    let animalImage = document.getElementById('animal-image');
+    let animalText = document.getElementById('animal-text');
+    let textContainer = document.getElementById('text-container');
+    let imageContainer = document.getElementById('image-container');
+    let languageContainer = document.getElementById('language-container');
 
 
     if (currentScene.name === 'main') {
