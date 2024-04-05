@@ -56,12 +56,6 @@
     bottom: 0;
     text-align: center;
 }
-#end-container {
-    width: 700px;
-    height: auto;
-    margin-bottom: 20px;
-    text-align: center;
-}
 #restart-btn {
     font-size: 35px;
 }
