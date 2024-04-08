@@ -47,6 +47,14 @@
     width: 700px;
     height: 650px;
 }
+#image-credit {
+    z-index: 4;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: aliceblue;
+    font-size: medium;
+}
 
 
 #control-container,
@@ -71,6 +79,7 @@
     font-size: 35px;
     color: white;
     position: relative;
+    bottom: 25px;
     z-index: 2;
     vertical-align: middle;
 }
