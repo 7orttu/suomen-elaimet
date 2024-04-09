@@ -106,4 +106,15 @@ const scenes = [
     }
 ];
 
+const qa_scenes = [
+    {
+        name: "a",
+        image: "",
+        text: "",
+        question: "",
+        answer: ""
+    }
+];
+
 export { scenes };
+export { qa_scenes };
