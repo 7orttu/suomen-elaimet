@@ -1,4 +1,4 @@
-import { scenes } from './data.js';
+import { scenes } from '../javascript/data.js';
 
 let currentSceneIndex = 0;
 
