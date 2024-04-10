@@ -17,8 +17,10 @@ let currentQuestionIndex = 0;
 function setQuestion(questionIndex) {
     const currentQuestion = qaQuestions[questionIndex];
 
-    questionText.innerHTML = currentQuestion.text;
+    questionText.innerHTML = currentQuestion.question;
     animalImage.src = currentQuestion.image;
+
+    setOptions();
 };
 
 
@@ -26,6 +28,7 @@ function nextQuestion() {
     currentQuestionIndex++;
 
     setQuestion(currentQuestionIndex);
+    setOptions();
 };
 
 const optionButtons = document.querySelectorAll('.optionButtons');
