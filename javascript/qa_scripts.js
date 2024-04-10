@@ -28,10 +28,18 @@ function nextQuestion() {
     setQuestion(currentQuestionIndex);
 };
 
-
-function setOptionButtons() {
-    
+const optionButtons = document.querySelectorAll('.optionButtons');
+function setOptions() {
+    qaQuestions.forEach((question, index) => {
+        for (let i = 0; i < question.options.length; i++) {
+            optionButtons[index * question.options.length + i].textContent = question.options[i];
+        }
+    });
 };
 
 
+// DOM
+document.addEventListener('DOMContentLoaded', function() {
+    setQuestion(currentQuestionIndex);
+});
 
