@@ -115,15 +115,50 @@ const scenes = [
     }
 ];
 
-const qa_scenes = [
+const qaQuestions = [
     {
-        name: "a",
-        image: "",
+        name: "wolfQuestion",
+        image: wolfImagePath,
         text: "",
         question: "",
-        answer: ""
+        options: ["", ""]
+    },
+    {
+        name: "foxQuestion",
+        image: foxImagePath,
+        text: "",
+        question: "",
+        options: ["", ""]
+    },
+    {
+        name: "bearQuestion",
+        image: bearImagePath,
+        text: "",
+        question: "",
+        options: ["", ""]
+    },
+    {
+        name: "roedeerQuestion",
+        image: roedeerImagePath,
+        text: "",
+        question: "",
+        options: ["", ""]
+    },
+    {
+        name: "mooseQuestion",
+        image: mooseImagePath,
+        text: "",
+        question: "",
+        options: ["", ""]
+    },
+    {
+        name: "beaverQuestion",
+        image: beaverImagePath,
+        text: "",
+        question: "",
+        options: ["", ""]
     }
 ];
 
 export { scenes };
-export { qa_scenes };
+export { qaQuestions };
