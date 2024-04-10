@@ -1,3 +1,4 @@
+/* ID */
 #screen {
     position: relative;
     width: 700px;
@@ -74,6 +75,7 @@
 
 
 
+/* CLASS */
 .buttons {
     width: 296px;
     height: 88px;
@@ -103,6 +105,7 @@
 
 
 
+/* GLOBAL */
 body,  html {
     margin: 0;
     padding: 0;
