@@ -1,19 +1,19 @@
 import { scenes } from '../javascript/data.js';
 
+let prevBtn = document.getElementById('prev-btn');
+let nextBtn = document.getElementById('next-btn');
+let animalImage = document.getElementById('animal-image');
+let animalText = document.getElementById('animal-text');
+let textContainer = document.getElementById('text-container');
+let imageContainer = document.getElementById('image-container');
+let languageContainer = document.getElementById('language-container');
+let imageCredit = document.getElementById('image-credit');
+
+
 let currentSceneIndex = 0;
 
-
-function DisplayScene(index) {
-    const currentScene = scenes[index];
-
-    let prevBtn = document.getElementById('prev-btn');
-    let nextBtn = document.getElementById('next-btn');
-    let animalImage = document.getElementById('animal-image');
-    let animalText = document.getElementById('animal-text');
-    let textContainer = document.getElementById('text-container');
-    let imageContainer = document.getElementById('image-container');
-    let languageContainer = document.getElementById('language-container');
-    let imageCredit = document.getElementById('image-credit');
+function DisplayScene(sceneIndex) {
+    const currentScene = scenes[sceneIndex];
 
     animalImage.src = currentScene.image;
     animalText.innerText = currentScene.text;
