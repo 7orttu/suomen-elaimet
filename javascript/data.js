@@ -119,46 +119,47 @@ const qaQuestions = [
     {
         name: "wolfQuestion",
         image: wolfImagePath,
-        text: "",
-        question: "",
-        options: ["", ""]
+        question: "Milloin sudet saalistavat useimmiten? \n 1. Yöllä \n 2. Päivällä \n 3. Aamulla \n 4. Sudet eivät saalista",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 0
     },
     {
         name: "foxQuestion",
         image: foxImagePath,
-        text: "",
         question: "",
-        options: ["", ""]
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 1
     },
     {
         name: "bearQuestion",
         image: bearImagePath,
-        text: "",
         question: "",
-        options: ["", ""]
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 0
     },
     {
         name: "roedeerQuestion",
         image: roedeerImagePath,
-        text: "",
         question: "",
-        options: ["", ""]
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 3
     },
     {
         name: "mooseQuestion",
         image: mooseImagePath,
-        text: "",
         question: "",
-        options: ["", ""]
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 2
     },
     {
         name: "beaverQuestion",
         image: beaverImagePath,
-        text: "",
         question: "",
-        options: ["", ""]
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 1
     }
 ];
+
 
 export { scenes };
 export { qaQuestions };
