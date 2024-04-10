@@ -29,7 +29,7 @@
     text-align: center;
     background-color: rgb(157, 157, 168);
 }
-#text-container {
+#text-container, #question-container {
     width: 700px;
     height: auto;
     position: absolute;
@@ -58,7 +58,7 @@
 
 
 #control-container,
-#end-container {
+#end-container, #option-container {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -74,6 +74,19 @@
     width: 296px;
     height: 88px;
     background-image: linear-gradient(to right, rgb(57, 92, 0), rgb(26, 192, 40));
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color: white;
+    position: relative;
+    bottom: 25px;
+    z-index: 2;
+    vertical-align: middle;
+}
+.optionButtons {
+    width: 200px;
+    height: 100px;
+    background-image: linear-gradient(to right, rgb(61, 63, 63), rgb(25, 176, 223));
     margin: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 35px;
