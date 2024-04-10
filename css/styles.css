@@ -29,6 +29,10 @@
     text-align: center;
     background-color: rgb(157, 157, 168);
 }
+#question {
+    font-size: 35px;
+    background-color: rgb(255, 255, 255);
+}
 #text-container, #question-container {
     width: 700px;
     height: auto;
@@ -52,7 +56,7 @@
     position: absolute;
     bottom: 0px;
     right: 0px;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     font-size: medium;
 }
 
