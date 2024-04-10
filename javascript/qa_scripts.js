@@ -14,3 +14,24 @@ let imageCredit = document.getElementById('image-credit');
 let currentQuestionIndex = 0;
 
 
+function setQuestion(questionIndex) {
+    const currentQuestion = qaQuestions[questionIndex];
+
+    questionText.innerHTML = currentQuestion.text;
+    animalImage.src = currentQuestion.image;
+};
+
+
+function nextQuestion() {
+    currentQuestionIndex++;
+
+    setQuestion(currentQuestionIndex);
+};
+
+
+function setOptionButtons() {
+    
+};
+
+
+
