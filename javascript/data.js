@@ -1,11 +1,11 @@
 
-const mainImagePath = "images/resized-pictures/main.jpg";
-const wolfImagePath = "images/resized-pictures/wolf.jpg";
-const foxImagePath = "images/resized-pictures/fox.jpg";
-const bearImagePath = "images/resized-pictures/bear.jpg";
-const roedeerImagePath = "images/resized-pictures/roedeer.jpg";
-const mooseImagePath = "images/resized-pictures/moose.jpg";
-const beaverImagePath = "images/resized-pictures/beaver.jpg";
+const mainImagePath = "../images/resized-pictures/main.jpg";
+const wolfImagePath = "../images/resized-pictures/wolf.jpg";
+const foxImagePath = "../images/resized-pictures/fox.jpg";
+const bearImagePath = "../images/resized-pictures/bear.jpg";
+const roedeerImagePath = "../images/resized-pictures/roedeer.jpg";
+const mooseImagePath = "../images/resized-pictures/moose.jpg";
+const beaverImagePath = "../images/resized-pictures/beaver.jpg";
 
 const scenes = [
     {
