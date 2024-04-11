@@ -27,9 +27,13 @@ function setQuestion(questionIndex) {
 function nextQuestion() {
     currentQuestionIndex++;
 
-    setQuestion(currentQuestionIndex);
-    setOptions();
-};
+    if (currentQuestionIndex < qaQuestions.length) {
+        setQuestion(currentQuestionIndex);
+    } else {
+
+        console.log('loppu');
+    }
+}
 
 const optionButtons = document.querySelectorAll('.optionButtons');
 function setOptions() {
@@ -39,6 +43,21 @@ function setOptions() {
         }
     });
 };
+
+optionButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+
+        const currentQuestion = qaQuestions[currentQuestionIndex];
+        if (index === currentQuestion.correctAnswerIndex) {
+
+            nextQuestion();
+        } else {
+
+            alert('Väärä vastaus, yritä uudestaan.');
+            console.log("Väärä vastaus")
+        }
+    });
+});
 
 
 // DOM
