@@ -126,7 +126,7 @@ const qaQuestions = [
     {
         name: "foxQuestion",
         image: foxImagePath,
-        question: "",
+        question: "Asuuko Suomessa hopeakettuja? \n 1. Ei \n 2. Kyllä",
         options: ["1", "2", "3", "4"],
         correctAnswerIndex: 1
     },
