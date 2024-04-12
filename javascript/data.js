@@ -140,7 +140,7 @@ const qaQuestions = [
     {
         name: "roedeerQuestion",
         image: roedeerImagePath,
-        question: "",
+        question: "Missä metsäkauriit ovat taitavia? \n 1. Kiipeilyssä \n 2. Piiloutumisessa \n 3. Kalojen nappaamisessa \n 4. Uimisessa",
         options: ["1", "2", "3", "4"],
         correctAnswerIndex: 3
     },
