@@ -147,9 +147,9 @@ const qaQuestions = [
     {
         name: "mooseQuestion",
         image: mooseImagePath,
-        question: "",
+        question: "Mikä on hirvien keskimääräinen paino? \n 1. Noin 100kg \n 2. Noin 500kg \n 3. Noin 200kg \n 4. Noin 1000kg",
         options: ["1", "2", "3", "4"],
-        correctAnswerIndex: 2
+        correctAnswerIndex: 1
     },
     {
         name: "beaverQuestion",
