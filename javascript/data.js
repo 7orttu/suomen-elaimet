@@ -121,7 +121,7 @@ const qaQuestions = [
         image: wolfImagePath,
         question: "Milloin sudet saalistavat useimmiten? \n 1. Yöllä \n 2. Päivällä \n 3. Aamulla \n 4. Sudet eivät saalista",
         options: ["1", "2", "3", "4"],
-        correctAnswerIndex: 0
+        correctAnswerIndex: 0   // option(1/2/3/4) - 1 = correctAnswerIndex
     },
     {
         name: "foxQuestion",
