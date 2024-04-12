@@ -133,9 +133,9 @@ const qaQuestions = [
     {
         name: "bearQuestion",
         image: bearImagePath,
-        question: "",
-        options: ["1", "2", "3", "4"],
-        correctAnswerIndex: 0
+        question: "Mikä on karhun aisteista huonoin? \n 1. Hajuaisti \n 2. Näköaisti \n 3. Kuuloaisti \n 4. Kaikki edellä mainitut",
+        options: ["1", "2", "3", "4"], 
+        correctAnswerIndex: 1
     },
     {
         name: "roedeerQuestion",
