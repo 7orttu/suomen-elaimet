@@ -126,9 +126,9 @@ const qaQuestions = [
     {
         name: "foxQuestion",
         image: foxImagePath,
-        question: "Asuuko Suomessa hopeakettuja? \n 1. Ei \n 2. Kyllä",
-        options: ["1", "2", "3", "4"],
-        correctAnswerIndex: 1
+        question: "Kuinka suuri määrä Suomen ketuista on hopeakettuja? \n 1. 1% \n 2. 5% \n 3. 10% \n 4. 20%",
+        options: ["1", "2", "3", "4"],  
+        correctAnswerIndex: 2
     },
     {
         name: "bearQuestion",
