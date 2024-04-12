@@ -88,7 +88,7 @@ const scenes = [
     {
         name: "Hirvi",
         image: mooseImagePath,
-        text: "HIRVI \n Aikuinen hirvi voi painaa jopa huimat 800 kilogrammaa! Se on noin kolme moottoripyörää!",
+        text: "HIRVI \n Aikuinen hirvi voi painaa huimat 800 kilogrammaa, se on jopa noin kolme moottoripyörää! Yleensä ne kuitenkin painavat nlähemmäksi 500 kilogrammaa. \n Hirvet myös aiheuttavat paljon metsävahinkoja ja niiden korvaus maksaa paljon.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: "12019, Pixabay"
     },
