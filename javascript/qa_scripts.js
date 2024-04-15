@@ -19,6 +19,7 @@ function setQuestion(questionIndex) {
 
     questionText.innerHTML = currentQuestion.question;
     animalImage.src = currentQuestion.image;
+    imageCredit.innerText = currentQuestion.creditText;
 
     setOptions();
 };
