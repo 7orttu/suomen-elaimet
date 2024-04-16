@@ -32,7 +32,7 @@ function nextQuestion() {
         setQuestion(currentQuestionIndex);
     } else {
 
-        console.log('loppu');
+        console.log('Loppu');
     }
 }
 
