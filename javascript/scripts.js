@@ -103,7 +103,7 @@ document.getElementById('restart-btn').addEventListener('click', function() {
 
 // END BTN
 document.getElementById('end-btn').addEventListener('click', function() {
-    
+    RedirectQA();
 });
 
 // DOM
