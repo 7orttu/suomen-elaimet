@@ -79,6 +79,10 @@ function SetControlsVisibility(choice) {
     }
 }
 
+function RedirectQA() {
+    window.location.href = '../pages/qa.html';
+}
+
 // NEXT BTN
 document.getElementById('next-btn').addEventListener('click', function() {
     currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
