@@ -26,7 +26,7 @@ const scenes = [
     {
         name: "ohjeet",
         image: mainImagePath,
-        text: "OHJEET \n Paina 'seuraava' ja 'edellinen' nappeja vaihtaaksesi ruutuja!",
+        text: "OHJEET \n Paina 'seuraava' ja 'edellinen' nappeja vaihtaaksesi ruutuja! \n Ylävasemmalla on myös nappula, josta voit nähdä ohjeet mikäli niitä tarvitset.",
         buttonText: ["TAKAISIN", "JATKA"],
         creditText: mainBearCredit
     },
