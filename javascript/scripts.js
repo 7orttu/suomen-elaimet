@@ -56,18 +56,10 @@ function DisplayScene(sceneIndex) {
         textContainer.style.backgroundColor = "transparent";
     }
 }
+
 function SetControlsVisibility(choice) {
     var end = document.getElementById('end-container');
     var control = document.getElementById('control-container');
-
-    if (choice === "hide-end") {
-        end.style.visibility = 'hidden';
-        end.disabled = true;
-    } 
-    else if (choice === "show-end") {
-        end.style.visibility = 'visible';
-        end.disabled = false;
-    }
 
     if (choice === "hide-control") {
         control.style.visibility = 'hidden';
@@ -77,34 +69,43 @@ function SetControlsVisibility(choice) {
         control.style.visibility = 'visible';
         control.disabled = false;
     }
+
+    if (choice === "hide-end") {
+        end.style.visibility = 'hidden';
+        end.disabled = true;
+    } 
+    else if (choice === "show-end") {
+        end.style.visibility = 'visible';
+        end.disabled = false;
+    }
 }
 
 function RedirectQA() {
     window.location.href = '../pages/qa.html';
 }
 
-// NEXT BTN
-document.getElementById('next-btn').addEventListener('click', function() {
+
+// EVENT LISTENERS
+
+document.getElementById('next-btn').addEventListener('click', function() {  // NEXT
     currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
     DisplayScene(currentSceneIndex);
 });
 
-// PREVIOUS BTN
-document.getElementById('prev-btn').addEventListener('click', function() {
+document.getElementById('prev-btn').addEventListener('click', function() {  // PREVIOUS
     currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
     DisplayScene(currentSceneIndex);
 });
 
-// RESTART BTN
-document.getElementById('restart-btn').addEventListener('click', function() {
+document.getElementById('restart-btn').addEventListener('click', function() {   // RESTAR
     currentSceneIndex = 0;
     DisplayScene(currentSceneIndex);
 });
 
-// END BTN
-document.getElementById('end-btn').addEventListener('click', function() {
+document.getElementById('continue-btn').addEventListener('click', function() {  // CONTINUE
     RedirectQA();
 });
+
 
 // DOM
 document.addEventListener('DOMContentLoaded', function() {
