@@ -97,6 +97,25 @@
 #instruction-icon:hover + #instruction {
     opacity: 1;
 }
+#end-txt {
+    font-size: xx-large;
+    background-color: white;
+    opacity: 85%;
+
+    position: absolute;
+    bottom: 200px;
+    z-index: 1;
+    width: 100%;
+}
+#end-btn {
+    font-size: xx-large;
+    background-image: linear-gradient(to right, rgb(0, 162, 255), rgb(255, 136, 0));
+
+    position: absolute;
+    right: 42%;
+    left: 43%;
+    z-index: 1;
+}
 
 
 
