@@ -10,6 +10,9 @@ let animalImage = document.getElementById('animal-image');
 let imageCredit = document.getElementById('image-credit');
 
 
+let endTxt = document.getElementById('end-txt');
+let endBtn = document.getElementById('end-btn');
+
 
 let currentQuestionIndex = 0;
 
