@@ -13,22 +13,23 @@ let imageCredit = document.getElementById('image-credit');
 let endTxt = document.getElementById('end-txt');
 let endBtn = document.getElementById('end-btn');
 
+const optionButtons = document.querySelectorAll('.optionButtons');
 
 let currentQuestionIndex = 0;
 
 
-function setQuestion(questionIndex) {
+function SetQuestion(questionIndex) {
     const currentQuestion = qaQuestions[questionIndex];
 
     questionText.innerHTML = currentQuestion.question;
     animalImage.src = currentQuestion.image;
     imageCredit.innerText = currentQuestion.creditText;
 
-    setOptions();
+    SetOptions();
 };
 
 
-function nextQuestion() {
+function NextQuestion() {
     currentQuestionIndex++;
 
     if (currentQuestionIndex < qaQuestions.length) {
@@ -39,8 +40,7 @@ function nextQuestion() {
     }
 }
 
-const optionButtons = document.querySelectorAll('.optionButtons');
-function setOptions() {
+function SetOptions() {
     qaQuestions.forEach((question, index) => {
         for (let i = 0; i < question.options.length; i++) {
             optionButtons[index * question.options.length + i].textContent = question.options[i];
@@ -54,11 +54,10 @@ optionButtons.forEach((button, index) => {
         const currentQuestion = qaQuestions[currentQuestionIndex];
         if (index === currentQuestion.correctAnswerIndex) {
 
-            nextQuestion();
-        } else {
-
+            NextQuestion();
+        } 
+        else {
             alert('Väärä vastaus, yritä uudestaan.');
-            console.log("Väärä vastaus")
         }
     });
 });
@@ -66,6 +65,5 @@ optionButtons.forEach((button, index) => {
 
 // DOM
 document.addEventListener('DOMContentLoaded', function() {
-    setQuestion(currentQuestionIndex);
+    SetQuestion(currentQuestionIndex);
 });
-
