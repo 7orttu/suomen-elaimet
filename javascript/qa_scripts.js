@@ -9,6 +9,10 @@ let imageContainer = document.getElementById('image-container');
 let animalImage = document.getElementById('animal-image');
 let imageCredit = document.getElementById('image-credit');
 
+let optionBTN1 = document.getElementById('option1');
+let optionBTN2 = document.getElementById('option2');
+let optionBTN3 = document.getElementById('option3');
+let optionBTN4 = document.getElementById('option4');
 
 let endTxt = document.getElementById('end-txt');
 let endBtn = document.getElementById('end-btn');
