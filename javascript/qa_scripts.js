@@ -25,6 +25,8 @@ let currentQuestionIndex = 0;
 function SetQuestion(questionIndex) {
     const currentQuestion = qaQuestions[questionIndex];
 
+    SetEndVisibility("hide");
+
     questionText.innerHTML = currentQuestion.question;
     animalImage.src = currentQuestion.image;
     imageCredit.innerText = currentQuestion.creditText;
@@ -37,10 +39,15 @@ function NextQuestion() {
     currentQuestionIndex++;
 
     if (currentQuestionIndex < qaQuestions.length) {
-        setQuestion(currentQuestionIndex);
-    } else {
-
-        console.log('Loppu');
+        SetQuestion(currentQuestionIndex);
+    } 
+    else {
+        questionContainer.style.opacity=0;
+        optionBTN1.style.visibility='hidden';
+        optionBTN2.style.visibility='hidden';
+        optionBTN3.style.visibility='hidden';
+        optionBTN4.style.visibility='hidden';
+        SetEndVisibility("show");
     }
 }
 
@@ -65,6 +72,19 @@ optionButtons.forEach((button, index) => {
         }
     });
 });
+
+
+
+function SetEndVisibility(choice) {
+    if (choice == "hide") {
+        endBtn.style.visibility='hidden';
+        endTxt.style.visibility='hidden';
+    }
+    else if (choice == "show") {
+        endBtn.style.visibility='visible';
+        endTxt.style.visibility='visible';
+    }
+}
 
 
 // DOM
