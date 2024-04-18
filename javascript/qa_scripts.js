@@ -74,6 +74,9 @@ optionButtons.forEach((button, index) => {
 });
 
 
+function RedirectIndex() {
+    window.location.href = '../index.html';
+}
 
 function SetEndVisibility(choice) {
     if (choice == "hide") {
