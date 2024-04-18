@@ -97,7 +97,7 @@ document.getElementById('prev-btn').addEventListener('click', function() {  // P
     DisplayScene(currentSceneIndex);
 });
 
-document.getElementById('restart-btn').addEventListener('click', function() {   // RESTAR
+document.getElementById('restart-btn').addEventListener('click', function() {   // RESTART
     currentSceneIndex = 0;
     DisplayScene(currentSceneIndex);
 });
