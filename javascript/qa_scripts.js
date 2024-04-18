@@ -90,6 +90,10 @@ function SetEndVisibility(choice) {
 }
 
 
+document.getElementById('end-btn').addEventListener('click', function() {
+    RedirectIndex();
+});
+
 // DOM
 document.addEventListener('DOMContentLoaded', function() {
     SetQuestion(currentQuestionIndex);
