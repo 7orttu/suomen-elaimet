@@ -31,14 +31,6 @@ function DisplayScene(sceneIndex) {
     }
     // --- // --- //
 
-    if (currentScene.name === 'main' || currentScene.name === 'ohjeet') {
-        languageContainer.style.opacity=1;
-    }
-    else {
-        languageContainer.style.opacity=0;
-    }
-    // --- // --- //
-
     if (currentScene.name === 'end') {
         SetControlsVisibility("show-end");
         SetControlsVisibility("hide-control")
