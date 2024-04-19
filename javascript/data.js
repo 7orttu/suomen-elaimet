@@ -1,11 +1,11 @@
 
-const mainImagePath = "./images/resized-pictures/main.jpg";
-const wolfImagePath = "./images/resized-pictures/wolf.jpg";
-const foxImagePath = "./images/resized-pictures/fox.jpg";
-const bearImagePath = "./images/resized-pictures/bear.jpg";
-const roedeerImagePath = "./images/resized-pictures/roedeer.jpg";
-const mooseImagePath = "./images/resized-pictures/moose.jpg";
-const beaverImagePath = "./images/resized-pictures/beaver.jpg";
+const mainImagePath = "images/resized-pictures/main.jpg";
+const wolfImagePath = "images/resized-pictures/wolf.jpg";
+const foxImagePath = "images/resized-pictures/fox.jpg";
+const bearImagePath = "images/resized-pictures/bear.jpg";
+const roedeerImagePath = "images/resized-pictures/roedeer.jpg";
+const mooseImagePath = "images/resized-pictures/moose.jpg";
+const beaverImagePath = "images/resized-pictures/beaver.jpg";
 
 const mainBearCredit = "LTapsaH, Pixabay";
 const wolfCredit = "christels, Pixabay";
@@ -18,105 +18,105 @@ const beaverCredit = "SteveRaubenstine, Pixabay";
 const scenes = [
     {
         name: "main",
-        image: mainImagePath,
+        image: "./" + mainImagePath,
         text: "Suomen Eläimet",
         buttonText: ["", "ALOITA"],
         creditText: mainBearCredit
     },
     {
         name: "ohjeet",
-        image: mainImagePath,
+        image: "./" + mainImagePath,
         text: "OHJEET \n Paina 'seuraava' ja 'edellinen' nappeja vaihtaaksesi ruutuja! \n Ylävasemmalla on myös nappula, josta voit nähdä ohjeet mikäli niitä tarvitset.",
         buttonText: ["TAKAISIN", "JATKA"],
         creditText: mainBearCredit
     },
     {   // preview
         name:"Susi-pre",
-        image: wolfImagePath,
+        image: "./" + wolfImagePath,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: wolfCredit
     },
     {
         name: "Susi",
-        image: wolfImagePath,
+        image: "./" + wolfImagePath,
         text: "SUSI \n Tiesitkö, että susi on yöeläin? Tämä tarkoittaa että ne liikkuvat pääosin öisin ja hämärällä. Sudet myös saalistavat usein yöllä.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: wolfCredit
     },
     {   // preview
         name: "Kettu-pre",
-        image: foxImagePath,
+        image: "./" + foxImagePath,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: foxCredit
     },
     {
         name: "Kettu",
-        image: foxImagePath,
+        image: "./" + foxImagePath,
         text: "KETTU \n Noin 10% Suomen ketuista on 'hopeakettuja', niiden turkin väri vaihtelee hopeanvärisestä lähes mustaan.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: foxCredit
     },
     {   // preview
         name: "Karhu-pre",
-        image: bearImagePath,
+        image: "./" + bearImagePath,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: bearCredit
     },
     {
         name: "Karhu",
-        image: bearImagePath,
+        image: "./" + bearImagePath,
         text: "KARHU \n Tiesitkö, että karhu ei ole ainoastaan Suomen suurin petoeläin, vaan koko Euroopan! \n Karhujen näköaisti on huono, mutta niiden hajuaisti on hyvin kehittynyt.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: bearCredit
     },
     {   // preview
         name: "Metsäkauris-pre",
-        image: roedeerImagePath,
+        image: "./" + roedeerImagePath,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: roedeerCredit
     },
     {
         name: "Metsäkauris",
-        image: roedeerImagePath,
+        image: "./" + roedeerImagePath,
         text: "METSÄKAURIS \n Metsäkauriit ovat taitavia uimareita!",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: roedeerCredit
     },
     {   // preview
         name: "Hirvi-pre",
-        image: mooseImagePath,
+        image: "./" + mooseImagePath,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: mooseCredit
     },
     {
         name: "Hirvi",
-        image: mooseImagePath,
+        image: "./" + mooseImagePath,
         text: "HIRVI \n Aikuinen hirvi voi painaa huimat 800 kilogrammaa, se on jopa noin kolme moottoripyörää! Yleensä ne kuitenkin painavat nlähemmäksi 500 kilogrammaa. \n Hirvet myös aiheuttavat paljon metsävahinkoja ja niiden korvaus maksaa paljon.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: mooseCredit
     },
     {   // preview
         name: "Majava-pre",
-        image: beaverImagePath,
+        image: "./" + beaverImagePath,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: beaverCredit
     },
     {
         name: "Majava",
-        image: beaverImagePath,
+        image: "./" + beaverImagePath,
         text: "MAJAVA \n Tiesitkö, että majavat voivat elää jopa yli 20 vuotiaiksi?",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: beaverCredit
     },
     {
         name: "end",
-        image: mainImagePath,
+        image: "./" + mainImagePath,
         text: "Hyvä! Luit kaikki faktat! Haluatko mennä kysymyksiin?",
         buttonText: ["B", "N"],
         creditText: mainBearCredit
