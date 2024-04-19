@@ -1,11 +1,11 @@
 
-const mainImagePath = "../images/resized-pictures/main.jpg";
-const wolfImagePath = "../images/resized-pictures/wolf.jpg";
-const foxImagePath = "../images/resized-pictures/fox.jpg";
-const bearImagePath = "../images/resized-pictures/bear.jpg";
-const roedeerImagePath = "../images/resized-pictures/roedeer.jpg";
-const mooseImagePath = "../images/resized-pictures/moose.jpg";
-const beaverImagePath = "../images/resized-pictures/beaver.jpg";
+const mainImagePath = "./images/resized-pictures/main.jpg";
+const wolfImagePath = "./images/resized-pictures/wolf.jpg";
+const foxImagePath = "./images/resized-pictures/fox.jpg";
+const bearImagePath = "./images/resized-pictures/bear.jpg";
+const roedeerImagePath = "./images/resized-pictures/roedeer.jpg";
+const mooseImagePath = "./images/resized-pictures/moose.jpg";
+const beaverImagePath = "./images/resized-pictures/beaver.jpg";
 
 const mainBearCredit = "LTapsaH, Pixabay";
 const wolfCredit = "christels, Pixabay";
@@ -126,7 +126,7 @@ const scenes = [
 const qaQuestions = [
     {
         name: "wolfQuestion",
-        image: wolfImagePath,
+        image: "../" + wolfImagePath,
         question: "Milloin sudet saalistavat useimmiten? \n 1. Yöllä \n 2. Päivällä \n 3. Aamulla \n 4. Sudet eivät saalista",
         options: ["1", "2", "3", "4"],
         correctAnswerIndex: 0,   // option(1/2/3/4) - 1 = correctAnswerIndex
@@ -134,7 +134,7 @@ const qaQuestions = [
     },
     {
         name: "foxQuestion",
-        image: foxImagePath,
+        image: "../" + foxImagePath,
         question: "Kuinka suuri määrä Suomen ketuista on hopeakettuja? \n 1. 1% \n 2. 5% \n 3. 10% \n 4. 20%",
         options: ["1", "2", "3", "4"],  
         correctAnswerIndex: 2,
@@ -142,7 +142,7 @@ const qaQuestions = [
     },
     {
         name: "bearQuestion",
-        image: bearImagePath,
+        image: "../" + bearImagePath,
         question: "Mikä on karhun aisteista huonoin? \n 1. Hajuaisti \n 2. Näköaisti \n 3. Kuuloaisti \n 4. Kaikki edellä mainitut",
         options: ["1", "2", "3", "4"], 
         correctAnswerIndex: 1,
@@ -150,7 +150,7 @@ const qaQuestions = [
     },
     {
         name: "roedeerQuestion",
-        image: roedeerImagePath,
+        image: "../" + roedeerImagePath,
         question: "Missä metsäkauriit ovat taitavia? \n 1. Kiipeilyssä \n 2. Piiloutumisessa \n 3. Kalojen nappaamisessa \n 4. Uimisessa",
         options: ["1", "2", "3", "4"],
         correctAnswerIndex: 3,
@@ -158,7 +158,7 @@ const qaQuestions = [
     },
     {
         name: "mooseQuestion",
-        image: mooseImagePath,
+        image: "../" + mooseImagePath,
         question: "Mikä on hirvien keskimääräinen paino? \n 1. Noin 100kg \n 2. Noin 500kg \n 3. Noin 200kg \n 4. Noin 1000kg",
         options: ["1", "2", "3", "4"],
         correctAnswerIndex: 1,
@@ -166,7 +166,7 @@ const qaQuestions = [
     },
     {
         name: "beaverQuestion",
-        image: beaverImagePath,
+        image: "../" + beaverImagePath,
         question: "Kuinka vanhoiksi majavat voivat elää? \n 1. Noin 10 vuotiaksi \n 2. Noin 5 vuotiaksi \n 3. Noin 15 vuotiaksi 4. Noin 20 vuotiaksi",
         options: ["1", "2", "3", "4"],
         correctAnswerIndex: 3,
