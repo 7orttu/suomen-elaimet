@@ -73,7 +73,7 @@ function SetControlsVisibility(choice) {
 }
 
 function RedirectQA() {
-    window.location.href = '../pages/qa.html';
+    window.location.href = './pages/qa.html';
 }
 
 
