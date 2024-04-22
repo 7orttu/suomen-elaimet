@@ -30,10 +30,14 @@ function DisplayScene(sceneIndex) {
     if (currentScene.name === 'main') {
         prevBtn.disabled = true;
         animalText.style.fontSize = '70px';
+
+        instructionText.innerText = "Paina ALOITA nappia";
     } 
     else {
         prevBtn.disabled = false;
         animalText.style.fontSize = '35px';
+
+        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     }
     // --- // --- //
     // --- // --- //
@@ -41,6 +45,11 @@ function DisplayScene(sceneIndex) {
     if (currentScene.name === 'end') {
         SetFirstPartEndControlsVisibility("show-end");
         SetFirstPartEndControlsVisibility("hide-control")
+
+        restartBtn.innerText = "ALOITA ALUSTA";
+        continueBtn.innerText = "JATKA";
+
+        instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
     } 
     else {
         SetFirstPartEndControlsVisibility("hide-end");
