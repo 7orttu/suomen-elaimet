@@ -8,6 +8,7 @@ let questionText = document.getElementById('question');
 let imageContainer = document.getElementById('image-container');
 let animalImage = document.getElementById('animal-image');
 let imageCredit = document.getElementById('image-credit');
+let instruction = document.getElementById('instruction');
 
 let optionBTN1 = document.getElementById('option1');
 let optionBTN2 = document.getElementById('option2');
@@ -43,10 +44,14 @@ function NextQuestion() {
     } 
     else {
         questionContainer.style.opacity=0;
+
         optionBTN1.style.visibility='hidden';
         optionBTN2.style.visibility='hidden';
         optionBTN3.style.visibility='hidden';
         optionBTN4.style.visibility='hidden';
+
+        instruction.innerText = "Olet valmis! Paina LOPETA lopettaaksesi!";
+
         SetEndVisibility("show");
     }
 }
