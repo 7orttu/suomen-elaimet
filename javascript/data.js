@@ -118,7 +118,7 @@ const scenes = [
         name: "end",
         image: "./" + mainImagePath,
         text: "Hyvä! Luit kaikki faktat! Haluatko mennä kysymyksiin?",
-        buttonText: ["B", "N"],
+        buttonText: ["PALAA", "None"],
         creditText: mainBearCredit
     }
 ];
