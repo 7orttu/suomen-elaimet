@@ -36,6 +36,7 @@ function DisplayScene(sceneIndex) {
         animalText.style.fontSize = '35px';
     }
     // --- // --- //
+    // --- // --- //
 
     if (currentScene.name === 'end') {
         SetControlsVisibility("show-end");
@@ -46,6 +47,7 @@ function DisplayScene(sceneIndex) {
         SetControlsVisibility("show-control")
     }
     // --- // --- //
+    // --- // --- //
     
     if (currentSceneIndex % 2 == 1) {
         textContainer.style.backgroundColor = "white";
@@ -53,6 +55,8 @@ function DisplayScene(sceneIndex) {
     else {
         textContainer.style.backgroundColor = "transparent";
     }
+    // --- // --- //
+    // --- // --- //
 }
 
 function SetControlsVisibility(choice) {
