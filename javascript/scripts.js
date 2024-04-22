@@ -39,12 +39,12 @@ function DisplayScene(sceneIndex) {
     // --- // --- //
 
     if (currentScene.name === 'end') {
-        SetControlsVisibility("show-end");
-        SetControlsVisibility("hide-control")
+        SetFirstPartEndControlsVisibility("show-end");
+        SetFirstPartEndControlsVisibility("hide-control")
     } 
     else {
-        SetControlsVisibility("hide-end");
-        SetControlsVisibility("show-control")
+        SetFirstPartEndControlsVisibility("hide-end");
+        SetFirstPartEndControlsVisibility("show-control")
     }
     // --- // --- //
     // --- // --- //
@@ -59,18 +59,8 @@ function DisplayScene(sceneIndex) {
     // --- // --- //
 }
 
-function SetControlsVisibility(choice) {
+function SetFirstPartEndControlsVisibility(choice) {
     var end = document.getElementById('end-container');
-    var control = document.getElementById('control-container');
-
-    if (choice === "hide-control") {
-        control.style.visibility = 'hidden';
-        control.disabled = true;
-    }
-    else if (choice === "show-control") {
-        control.style.visibility = 'visible';
-        control.disabled = false;
-    }
 
     if (choice === "hide-end") {
         end.style.visibility = 'hidden';
