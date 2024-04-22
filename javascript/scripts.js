@@ -29,12 +29,22 @@ function DisplayScene(sceneIndex) {
 
     if (currentScene.name === 'main') {
         prevBtn.disabled = true;
+        prevBtn.style.visibility ='hidden';
+
+        prevBtn.style.right = '-22%';
+        prevBtn.style.bottom = '-80px';
+
+        nextBtn.style.right = '13%';
+        nextBtn.style.bottom = '-10px';
+
         animalText.style.fontSize = '70px';
 
         instructionText.innerText = "Paina ALOITA nappia";
     } 
     else {
         prevBtn.disabled = false;
+        prevBtn.style.visibility='visible';
+
         animalText.style.fontSize = '35px';
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
@@ -49,11 +59,28 @@ function DisplayScene(sceneIndex) {
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
 
+        nextBtn.disabled = true;
+        nextBtn.style.visibility = 'hidden';
+
+        animalText.style.color = 'blue';
+        animalText.style.opacity = '100%';
+        textContainer.style.opacity = '100%';
+
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
     } 
     else {
         SetFirstPartEndControlsVisibility("hide-end");
         SetFirstPartEndControlsVisibility("show-control")
+
+        restartBtn.innerText = "";
+        continueBtn.innerText = "";
+
+        nextBtn.disabled = false;
+        nextBtn.style.visibility = 'visible';
+
+        animalText.style.color = 'black';
+        animalText.style.opacity = '100%';
+        textContainer.style.opacity = '75%';
     }
     // --- // --- //
     // --- // --- //
@@ -61,6 +88,10 @@ function DisplayScene(sceneIndex) {
     if (currentSceneIndex % 2 == 1) {
         textContainer.style.backgroundColor = "white";
     } 
+    else if (currentScene.name === "end") {
+        textContainer.style.backgroundColor = "white";
+        textContainer.style.opacity = '80%';
+    }
     else {
         textContainer.style.backgroundColor = "transparent";
     }
