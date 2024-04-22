@@ -72,7 +72,7 @@ function SetControlsVisibility(choice) {
     }
 }
 
-function RedirectQA() {
+function RedirectToQuestions() {
     window.location.href = './pages/qa.html';
 }
 
@@ -95,7 +95,7 @@ document.getElementById('restart-btn').addEventListener('click', function() {   
 });
 
 document.getElementById('continue-btn').addEventListener('click', function() {  // CONTINUE
-    RedirectQA();
+    RedirectToQuestions();
 });
 
 

@@ -74,7 +74,7 @@ optionButtons.forEach((button, index) => {
 });
 
 
-function RedirectIndex() {
+function RedirectToIndex() {
     window.location.href = '../index.html';
 }
 
@@ -91,7 +91,7 @@ function SetEndVisibility(choice) {
 
 
 document.getElementById('end-btn').addEventListener('click', function() {
-    RedirectIndex();
+    RedirectToIndex();
 });
 
 // DOM
