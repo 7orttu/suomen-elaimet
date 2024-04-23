@@ -1,5 +1,4 @@
 import { qaQuestions } from '../javascript/data.js';
-// import { scenes } from '../javascript/data.js';
 
 
 
