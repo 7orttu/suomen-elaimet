@@ -30,7 +30,6 @@ function DisplayScene(sceneIndex) {
     if (currentScene.name === 'main') {
         prevBtn.disabled = true;
         prevBtn.style.visibility ='hidden';
-
         prevBtn.style.right = '-22%';
         prevBtn.style.bottom = '-80px';
 
@@ -46,6 +45,7 @@ function DisplayScene(sceneIndex) {
         prevBtn.style.visibility='visible';
 
         animalText.style.fontSize = '35px';
+        animalText.style.color = 'black';
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     }
@@ -99,6 +99,7 @@ function DisplayScene(sceneIndex) {
     // --- // --- //
 }
 
+// Sets the end-containers visibility which contains the restart and continue buttons.
 function SetFirstPartEndControlsVisibility(choice) {
     var end = document.getElementById('end-container');
 
@@ -115,6 +116,8 @@ function SetFirstPartEndControlsVisibility(choice) {
 function RedirectToQuestions() {
     window.location.href = './pages/qa.html';
 }
+
+
 
 
 // EVENT LISTENERS
