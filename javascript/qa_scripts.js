@@ -36,6 +36,15 @@ function SetQuestion(questionIndex) {
 };
 
 
+function SetOptions() {
+    qaQuestions.forEach((question, index) => {
+        for (let i = 0; i < question.options.length; i++) {
+            optionButtons[index * question.options.length + i].textContent = question.options[i];
+        }
+    });
+};
+
+
 function NextQuestion() {
     currentQuestionIndex++;
 
@@ -56,24 +65,19 @@ function NextQuestion() {
     }
 }
 
-function SetOptions() {
-    qaQuestions.forEach((question, index) => {
-        for (let i = 0; i < question.options.length; i++) {
-            optionButtons[index * question.options.length + i].textContent = question.options[i];
-        }
-    });
-};
 
 optionButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
 
         const currentQuestion = qaQuestions[currentQuestionIndex];
-        if (index === currentQuestion.correctAnswerIndex) {
 
+        if (index === currentQuestion.correctAnswerIndex) {
             NextQuestion();
         } 
         else {
             alert('Väärä vastaus, yritä uudestaan.');
+
+
         }
     });
 });
