@@ -103,7 +103,7 @@ function DisplayScene(sceneIndex) {
 
 // Sets the end-containers visibility which contains the restart and continue buttons.
 function SetFirstPartEndControlsVisibility(choice) {
-    var end = document.getElementById('end-container');
+    var end = document.getElementById('fpartend-container');
 
     if (choice === "hide-end") {
         end.style.visibility = 'hidden';
