@@ -1,12 +1,16 @@
 
-const mainImagePath = "images/resized-pictures/main.jpg";
-const wolfImagePath = "images/resized-pictures/wolf.jpg";
-const foxImagePath = "images/resized-pictures/fox.jpg";
-const bearImagePath = "images/resized-pictures/bear.jpg";
-const roedeerImagePath = "images/resized-pictures/roedeer.jpg";
-const mooseImagePath = "images/resized-pictures/moose.jpg";
-const beaverImagePath = "images/resized-pictures/beaver.jpg";
+// IMAGES
+const mainImagePath = "images/main.jpg";
+const instructionPath = "images/bear-instruction.jpg";
+const fPartEndPath = "images/bear-fpartend.jpg";
+const wolfImagePath = "images/wolf.jpg";
+const foxImagePath = "images/fox.jpg";
+const bearImagePath = "images/bear.jpg";
+const roedeerImagePath = "images/roedeer.jpg";
+const mooseImagePath = "images/moose.jpg";
+const beaverImagePath = "images/beaver.jpg";
 
+// AUTHOR CREDITS
 const mainBearCredit = "LTapsaH, Pixabay";
 const wolfCredit = "christels, Pixabay";
 const foxCredit = "azazelok, Pixabay";
@@ -25,7 +29,7 @@ const scenes = [
     },
     {
         name: "ohjeet",
-        image: "./" + mainImagePath,
+        image: "./" + instructionPath,
         text: "OHJEET \n Paina 'seuraava' ja 'edellinen' nappeja vaihtaaksesi ruutuja! \n Ylävasemmalla on myös nappula, josta voit nähdä ohjeet mikäli niitä tarvitset.",
         buttonText: ["TAKAISIN", "JATKA"],
         creditText: mainBearCredit
