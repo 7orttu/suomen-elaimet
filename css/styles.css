@@ -42,7 +42,7 @@
     z-index: 1;
     font-size: 10px; /*DisplayScene() modifies this*/
     margin-top: 50px;
-    opacity: 75%;
+    opacity: 70%;
 }
 #image-container {
     width: 700px;
@@ -103,7 +103,7 @@
     padding-left: 25px;
 
     font-size: 100px;
-    color: black;
+    color: blue;
 }
 #instruction-icon:hover + #instruction {
     opacity: 1;
@@ -136,13 +136,15 @@
 .buttons {
     width: 250px;
     height: 70px;
+    position: relative;
+    bottom: 25px;
+
     background-image: linear-gradient(to right, rgb(57, 92, 0), rgb(26, 192, 40));
-    margin: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 35px;
     color: white;
-    position: relative;
-    bottom: 25px;
+    
+    margin: 20px;
     z-index: 2;
 }
 .optionButtons {
