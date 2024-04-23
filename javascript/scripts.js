@@ -37,6 +37,8 @@ function DisplayScene(sceneIndex) {
         nextBtn.style.bottom = '-10px';
 
         animalText.style.fontSize = '70px';
+        animalText.style.color = 'blue';
+        animalText.style.textShadow = '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000';
 
         instructionText.innerText = "Paina ALOITA nappia";
     } 
@@ -46,6 +48,7 @@ function DisplayScene(sceneIndex) {
 
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
+        animalText.style.textShadow = '0 0 0';
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     }
@@ -78,7 +81,6 @@ function DisplayScene(sceneIndex) {
         nextBtn.disabled = false;
         nextBtn.style.visibility = 'visible';
 
-        animalText.style.color = 'black';
         animalText.style.opacity = '100%';
         textContainer.style.opacity = '75%';
     }
