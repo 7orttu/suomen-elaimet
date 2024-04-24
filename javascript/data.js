@@ -1,8 +1,8 @@
 
 // IMAGES
 const mainImagePath = "images/main.jpg";
-const instructionPath = "images/bear-instruction.jpg";
-const fPartEndPath = "images/bear-fpartend.jpg";
+const instructionImagePath = "images/bear-instruction.jpg";
+const fPartEndImagePath = "images/bear-fpartend.jpg";
 const wolfImagePath = "images/wolf.jpg";
 const foxImagePath = "images/fox.jpg";
 const bearImagePath = "images/bear.jpg";
@@ -29,10 +29,10 @@ const scenes = [
     },
     {
         name: "ohjeet",
-        image: "./" + instructionPath,
+        image: "./" + instructionImagePath,
         text: "OHJEET \n Paina 'seuraava' ja 'edellinen' nappeja vaihtaaksesi ruutuja! \n Ylävasemmalla on myös nappula, josta voit nähdä ohjeet mikäli niitä tarvitset.",
         buttonText: ["TAKAISIN", "JATKA"],
-        creditText: mainBearCredit
+        creditText: ""
     },
     {   // preview
         name:"Susi-pre",
@@ -120,10 +120,10 @@ const scenes = [
     },
     {
         name: "end",
-        image: "./" + mainImagePath,
+        image: "./" + fPartEndImagePath,
         text: "Hyvä! Luit kaikki faktat! Haluatko mennä kysymyksiin?",
         buttonText: ["PALAA", "None"],
-        creditText: mainBearCredit
+        creditText: ""
     }
 ];
 
