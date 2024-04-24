@@ -3,6 +3,8 @@
     width: 700px;
     height: 650px;
     overflow: hidden;
+
+    border-radius: 10px;
 }
 
 
@@ -15,4 +17,6 @@ body,  html {
     align-items: center;
     height: 100vh;
     background-color: #ffffff;
+
+    border-radius: 10px;
 }
