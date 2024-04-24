@@ -47,6 +47,11 @@ function SetOptions() {
 function NextQuestion() {
     currentQuestionIndex++;
 
+    enableOptionButtons();
+    optionButtons.forEach(function(optionButton) {
+        optionButton.style.color = 'white';
+    });
+
     if (currentQuestionIndex < qaQuestions.length) {
         SetQuestion(currentQuestionIndex);
     } 
@@ -67,12 +72,16 @@ optionButtons.forEach((button, index) => {
         const currentQuestion = qaQuestions[currentQuestionIndex];
 
         if (index === currentQuestion.correctAnswerIndex) {
-            NextQuestion();
+            button.style.color = 'green';
+            disableOptionButtons();
+            setTimeout(NextQuestion, 2500);
         } 
         else {
-            alert('Väärä vastaus, yritä uudestaan.');
-
-
+            optionButtons.forEach(function(optionButton) {
+                optionButton.style.color = 'red';
+                disableOptionButtons();
+            });
+            setTimeout(NextQuestion, 2500);
         }
     });
 });
