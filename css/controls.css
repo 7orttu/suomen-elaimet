@@ -6,9 +6,26 @@
     bottom: 0;
     text-align: center;
 }
+
+
+#next-btn {
+    background-image: linear-gradient(to right, rgb(162, 212, 81), rgb(26, 192, 40));
+}
+#next-btn:hover {
+    scale: 1.1;
+}
 #prev-btn {
     width: 150px;
     height: 50px;
+
+    background-image: linear-gradient(to right, rgb(141, 141, 141), rgb(233, 0, 0));
+    font-size: 20px;
+}
+#prev-btn:hover {
+    scale: 1.1;
+}
+
+
 }
 #restart-btn {
     font-size: 35px;
@@ -21,7 +38,6 @@
     position: relative;
     bottom: 25px;
 
-    background-image: linear-gradient(to right, rgb(57, 92, 0), rgb(26, 192, 40));
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 35px;
     color: white;
