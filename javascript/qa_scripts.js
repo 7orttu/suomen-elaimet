@@ -53,10 +53,6 @@ function NextQuestion() {
     else {
         questionContainer.style.opacity=0;
 
-        optionBTN1.style.visibility='hidden';
-        optionBTN2.style.visibility='hidden';
-        optionBTN3.style.visibility='hidden';
-        optionBTN4.style.visibility='hidden';
         disableOptionButtons();
         SetEndVisibility("show");
 
@@ -98,12 +94,29 @@ function disableOptionButtons() {
 
 function SetEndVisibility(choice) {
     if (choice == "hide") {
+        endBtn.disabled = true;
+        endTxt.disabled = true;
         endBtn.style.visibility='hidden';
         endTxt.style.visibility='hidden';
+
+        enableOptionButtons();
+
+        optionBtnF.style.visibility = 'visible';
+        optionBtnS.style.visibility = 'visible';
+        optionBtnT.style.visibility = 'visible';
+        optionBtnFO.style.visibility = 'visible';
     }
     else if (choice == "show") {
+        endBtn.disabled = false;
+        endTxt.disabled = false;
         endBtn.style.visibility='visible';
         endTxt.style.visibility='visible';
+
+        disableOptionButtons();
+        optionBtnF.style.visibility = 'hidden';
+        optionBtnS.style.visibility = 'hidden';
+        optionBtnT.style.visibility = 'hidden';
+        optionBtnFO.style.visibility = 'hidden';
     }
 }
 
