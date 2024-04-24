@@ -26,9 +26,18 @@
 }
 
 
+#continue-btn {
+    background-image: linear-gradient(to right, rgb(162, 212, 81), rgb(26, 192, 40));
+}
+#continue-btn:hover {
+    scale: 1.1;
 }
 #restart-btn {
     font-size: 35px;
+    background-image: linear-gradient(to right, rgb(88, 88, 88), rgb(0, 128, 233));
+}
+#restart-btn:hover {
+    scale: 1.1;
 }
 
 
