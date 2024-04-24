@@ -57,10 +57,10 @@ function NextQuestion() {
         optionBTN2.style.visibility='hidden';
         optionBTN3.style.visibility='hidden';
         optionBTN4.style.visibility='hidden';
+        disableOptionButtons();
+        SetEndVisibility("show");
 
         instruction.innerText = "Olet valmis! Paina LOPETA lopettaaksesi!";
-
-        SetEndVisibility("show");
     }
 }
 
@@ -83,6 +83,17 @@ optionButtons.forEach((button, index) => {
 
 function RedirectToIndex() {
     window.location.href = '../index.html';
+function enableOptionButtons() {
+    optionBtnF.disabled = false;
+    optionBtnS.disabled = false;
+    optionBtnT.disabled = false;
+    optionBtnFO.disabled = false;
+}
+function disableOptionButtons() {
+    optionBtnF.disabled = true;
+    optionBtnS.disabled = true;
+    optionBtnT.disabled = true;
+    optionBtnFO.disabled = true;
 }
 
 function SetEndVisibility(choice) {
