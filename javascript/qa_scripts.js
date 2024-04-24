@@ -1,7 +1,6 @@
 import { qaQuestions } from '../javascript/data.js';
 
 
-
 let questionContainer = document.getElementById('question-container');
 let questionText = document.getElementById('question');
 let imageContainer = document.getElementById('image-container');
@@ -9,15 +8,16 @@ let animalImage = document.getElementById('animal-image');
 let imageCredit = document.getElementById('image-credit');
 let instruction = document.getElementById('instruction');
 
-let optionBTN1 = document.getElementById('option1');
-let optionBTN2 = document.getElementById('option2');
-let optionBTN3 = document.getElementById('option3');
-let optionBTN4 = document.getElementById('option4');
+let optionBtnF = document.getElementById('option1');
+let optionBtnS = document.getElementById('option2');
+let optionBtnT = document.getElementById('option3');
+let optionBtnFO = document.getElementById('option4');
 
 let endTxt = document.getElementById('end-txt');
 let endBtn = document.getElementById('end-btn');
 
 const optionButtons = document.querySelectorAll('.optionButtons');
+
 
 let currentQuestionIndex = 0;
 
@@ -80,7 +80,6 @@ optionButtons.forEach((button, index) => {
         }
     });
 });
-
 
 function RedirectToIndex() {
     window.location.href = '../index.html';
