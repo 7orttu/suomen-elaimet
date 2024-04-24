@@ -86,8 +86,6 @@ optionButtons.forEach((button, index) => {
     });
 });
 
-function RedirectToIndex() {
-    window.location.href = '../index.html';
 function enableOptionButtons() {
     optionBtnF.disabled = false;
     optionBtnS.disabled = false;
@@ -127,6 +125,9 @@ function SetEndVisibility(choice) {
         optionBtnT.style.visibility = 'hidden';
         optionBtnFO.style.visibility = 'hidden';
     }
+}
+function RedirectToIndex() {
+    window.location.href = '../index.html';
 }
 
 
