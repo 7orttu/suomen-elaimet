@@ -112,6 +112,37 @@ function SetFirstPartEndControlsVisibility(choice) {
         end.disabled = false;
     }
 }
+function ShowNextButton() {
+    nextBtn.disabled = false;
+    nextBtn.style.visibility = 'visible';
+    nextBtn.style.right = '13%';
+    nextBtn.style.bottom = '-10px';
+}
+function HideNextButton() {
+    nextBtn.disabled = true;
+    nextBtn.style.visibility = 'hidden';
+    nextBtn.style.right = '13%';
+    nextBtn.style.bottom = '-10px';
+}
+function ShowPrevButton() {
+    prevBtn.disabled = false;
+    prevBtn.style.visibility = 'visible';
+    prevBtn.style.right = '-22%';
+    prevBtn.style.bottom = '-80px';
+}
+function HidePrevButton() {
+    prevBtn.disabled = true;
+    prevBtn.style.visibility = 'hidden';
+    prevBtn.style.right = '-22%';
+    prevBtn.style.bottom = '-80px';
+}
+
+
+
+
+
+
+
 
 function RedirectToQuestions() {
     window.location.href = './pages/qa.html';
