@@ -57,7 +57,6 @@ function DisplayScene(sceneIndex) {
 
     if (currentScene.name === 'end') {
         SetFirstPartEndControlsVisibility("show-end");
-        SetFirstPartEndControlsVisibility("hide-control")
 
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
@@ -67,13 +66,11 @@ function DisplayScene(sceneIndex) {
 
         animalText.style.color = 'blue';
         animalText.style.opacity = '100%';
-        textContainer.style.opacity = '100%';
 
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
     } 
     else {
         SetFirstPartEndControlsVisibility("hide-end");
-        SetFirstPartEndControlsVisibility("show-control")
 
         restartBtn.innerText = "";
         continueBtn.innerText = "";
@@ -92,7 +89,7 @@ function DisplayScene(sceneIndex) {
     } 
     else if (currentScene.name === "end") {
         textContainer.style.backgroundColor = "white";
-        textContainer.style.opacity = '80%';
+        textContainer.style.opacity = '70%';
     }
     else {
         textContainer.style.backgroundColor = "transparent";
