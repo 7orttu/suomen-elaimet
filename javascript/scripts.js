@@ -63,7 +63,7 @@ function DisplayScene(sceneIndex) {
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
 
-        instructionText.innerText = "Tämä on ohje nappula!";
+        instructionText.innerText = "Tämä on ohje nappula! Paina JATKA niin voit jatkaa faktoihin!";
     }
     else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
         ElementEnabler(fPartEnd, true, "hidden");
@@ -78,6 +78,8 @@ function DisplayScene(sceneIndex) {
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
+
+        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     } 
     else if (currentScene.name === "Susi" || currentScene.name === "Kettu" || currentScene.name === "Karhu" || currentScene.name === "Metsäkauris" || currentScene.name === "Hirvi" || currentScene.name === "Majava") {
         ElementEnabler(fPartEnd, true, "hidden");
@@ -92,6 +94,8 @@ function DisplayScene(sceneIndex) {
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
+
+        "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     }
     else if (currentScene.name === "end") {
         ElementEnabler(fPartEnd, false, "visible");
