@@ -32,6 +32,10 @@ function DisplayScene(sceneIndex) {
         HidePrevButton();
         ShowNextButton();
 
+        ElementLocationModifier(textContainer, "50px")
+        ElementSizeModifier(textContainer, "700px")
+
+        animalText.style.opacity = '100%';
         animalText.style.fontSize = '70px';
         animalText.style.color = '#1b4bab';
         animalText.style.textShadow = '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000';
@@ -46,13 +50,13 @@ function DisplayScene(sceneIndex) {
         ShowNextButton();
         ShowPrevButton();
 
-        nextBtn.style.right = '13%';
-        nextBtn.style.bottom = '-10px';
-
-        animalText.style.fontSize = '35px';
+        animalText.style.fontSize = '30px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
 
+
+        ElementLocationModifier(textContainer, "75px", "", "15px")
+        ElementSizeModifier(textContainer, "250px")
         textContainer.style.backgroundColor = 'white';
 
         instructionText.innerText = "Tämä on ohje nappula!";
