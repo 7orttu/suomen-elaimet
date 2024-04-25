@@ -137,6 +137,16 @@ function HidePrevButton() {
     prevBtn.style.right = '-22%';
     prevBtn.style.bottom = '-80px';
 }
+function ElementLocationModifier(element, top, bottom, left, right) {
+    element.style.top = top;
+    element.style.bottom = bottom;
+    element.style.left = left;
+    element.style.right = right;
+}
+function ElementSizeModifier(element, width, height) {
+    element.style.width = width;
+    element.style.height = height;
+}
 
 
 
