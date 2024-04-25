@@ -104,42 +104,7 @@ function DisplayScene(sceneIndex) {
     // --- // --- //
 }
 
-// Sets the "end-container" hidden or visible.
-function SetFirstPartEndControlsVisibility(choice) {
-    var end = document.getElementById('fpartend-container');
 
-    if (choice === "hide-end") {
-        end.style.visibility = 'hidden';
-        end.disabled = true;
-    } 
-    else if (choice === "show-end") {
-        end.style.visibility = 'visible';
-        end.disabled = false;
-    }
-}
-function ShowNextButton() {
-    nextBtn.disabled = false;
-    nextBtn.style.visibility = 'visible';
-    nextBtn.style.right = '13%';
-    nextBtn.style.bottom = '-10px';
-}
-function HideNextButton() {
-    nextBtn.disabled = true;
-    nextBtn.style.visibility = 'hidden';
-    nextBtn.style.right = '13%';
-    nextBtn.style.bottom = '-10px';
-}
-function ShowPrevButton() {
-    prevBtn.disabled = false;
-    prevBtn.style.visibility = 'visible';
-    prevBtn.style.right = '-22%';
-    prevBtn.style.bottom = '-80px';
-}
-function HidePrevButton() {
-    prevBtn.disabled = true;
-    prevBtn.style.visibility = 'hidden';
-    prevBtn.style.right = '-22%';
-    prevBtn.style.bottom = '-80px';
 }
 function ElementLocationModifier(element, top, bottom, left, right) {
     element.style.top = top;
