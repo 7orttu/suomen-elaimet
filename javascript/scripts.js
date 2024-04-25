@@ -15,6 +15,8 @@ let languageContainer = document.getElementById('language-container');
 let imageCredit = document.getElementById('image-credit');
 let instructionText = document.getElementById('instruction')
 
+let fPartEnd = document.getElementById('fpartend-container');
+
 
 let currentSceneIndex = 0;
 
@@ -28,80 +30,91 @@ function DisplayScene(sceneIndex) {
     imageCredit.innerText = currentScene.creditText;
 
     if (currentScene.name === "main") {
-        SetFirstPartEndControlsVisibility("hide-end");
-        HidePrevButton();
-        ShowNextButton();
+        ElementEnabler(fPartEnd, true, "hidden");
 
-        ElementLocationModifier(textContainer, "50px")
-        ElementSizeModifier(textContainer, "700px")
+        ElementEnabler(prevBtn, true, "hidden");
+        ElementEnabler(nextBtn, false, "visible")
 
-        animalText.style.opacity = '100%';
+        ElementLocationModifier(nextBtn, "", "-10px", "", "13%");
+        ElementLocationModifier(prevBtn, "", "-80px", "", "-22%");
+
+        ElementLocationModifier(textContainer, "50px");
+        ElementSizeModifier(textContainer, "700px");
+        textContainer.style.backgroundColor = 'transparent';
+        textContainer.style.opacity = '100%';
+
         animalText.style.fontSize = '70px';
         animalText.style.color = '#1b4bab';
         animalText.style.textShadow = '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000';
 
-        textContainer.style.backgroundColor = 'transparent';
-        textContainer.style.opacity = '100%';
-
         instructionText.innerText = "Paina ALOITA nappia";
     } 
     else if (currentScene.name === "ohjeet") {
-        SetFirstPartEndControlsVisibility("hide-end");
-        ShowNextButton();
-        ShowPrevButton();
+        ElementEnabler(fPartEnd, true, "hidden");
+
+        ElementEnabler(prevBtn, false, "visible");
+        ElementEnabler(nextBtn, false, "visible");
+
+        ElementLocationModifier(textContainer, "75px", "", "15px");
+        ElementSizeModifier(textContainer, "250px");
+        textContainer.style.backgroundColor = 'white';
 
         animalText.style.fontSize = '30px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
 
-
-        ElementLocationModifier(textContainer, "75px", "", "15px")
-        ElementSizeModifier(textContainer, "250px")
-        textContainer.style.backgroundColor = 'white';
-
         instructionText.innerText = "Tämä on ohje nappula!";
     }
     else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
-        SetFirstPartEndControlsVisibility("hide-end");
-        ShowNextButton();
-        ShowPrevButton();
+        ElementEnabler(fPartEnd, true, "hidden");
+
+        ElementEnabler(prevBtn, false, "visible");
+        ElementEnabler(nextBtn, false, "visible");
+
+        ElementLocationModifier(textContainer, "50px", "", "0px");
+        ElementSizeModifier(textContainer, "700px");
+        textContainer.style.backgroundColor = 'transparent';
 
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
-
-        textContainer.style.backgroundColor = 'transparent';
     } 
     else if (currentScene.name === "Susi" || currentScene.name === "Kettu" || currentScene.name === "Karhu" || currentScene.name === "Metsäkauris" || currentScene.name === "Hirvi" || currentScene.name === "Majava") {
-        SetFirstPartEndControlsVisibility("hide-end");
-        ShowNextButton();
-        ShowPrevButton();
+        ElementEnabler(fPartEnd, true, "hidden");
+
+        ElementEnabler(prevBtn, false, "visible");
+        ElementEnabler(nextBtn, false, "visible");
+
+        ElementLocationModifier(textContainer, "50px", "", "0px");
+        ElementSizeModifier(textContainer, "700px");
+        textContainer.style.backgroundColor = 'white';
 
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
-
-        textContainer.style.backgroundColor = 'white';
     }
     else if (currentScene.name === "end") {
-        SetFirstPartEndControlsVisibility("show-end");
-        HideNextButton();
+        ElementEnabler(fPartEnd, false, "visible");
+
+        ElementEnabler(prevBtn, false, "visible");
+        ElementEnabler(nextBtn, true, "hidden");
+
+        ElementLocationModifier(textContainer, "50px", "", "0px");
+        ElementSizeModifier(textContainer, "700px");
+        textContainer.style.backgroundColor = "white";
+        textContainer.style.opacity = '70%';
 
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
 
         animalText.style.color = 'blue';
         animalText.style.opacity = '100%';
-        textContainer.style.backgroundColor = "white";
-        textContainer.style.opacity = '70%';
 
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
     } 
     else {
 
     }
-    // --- // --- //
-    // --- // --- //
 }
 
 
