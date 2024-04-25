@@ -105,6 +105,9 @@ function DisplayScene(sceneIndex) {
 }
 
 
+function ElementEnabler(element, isdisabled, visibility) {
+    element.disabled = isdisabled;
+    element.style.visibility = visibility;
 }
 function ElementLocationModifier(element, top, bottom, left, right) {
     element.style.top = top;
@@ -116,7 +119,6 @@ function ElementSizeModifier(element, width, height) {
     element.style.width = width;
     element.style.height = height;
 }
-
 
 
 function RedirectToQuestions() {
