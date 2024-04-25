@@ -27,78 +27,79 @@ function DisplayScene(sceneIndex) {
     nextBtn.innerText = currentScene.buttonText[1];
     imageCredit.innerText = currentScene.creditText;
 
-    if (currentScene.name === 'main') {
-        prevBtn.disabled = true;
-        prevBtn.style.visibility ='hidden';
-        prevBtn.style.right = '-22%';
-        prevBtn.style.bottom = '-80px';
-
-        nextBtn.style.right = '13%';
-        nextBtn.style.bottom = '-10px';
+    if (currentScene.name === "main") {
+        SetFirstPartEndControlsVisibility("hide-end");
+        HidePrevButton();
+        ShowNextButton();
 
         animalText.style.fontSize = '70px';
         animalText.style.color = 'blue';
         animalText.style.textShadow = '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000';
 
+        textContainer.style.backgroundColor = 'transparent';
+
         instructionText.innerText = "Paina ALOITA nappia";
     } 
-    else {
-        prevBtn.disabled = false;
-        prevBtn.style.visibility='visible';
+    else if (currentScene.name === "ohjeet") {
+        SetFirstPartEndControlsVisibility("hide-end");
+        ShowNextButton();
+        ShowPrevButton();
+
+        nextBtn.style.right = '13%';
+        nextBtn.style.bottom = '-10px';
 
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
 
-        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
-    }
-    // --- // --- //
-    // --- // --- //
+        textContainer.style.backgroundColor = 'white';
 
-    if (currentScene.name === 'end') {
+        instructionText.innerText = "Tämä on ohje nappula!";
+    }
+    else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
+        SetFirstPartEndControlsVisibility("hide-end");
+        ShowNextButton();
+        ShowPrevButton();
+
+        animalText.style.fontSize = '35px';
+        animalText.style.color = 'black';
+        animalText.style.textShadow = '0 0 0';
+
+        textContainer.style.backgroundColor = 'transparent';
+    } 
+    else if (currentScene.name === "Susi" || currentScene.name === "Kettu" || currentScene.name === "Karhu" || currentScene.name === "Metsäkauris" || currentScene.name === "Hirvi" || currentScene.name === "Majava") {
+        SetFirstPartEndControlsVisibility("hide-end");
+        ShowNextButton();
+        ShowPrevButton();
+
+        animalText.style.fontSize = '35px';
+        animalText.style.color = 'black';
+        animalText.style.textShadow = '0 0 0';
+
+        textContainer.style.backgroundColor = 'white';
+    }
+    else if (currentScene.name === "end") {
         SetFirstPartEndControlsVisibility("show-end");
+        HideNextButton();
 
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
 
-        nextBtn.disabled = true;
-        nextBtn.style.visibility = 'hidden';
-
         animalText.style.color = 'blue';
         animalText.style.opacity = '100%';
+        textContainer.style.backgroundColor = "white";
+        textContainer.style.opacity = '70%';
 
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
     } 
     else {
-        SetFirstPartEndControlsVisibility("hide-end");
 
-        restartBtn.innerText = "";
-        continueBtn.innerText = "";
-
-        nextBtn.disabled = false;
-        nextBtn.style.visibility = 'visible';
-
-        animalText.style.opacity = '100%';
-        textContainer.style.opacity = '75%';
-    }
-    // --- // --- //
-    // --- // --- //
-    
-    if (currentSceneIndex % 2 == 1) {
-        textContainer.style.backgroundColor = "white";
-    } 
-    else if (currentScene.name === "end") {
-        textContainer.style.backgroundColor = "white";
-        textContainer.style.opacity = '70%';
-    }
-    else {
-        textContainer.style.backgroundColor = "transparent";
     }
     // --- // --- //
     // --- // --- //
 }
 
-// Sets the end-containers visibility which contains the restart and continue buttons.
+// Sets the "end-container" hidden or visible.
 function SetFirstPartEndControlsVisibility(choice) {
     var end = document.getElementById('fpartend-container');
 
@@ -133,8 +134,6 @@ document.getElementById('prev-btn').addEventListener('click', function() {  // P
 
 document.getElementById('restart-btn').addEventListener('click', function() {   // RESTART
     window.location.reload();
-    // currentSceneIndex = 0;
-    // DisplayScene(currentSceneIndex);
 });
 
 document.getElementById('continue-btn').addEventListener('click', function() {  // CONTINUE
