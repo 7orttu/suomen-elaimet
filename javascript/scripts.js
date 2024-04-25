@@ -33,7 +33,7 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(fPartEnd, true, "hidden");
 
         ElementEnabler(prevBtn, true, "hidden");
-        ElementEnabler(nextBtn, false, "visible")
+        ElementEnabler(nextBtn, false, "visible");
 
         ElementLocationModifier(nextBtn, "", "-10px", "", "13%");
         ElementLocationModifier(prevBtn, "", "-80px", "", "-22%");
