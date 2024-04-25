@@ -6,7 +6,7 @@
     z-index: 9;
 }
 #instruction {
-    position: absolute;
+    position: inherit;
     top: 0px;
     left: 140px;
 
@@ -23,7 +23,7 @@
     padding-left: 25px;
 
     font-size: 100px;
-    color: blue;
+    color: #1b4bab;
 }
 #instruction-icon:hover + #instruction {
     opacity: 1;

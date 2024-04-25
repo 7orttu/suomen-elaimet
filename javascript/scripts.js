@@ -33,10 +33,11 @@ function DisplayScene(sceneIndex) {
         ShowNextButton();
 
         animalText.style.fontSize = '70px';
-        animalText.style.color = 'blue';
+        animalText.style.color = '#1b4bab';
         animalText.style.textShadow = '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000';
 
         textContainer.style.backgroundColor = 'transparent';
+        textContainer.style.opacity = '100%';
 
         instructionText.innerText = "Paina ALOITA nappia";
     } 
@@ -139,16 +140,9 @@ function HidePrevButton() {
 
 
 
-
-
-
-
-
 function RedirectToQuestions() {
     window.location.href = './pages/qa.html';
 }
-
-
 
 
 // EVENT LISTENERS
