@@ -5,6 +5,7 @@ let nextBtn = document.getElementById('next-btn');
 let restartBtn = document.getElementById('restart-btn');
 let continueBtn = document.getElementById('continue-btn');
 
+let scene = document.getElementById('scene');
 let animalImage = document.getElementById('animal-image');
 let animalText = document.getElementById('animal-text');
 let instructionText = document.getElementById('instruction')
@@ -22,6 +23,7 @@ function DisplayScene(sceneIndex) {
     const currentScene = scenes[sceneIndex];
 
     animalImage.src = currentScene.image;
+    scene.style.backgroundImage = "url('" + currentScene.bgImage + "')";
     animalText.innerText = currentScene.text;
     prevBtn.innerText = currentScene.buttonText[0];
     nextBtn.innerText = currentScene.buttonText[1];
@@ -88,6 +90,10 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "50px", "", "0px");
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = 'white';
+
+        ElementLocationModifier(animalImage, "0px");
+        ElementSizeModifier(animalImage, "300px", "250px")
+        imageContainer.style.textAlign = 'center';
 
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
