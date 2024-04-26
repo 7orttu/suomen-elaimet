@@ -2,19 +2,17 @@ import { scenes } from '../javascript/data.js';
 
 let prevBtn = document.getElementById('prev-btn');
 let nextBtn = document.getElementById('next-btn');
-
 let restartBtn = document.getElementById('restart-btn');
 let continueBtn = document.getElementById('continue-btn');
 
 let animalImage = document.getElementById('animal-image');
 let animalText = document.getElementById('animal-text');
+let instructionText = document.getElementById('instruction')
+let imageCredit = document.getElementById('image-credit');
+
 let textContainer = document.getElementById('text-container');
 let imageContainer = document.getElementById('image-container');
-
 let languageContainer = document.getElementById('language-container');
-let imageCredit = document.getElementById('image-credit');
-let instructionText = document.getElementById('instruction')
-
 let fPartEnd = document.getElementById('fpartend-container');
 
 
