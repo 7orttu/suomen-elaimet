@@ -51,7 +51,7 @@ const scenes = [
     {
         name: "Susi",
         image: "./" + wolfImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + lawnBGT,
         text: "SUSI \n Tiesitkö, että susi on yöeläin? Tämä tarkoittaa että ne liikkuvat pääosin öisin ja hämärällä. Sudet myös saalistavat usein yöllä.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: wolfCredit
@@ -83,7 +83,7 @@ const scenes = [
     {
         name: "Karhu",
         image: "./" + bearImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + lawnBGS,
         text: "KARHU \n Tiesitkö, että karhu ei ole ainoastaan Suomen suurin petoeläin, vaan koko Euroopan! \n Karhujen näköaisti on huono, mutta niiden hajuaisti on hyvin kehittynyt.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: bearCredit
@@ -115,7 +115,7 @@ const scenes = [
     {
         name: "Hirvi",
         image: "./" + mooseImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + lawnBGT,
         text: "HIRVI \n Aikuinen hirvi voi painaa huimat 800 kilogrammaa, se on jopa noin kolme moottoripyörää! Yleensä ne kuitenkin painavat nlähemmäksi 500 kilogrammaa. \n Hirvet myös aiheuttavat paljon metsävahinkoja ja niiden korvaus maksaa paljon.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: mooseCredit
@@ -131,7 +131,7 @@ const scenes = [
     {
         name: "Majava",
         image: "./" + beaverImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + lawnBGT,
         text: "MAJAVA \n Tiesitkö, että majavat voivat elää jopa yli 20 vuotiaiksi?",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: beaverCredit

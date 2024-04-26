@@ -42,10 +42,13 @@ function DisplayScene(sceneIndex) {
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = 'transparent';
         textContainer.style.opacity = '100%';
-
         animalText.style.fontSize = '70px';
         animalText.style.color = '#1b4bab';
         animalText.style.textShadow = '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000';
+
+        ElementLocationModifier(animalImage, "0px");
+        ElementSizeModifier(animalImage, "700px", "650px")
+        imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Paina ALOITA nappia";
     } 
@@ -58,10 +61,13 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "75px", "", "15px");
         ElementSizeModifier(textContainer, "250px");
         textContainer.style.backgroundColor = 'white';
-
         animalText.style.fontSize = '30px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
+
+        ElementLocationModifier(animalImage, "0px");
+        ElementSizeModifier(animalImage, "700px", "650px")
+        imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Tämä on ohje nappula! Paina JATKA niin voit jatkaa faktoihin!";
     }
@@ -74,10 +80,13 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "50px", "", "0px");
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = 'transparent';
-
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
+
+        ElementLocationModifier(animalImage, "0px");
+        ElementSizeModifier(animalImage, "700px", "650px")
+        imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     } 
@@ -87,17 +96,16 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, false, "visible");
 
-        ElementLocationModifier(textContainer, "50px", "", "0px");
+        ElementLocationModifier(textContainer, "220px");
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = 'white';
-
-        ElementLocationModifier(animalImage, "0px");
-        ElementSizeModifier(animalImage, "300px", "250px")
-        imageContainer.style.textAlign = 'center';
-
-        animalText.style.fontSize = '35px';
+        animalText.style.fontSize = '22px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
+
+        ElementLocationModifier(animalImage, "0px");
+        ElementSizeModifier(animalImage, "380px", "260px")
+        imageContainer.style.textAlign = 'center';
 
         "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     }
@@ -107,16 +115,19 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, true, "hidden");
 
-        ElementLocationModifier(textContainer, "50px", "", "0px");
+        ElementLocationModifier(textContainer, "50px");
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = "white";
         textContainer.style.opacity = '70%';
+        animalText.style.color = 'blue';
+        animalText.style.opacity = '100%';
+
+        ElementLocationModifier(animalImage, "0px");
+        ElementSizeModifier(animalImage, "700px", "650px")
+        imageContainer.style.textAlign = 'center';
 
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
-
-        animalText.style.color = 'blue';
-        animalText.style.opacity = '100%';
 
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
     } 
