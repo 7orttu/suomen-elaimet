@@ -61,6 +61,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "75px", "", "15px");
         ElementSizeModifier(textContainer, "250px");
         textContainer.style.backgroundColor = 'white';
+        textContainer.style.opacity = '100%';
         animalText.style.fontSize = '25px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
@@ -80,6 +81,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "50px", "", "0px");
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = 'transparent';
+        textContainer.style.opacity = '0%';
         animalText.style.fontSize = '35px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
@@ -99,6 +101,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "220px");
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = 'white';
+        textContainer.style.opacity = '80%';
         animalText.style.fontSize = '22px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
@@ -118,7 +121,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "50px");
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = "white";
-        textContainer.style.opacity = '70%';
+        textContainer.style.opacity = '75%';
         animalText.style.color = 'blue';
         animalText.style.opacity = '100%';
 
