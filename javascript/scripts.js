@@ -61,7 +61,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "75px", "", "15px");
         ElementSizeModifier(textContainer, "250px");
         textContainer.style.backgroundColor = 'white';
-        animalText.style.fontSize = '30px';
+        animalText.style.fontSize = '25px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
 
