@@ -67,7 +67,7 @@ const scenes = [
     {
         name: "Kettu",
         image: "./" + foxImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + lawnBGT,
         text: "KETTU \n Noin 10% Suomen ketuista on 'hopeakettuja', niiden turkin väri vaihtelee hopeanvärisestä lähes mustaan.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: foxCredit
@@ -83,7 +83,7 @@ const scenes = [
     {
         name: "Karhu",
         image: "./" + bearImagePath,
-        bgImage: "./" + lawnBGS,
+        bgImage: "./" + lawnBGT,
         text: "KARHU \n Tiesitkö, että karhu ei ole ainoastaan Suomen suurin petoeläin, vaan koko Euroopan! \n Karhujen näköaisti on huono, mutta niiden hajuaisti on hyvin kehittynyt.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: bearCredit
@@ -99,7 +99,7 @@ const scenes = [
     {
         name: "Metsäkauris",
         image: "./" + roedeerImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + lawnBGT,
         text: "METSÄKAURIS \n Metsäkauriit ovat taitavia uimareita!",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: roedeerCredit
