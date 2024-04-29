@@ -126,9 +126,12 @@ function SetEndVisibility(choice) {
         optionBtnFO.style.visibility = 'hidden';
     }
 }
+
+/*
 function RedirectToIndex() {
     window.location.href = '../index.html';
 }
+*/
 
 
 document.getElementById('end-btn').addEventListener('click', function() {

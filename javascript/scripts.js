@@ -1,4 +1,5 @@
 import { scenes } from '../javascript/data.js';
+import { qaQuestions } from '../javascript/data.js';
 
 let prevBtn = document.getElementById('prev-btn');
 let nextBtn = document.getElementById('next-btn');
@@ -29,6 +30,8 @@ function DisplayScene(sceneIndex) {
     nextBtn.innerText = currentScene.buttonText[1];
     imageCredit.innerText = currentScene.creditText;
 
+
+    // IF statements for each screen ->
     if (currentScene.name === "main") {
         ElementEnabler(fPartEnd, true, "hidden");
 
@@ -137,8 +140,22 @@ function DisplayScene(sceneIndex) {
     else {
 
     }
+    // <-
 }
 
+
+let currentQuestionIndex = 0;
+
+function DisplayQuestion(questionIndex) {
+    const currentQuestion = qaQuestions[questionIndex];
+
+    animalImage.src = currentQuestion.image;
+    // scene.style.backgroundImage = "url('" + currentScene.bgImage + "')";
+    animalText.innerText = currentQuestion.question;
+    // prevBtn.innerText = currentScene.buttonText[0];
+    // nextBtn.innerText = currentScene.buttonText[1];
+    imageCredit.innerText = currentQuestion.creditText;
+}
 
 function ElementEnabler(element, isdisabled, visibility) {
     element.disabled = isdisabled;
@@ -153,11 +170,6 @@ function ElementLocationModifier(element, top, bottom, left, right) {
 function ElementSizeModifier(element, width, height) {
     element.style.width = width;
     element.style.height = height;
-}
-
-
-function RedirectToQuestions() {
-    window.location.href = './pages/qa.html';
 }
 
 
@@ -178,7 +190,8 @@ document.getElementById('restart-btn').addEventListener('click', function() {   
 });
 
 document.getElementById('continue-btn').addEventListener('click', function() {  // CONTINUE
-    RedirectToQuestions();
+    currentQuestionIndex = (currentQuestionIndex + 1) % qaQuestions.length;
+    DisplayQuestion(currentQuestionIndex);
 });
 
 
@@ -186,4 +199,11 @@ document.getElementById('continue-btn').addEventListener('click', function() {  
 document.addEventListener('DOMContentLoaded', function() {
     DisplayScene(currentSceneIndex);
 });
+
+
+/*
+function RedirectToQuestions() {
+    window.location.href = './pages/qa.html';
+}
+*/
 
