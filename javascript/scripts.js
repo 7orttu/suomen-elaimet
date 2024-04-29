@@ -44,7 +44,7 @@ function DisplayScene(sceneIndex) {
         textContainer.style.opacity = '100%';
         animalText.style.fontSize = '70px';
         animalText.style.color = '#1b4bab';
-        animalText.style.textShadow = '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000';
+        animalText.style.textShadow = '-1px 0px 0 #000, -2px 0px 0 #000, -3px 0px 0 #000, -4px 0px 0 #000, -5px 0px 0 #000';
 
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "700px", "650px")
