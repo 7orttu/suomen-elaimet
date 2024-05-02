@@ -50,7 +50,7 @@ function DisplayScene(sceneIndex) {
 
     part = "facts";
 
-    // IF statements for each screen ->
+    // IF statements for each fact screen ->
     if (currentScene.name === "main") {
         ElementEnabler(fPartEnd, true, "hidden");
 
@@ -68,7 +68,7 @@ function DisplayScene(sceneIndex) {
         textContainer.style.opacity = '100%';
         animalText.style.fontSize = '70px';
         animalText.style.color = '#1b4bab';
-        animalText.style.textShadow = '-1px 0px 0 #000, -2px 0px 0 #000, -3px 0px 0 #000, -4px 0px 0 #000, -5px 0px 0 #000';
+        animalText.style.textShadow = '-1px 0px 0 #000, -2px 0px 0 #000, -3px 0px 0 #000, -4px 0px 0 #000, -5px 0px 0 #000, -5px 1px 0 #000, -5px 2px 0 #000, -5px 3px 0 #000';
 
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "700px", "650px")
@@ -166,9 +166,6 @@ function DisplayScene(sceneIndex) {
 
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
     } 
-    else {
-
-    }
     // <-
 }
 
@@ -184,17 +181,27 @@ function DisplayQuestion(questionIndex) {
     // nextBtn.innerText = currentScene.buttonText[1];
     imageCredit.innerText = currentQuestion.creditText;
 
-    if(currentQuestion.name === "wolfQuestion" || currentQuestion.name === "foxQuestion" || currentQuestion.name === "bearQuestion" || currentQuestion.name === "roedeerQuestion" || currentQuestion.name === "mooseQuestion" || currentQuestion.name === "beaverQuestion") {
     part = "qa";
+
+    if(currentQuestion.name === "wolfQuestion") {
         ElementEnabler(optionContainer, false, "visible");
 
         ElementEnabler(fPartEnd, true, "hidden");
         
         ElementEnabler(endBtn, true, "hidden");
         ElementEnabler(endTxt, true, "hidden");
+
+        animalText.style.color = 'black';
     }
-    else {
+    if(currentQuestion.name === "wolfQuestion" || currentQuestion.name === "foxQuestion" || currentQuestion.name === "bearQuestion" || currentQuestion.name === "roedeerQuestion" || currentQuestion.name === "mooseQuestion" || currentQuestion.name === "beaverQuestion") {
+        ElementEnabler(optionContainer, false, "visible");
+
+        ElementEnabler(fPartEnd, true, "hidden");
         
+        ElementEnabler(endBtn, true, "hidden");
+        ElementEnabler(endTxt, true, "hidden");
+
+        animalText.style.color = 'black';
     }
 }
 
