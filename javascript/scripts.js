@@ -36,6 +36,7 @@ const optionButtons = document.querySelectorAll('.optionButtons');
 
 
 let currentSceneIndex = 0;
+let part;   // Just for determining if the user is in facts or questions part of the game.
 
 function DisplayScene(sceneIndex) {
     const currentScene = scenes[sceneIndex];
@@ -47,6 +48,7 @@ function DisplayScene(sceneIndex) {
     nextBtn.innerText = currentScene.buttonText[1];
     imageCredit.innerText = currentScene.creditText;
 
+    part = "facts";
 
     // IF statements for each screen ->
     if (currentScene.name === "main") {
@@ -183,6 +185,7 @@ function DisplayQuestion(questionIndex) {
     imageCredit.innerText = currentQuestion.creditText;
 
     if(currentQuestion.name === "wolfQuestion" || currentQuestion.name === "foxQuestion" || currentQuestion.name === "bearQuestion" || currentQuestion.name === "roedeerQuestion" || currentQuestion.name === "mooseQuestion" || currentQuestion.name === "beaverQuestion") {
+    part = "qa";
         ElementEnabler(optionContainer, false, "visible");
 
         ElementEnabler(fPartEnd, true, "hidden");
@@ -233,12 +236,12 @@ function SceneChanger(currentPart, whichButton) {
 // EVENT LISTENERS
 
 document.getElementById('next-btn').addEventListener('click', function() {  // NEXT
-    currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
+    SceneChanger(part, "next");
     DisplayScene(currentSceneIndex);
 });
 
 document.getElementById('prev-btn').addEventListener('click', function() {  // PREVIOUS
-    currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
+    SceneChanger(part, "prev");
     DisplayScene(currentSceneIndex);
 });
 
@@ -247,7 +250,7 @@ document.getElementById('restart-btn').addEventListener('click', function() {   
 });
 
 document.getElementById('continue-btn').addEventListener('click', function() {  // CONTINUE
-    // currentQuestionIndex = (currentQuestionIndex + 1) % qaQuestions.length;
+    currentQuestionIndex = 0;
     DisplayQuestion(currentQuestionIndex);
 });
 
