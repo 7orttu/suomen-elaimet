@@ -210,6 +210,25 @@ function ElementSizeModifier(element, width, height) {
     element.style.height = height;
 }
 
+function SceneChanger(currentPart, whichButton) {
+    if(currentPart === "facts" && whichButton === "next") {
+        currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
+    }
+    else if(currentPart === "facts" && whichButton === "prev") {
+        currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
+    }
+    else if(currentPart === "qa" && whichButton === "next") {
+        currentQuestionIndex = (currentQuestionIndex + 1) % qaQuestions.length;
+    }
+    else if(currentPart === "qa" && whichButton === "prev") {
+        currentQuestionIndex = (currentQuestionIndex - 1) % qaQuestions.length;
+    }
+    else if(currentPart === "qa" && whichButton === "prev" && currentQuestion.name === "wolfQuestion") {
+        currentSceneIndex = 14;
+        DisplayScene(currentSceneIndex);
+    } 
+}
+
 
 // EVENT LISTENERS
 
