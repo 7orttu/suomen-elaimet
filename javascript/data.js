@@ -10,9 +10,16 @@ const roedeerImagePath = "images/roedeer.jpg";
 const mooseImagePath = "images/moose.jpg";
 const beaverImagePath = "images/beaver.jpg";
 
+// BACKGROUNDS
 const lawnBGF = "images/lawn1.jpg";
 const lawnBGS = "images/lawn2.jpg";
 const lawnBGT = "images/lawn3.jpg";
+
+const wolfBG = "images/wolfbg.jpg";
+const bearBG = "images/bearbg.jpg";
+const mooseBGF = "images/moosebg.jpg";
+const mooseBGS = "images/moosebg2.jpg";
+const beaverBG = "images/beaverbg.jpg";
 
 // AUTHOR CREDITS
 const mainBearCredit = "LTapsaH, Pixabay";
@@ -43,7 +50,7 @@ const scenes = [
     {   // preview
         name:"Susi-pre",
         image: "./" + wolfImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + wolfBG,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: wolfCredit
@@ -51,7 +58,7 @@ const scenes = [
     {
         name: "Susi",
         image: "./" + wolfImagePath,
-        bgImage: "./" + lawnBGT,
+        bgImage: "./" + wolfBG,
         text: "SUSI \n Tiesitkö, että susi on yöeläin? Tämä tarkoittaa että ne liikkuvat pääosin öisin ja hämärällä. Sudet myös saalistavat usein yöllä.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: wolfCredit
@@ -59,7 +66,7 @@ const scenes = [
     {   // preview
         name: "Kettu-pre",
         image: "./" + foxImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + lawnBGT,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: foxCredit
@@ -75,7 +82,7 @@ const scenes = [
     {   // preview
         name: "Karhu-pre",
         image: "./" + bearImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + bearBG,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: bearCredit
@@ -83,7 +90,7 @@ const scenes = [
     {
         name: "Karhu",
         image: "./" + bearImagePath,
-        bgImage: "./" + lawnBGT,
+        bgImage: "./" + bearBG,
         text: "KARHU \n Tiesitkö, että karhu ei ole ainoastaan Suomen suurin petoeläin, vaan koko Euroopan! \n Karhujen näköaisti on huono, mutta niiden hajuaisti on hyvin kehittynyt.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: bearCredit
@@ -99,7 +106,7 @@ const scenes = [
     {
         name: "Metsäkauris",
         image: "./" + roedeerImagePath,
-        bgImage: "./" + lawnBGT,
+        bgImage: "./" + lawnBGF,
         text: "METSÄKAURIS \n Metsäkauriit ovat taitavia uimareita!",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: roedeerCredit
@@ -107,7 +114,7 @@ const scenes = [
     {   // preview
         name: "Hirvi-pre",
         image: "./" + mooseImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + mooseBGF,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: mooseCredit
@@ -115,7 +122,7 @@ const scenes = [
     {
         name: "Hirvi",
         image: "./" + mooseImagePath,
-        bgImage: "./" + lawnBGT,
+        bgImage: "./" + mooseBGF,
         text: "HIRVI \n Aikuinen hirvi voi painaa huimat 800 kilogrammaa, se on jopa noin kolme moottoripyörää! Yleensä ne kuitenkin painavat nlähemmäksi 500 kilogrammaa. \n Hirvet myös aiheuttavat paljon metsävahinkoja ja niiden korvaus maksaa paljon.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: mooseCredit
@@ -123,7 +130,7 @@ const scenes = [
     {   // preview
         name: "Majava-pre",
         image: "./" + beaverImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + beaverBG,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: beaverCredit
@@ -131,14 +138,14 @@ const scenes = [
     {
         name: "Majava",
         image: "./" + beaverImagePath,
-        bgImage: "./" + lawnBGT,
+        bgImage: "./" + beaverBG,
         text: "MAJAVA \n Tiesitkö, että majavat voivat elää jopa yli 20 vuotiaiksi?",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: beaverCredit
     },
-    {
+    {   // Continue to questions screen
         name: "end",
-        image: "./" + fPartEndImagePath,
+        image: "./" + instructionImagePath,
         bgImage: "./" + lawnBGF,
         text: "Hyvä! Luit kaikki faktat! Haluatko mennä kysymyksiin?",
         buttonText: ["PALAA", "None"],
