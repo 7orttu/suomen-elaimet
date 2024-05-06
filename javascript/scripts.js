@@ -172,8 +172,8 @@ function DisplayQuestion(questionIndex) {
 
     animalImage.src = currentQuestion.image;
     animalText.innerText = currentQuestion.question;
-    // prevBtn.innerText = currentScene.buttonText[0];
-    // nextBtn.innerText = currentScene.buttonText[1];
+    prevBtn.innerText = currentQuestion.buttonText[0];
+    nextBtn.innerText = currentQuestion.buttonText[1];
     imageCredit.innerText = currentQuestion.creditText;
 
     part = "qa";
@@ -202,6 +202,8 @@ function DisplayQuestion(questionIndex) {
     }
 }
 
+
+// GENERAL FUNCTIONS
 function ElementEnabler(element, isdisabled, visibility) {
     element.disabled = isdisabled;
     element.style.visibility = visibility;
@@ -218,12 +220,16 @@ function ElementSizeModifier(element, width, height) {
 }
 
 function SceneChanger(currentPart, whichButton) {
+
+    // FOR FACTS
     if(currentPart === "facts" && whichButton === "next") {
         currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
     }
     else if(currentPart === "facts" && whichButton === "prev") {
         currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
     }
+
+    // FOR QUESTIONS
     else if(currentPart === "qa" && whichButton === "next") {
         currentQuestionIndex = (currentQuestionIndex + 1) % qaQuestions.length;
     }
@@ -237,26 +243,48 @@ function SceneChanger(currentPart, whichButton) {
 }
 
 
-// EVENT LISTENERS
 
-document.getElementById('next-btn').addEventListener('click', function() {  // NEXT
     SceneChanger(part, "next");
     DisplayScene(currentSceneIndex);
+document.getElementById('next-btn').addEventListener('click', function() {  // NEXT-BTN
 });
 
-document.getElementById('prev-btn').addEventListener('click', function() {  // PREVIOUS
     SceneChanger(part, "prev");
     DisplayScene(currentSceneIndex);
+document.getElementById('prev-btn').addEventListener('click', function() {  // PREVIOUS-BTN
 });
 
-document.getElementById('restart-btn').addEventListener('click', function() {   // RESTART
+document.getElementById('restart-btn').addEventListener('click', function() {   // RESTART-BTN
     window.location.reload();
 });
 
-document.getElementById('continue-btn').addEventListener('click', function() {  // CONTINUE
+document.getElementById('continue-btn').addEventListener('click', function() {  // CONTINUE-BTN
     currentQuestionIndex = 0;
     DisplayQuestion(currentQuestionIndex);
 });
+
+/*  OPTION BUTTON EVENTS
+optionButtons.forEach((button, index) => {  // OPTION BUTTONS
+    button.addEventListener('click', () => {
+
+        const currentQuestion = qaQuestions[currentQuestionIndex];
+
+        if (index === currentQuestion.correctAnswerIndex) {
+            button.style.backgroundColor = 'green';
+
+            if (!index === currentQuestion.correctAnswerIndex)
+            setTimeout(NextQuestion, 2500);
+        } 
+        else {
+            optionButtons.forEach(function(optionButton) {
+                optionButton.style.backgroundColor = 'red';
+
+            });
+            setTimeout(NextQuestion, 2500);
+        }
+    });
+});
+*/
 
 
 // DOM
