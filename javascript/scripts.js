@@ -178,6 +178,8 @@ function DisplayQuestion(questionIndex) {
 
     part = "qa";
 
+    ElementEnabler(nextBtn, false, "visible");
+
     if(currentQuestion.name === "wolfQuestion") {
         ElementEnabler(optionContainer, false, "visible");
 
