@@ -264,10 +264,3 @@ document.addEventListener('DOMContentLoaded', function() {
     DisplayScene(currentSceneIndex);
 });
 
-
-/*
-function RedirectToQuestions() {
-    window.location.href = './pages/qa.html';
-}
-*/
-
