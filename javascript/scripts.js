@@ -202,6 +202,8 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(endTxt, true, "hidden");
 
         animalText.style.color = 'black';
+
+        instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein!";
     }
 }
 
