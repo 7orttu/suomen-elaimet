@@ -25,8 +25,6 @@ let currentQuestionIndex = 0;
 function SetQuestion(questionIndex) {
     const currentQuestion = qaQuestions[questionIndex];
 
-    SetEndVisibility("hide");
-
     questionText.innerHTML = currentQuestion.question;
     animalImage.src = currentQuestion.image;
     imageCredit.innerText = currentQuestion.creditText;
@@ -47,7 +45,6 @@ function SetOptions() {
 function NextQuestion() {
     currentQuestionIndex++;
 
-    enableOptionButtons();
     optionButtons.forEach(function(optionButton) {
         optionButton.style.color = 'white';
     });
@@ -57,9 +54,6 @@ function NextQuestion() {
     } 
     else {
         questionContainer.style.opacity=0;
-
-        disableOptionButtons();
-        SetEndVisibility("show");
 
         instruction.innerText = "Olet valmis! Paina LOPETA lopettaaksesi!";
     }
@@ -73,13 +67,13 @@ optionButtons.forEach((button, index) => {
 
         if (index === currentQuestion.correctAnswerIndex) {
             button.style.color = 'green';
-            disableOptionButtons();
+
             setTimeout(NextQuestion, 2500);
         } 
         else {
             optionButtons.forEach(function(optionButton) {
                 optionButton.style.color = 'red';
-                disableOptionButtons();
+
             });
             setTimeout(NextQuestion, 2500);
         }
