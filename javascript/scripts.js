@@ -50,14 +50,17 @@ function DisplayScene(sceneIndex) {
 
     part = "facts";
 
+    ElementEnabler(optionContainer, true, "hidden");
+        
+    ElementEnabler(endBtn, true, "hidden");
+    ElementEnabler(endTxt, true, "hidden");
+
     // IF statements for each fact screen ->
     if (currentScene.name === "main") {
         ElementEnabler(fPartEnd, true, "hidden");
 
         ElementEnabler(prevBtn, true, "hidden");
         ElementEnabler(nextBtn, false, "visible");
-
-        ElementEnabler(optionContainer, true, "hidden")
 
         ElementLocationModifier(nextBtn, "", "-10px", "", "13%");
         ElementLocationModifier(prevBtn, "", "-80px", "", "-22%");
@@ -82,8 +85,6 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, false, "visible");
 
-        ElementEnabler(optionContainer, true, "hidden")
-
         ElementLocationModifier(textContainer, "75px", "", "15px");
         ElementSizeModifier(textContainer, "250px");
         textContainer.style.backgroundColor = 'white';
@@ -103,8 +104,6 @@ function DisplayScene(sceneIndex) {
 
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, false, "visible");
-
-        ElementEnabler(optionContainer, true, "hidden")
 
         ElementLocationModifier(textContainer, "50px", "", "0px");
         ElementSizeModifier(textContainer, "700px");
@@ -126,8 +125,6 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, false, "visible");
 
-        ElementEnabler(optionContainer, true, "hidden")
-
         ElementLocationModifier(textContainer, "220px");
         ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = 'white';
@@ -147,8 +144,6 @@ function DisplayScene(sceneIndex) {
 
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, true, "hidden");
-
-        ElementEnabler(optionContainer, true, "hidden")
 
         ElementLocationModifier(textContainer, "50px");
         ElementSizeModifier(textContainer, "700px");
