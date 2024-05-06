@@ -238,22 +238,35 @@ function SceneChanger(currentPart, whichButton) {
     else if(currentPart === "qa" && whichButton === "prev") {
         currentQuestionIndex = (currentQuestionIndex - 1) % qaQuestions.length;
     }
-    else if(currentPart === "qa" && whichButton === "prev" && currentQuestion.name === "wolfQuestion") {
-        currentSceneIndex = 14;
-        DisplayScene(currentSceneIndex);
-    } 
 }
 
 
 
-    SceneChanger(part, "next");
-    DisplayScene(currentSceneIndex);
+// EVENT LISTENERS
 document.getElementById('next-btn').addEventListener('click', function() {  // NEXT-BTN
+    if (part === "facts") {
+        SceneChanger(part, "next");
+        DisplayScene(currentSceneIndex);
+    }
+    else if (part === "qa") {
+        SceneChanger(part, "next");
+        DisplayQuestion(currentQuestionIndex);
+    }
 });
 
-    SceneChanger(part, "prev");
-    DisplayScene(currentSceneIndex);
 document.getElementById('prev-btn').addEventListener('click', function() {  // PREVIOUS-BTN
+    if (part === "facts") {
+        SceneChanger(part, "prev");
+        DisplayScene(currentSceneIndex);
+    }
+    else if (part === "qa" && currentQuestionIndex === 0) {
+        currentSceneIndex = 14;
+        DisplayScene(currentSceneIndex);
+    }
+    else {
+        SceneChanger(part, "prev");
+        DisplayScene(currentSceneIndex);
+    }
 });
 
 document.getElementById('restart-btn').addEventListener('click', function() {   // RESTART-BTN
