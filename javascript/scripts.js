@@ -259,13 +259,15 @@ document.getElementById('prev-btn').addEventListener('click', function() {  // P
         SceneChanger(part, "prev");
         DisplayScene(currentSceneIndex);
     }
-    else if (part === "qa" && currentQuestionIndex === 0) {
-        currentSceneIndex = 14;
-        DisplayScene(currentSceneIndex);
-    }
-    else {
-        SceneChanger(part, "prev");
-        DisplayScene(currentSceneIndex);
+    else if (part === "qa") {
+        if (part === "qa" && currentQuestionIndex === 0) {
+            currentSceneIndex = 14;
+            DisplayScene(currentSceneIndex);
+        }
+        else {
+            SceneChanger(part, "prev");
+            DisplayQuestion(currentQuestionIndex);
+        }
     }
 });
 
