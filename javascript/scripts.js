@@ -28,10 +28,10 @@ let optionBtnFO = document.getElementById('option4');
 
 let optionContainer = document.getElementById('option-container');
 
+const optionButtons = document.querySelectorAll('.optionButtons');
+
 let endTxt = document.getElementById('end-txt');
 let endBtn = document.getElementById('end-btn');
-
-const optionButtons = document.querySelectorAll('.optionButtons');
 
 
 
@@ -178,7 +178,14 @@ function DisplayQuestion(questionIndex) {
 
     part = "qa";
 
-    ElementEnabler(nextBtn, false, "visible");
+    ElementEnabler(optionBtnF, false, "visible");
+    ElementEnabler(optionBtnS, false, "visible");
+    ElementEnabler(optionBtnT, false, "visible");
+    ElementEnabler(optionBtnFO, false, "visible");
+
+    optionButtons.forEach(function(optionButton) {
+        optionButton.style.color = 'white';
+    });
 
     if(currentQuestion.name === "wolfQuestion") {
         ElementEnabler(optionContainer, false, "visible");
@@ -240,8 +247,6 @@ function SceneChanger(currentPart, whichButton) {
     }
 }
 
-
-
 // EVENT LISTENERS
 document.getElementById('next-btn').addEventListener('click', function() {  // NEXT-BTN
     if (part === "facts") {
@@ -280,29 +285,42 @@ document.getElementById('continue-btn').addEventListener('click', function() {  
     DisplayQuestion(currentQuestionIndex);
 });
 
-/*  OPTION BUTTON EVENTS
+
+// OPTION BUTTON EVENTS
 optionButtons.forEach((button, index) => {  // OPTION BUTTONS
     button.addEventListener('click', () => {
 
         const currentQuestion = qaQuestions[currentQuestionIndex];
 
         if (index === currentQuestion.correctAnswerIndex) {
-            button.style.backgroundColor = 'green';
+            optionButtons.forEach(function(optionButton) {
+                optionButton.style.color = 'red';
+            });
+            button.style.color = 'green';
+            
+            ElementEnabler(optionBtnF, true, "visible");
+            ElementEnabler(optionBtnS, true, "visible");
+            ElementEnabler(optionBtnT, true, "visible");
+            ElementEnabler(optionBtnFO, true, "visible");
 
-            if (!index === currentQuestion.correctAnswerIndex)
-            setTimeout(NextQuestion, 2500);
+            SceneChanger(part, "next");
+            DisplayQuestion(currentQuestionIndex);
         } 
         else {
             optionButtons.forEach(function(optionButton) {
-                optionButton.style.backgroundColor = 'red';
-
+                optionButton.style.color = 'red';
             });
-            setTimeout(NextQuestion, 2500);
+
+            ElementEnabler(optionBtnF, true, "visible");
+            ElementEnabler(optionBtnS, true, "visible");
+            ElementEnabler(optionBtnT, true, "visible");
+            ElementEnabler(optionBtnFO, true, "visible");
+
+            SceneChanger(part, "next");
+            DisplayQuestion(currentQuestionIndex);
         }
     });
 });
-*/
-
 
 // DOM
 document.addEventListener('DOMContentLoaded', function() {
