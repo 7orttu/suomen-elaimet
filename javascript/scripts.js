@@ -328,12 +328,17 @@ optionButtons.forEach((button, index) => {  // OPTION BUTTONS
             ElementEnabler(optionBtnT, true, "visible");
             ElementEnabler(optionBtnFO, true, "visible");
 
-            SceneChanger(part, "next");
-            DisplayQuestion(currentQuestionIndex);
+            setTimeout(() => {
+                SceneChanger(part, "next");
+                DisplayQuestion(currentQuestionIndex);
+            }, 2500);
         } 
         else {
             optionButtons.forEach(function(optionButton) {
                 optionButton.style.color = 'red';
+                if (optionButton.index === currentQuestion.correctAnswerIndex) {
+                    optionButton.style.color = 'green';
+                }
             });
 
             ElementEnabler(optionBtnF, true, "visible");
@@ -341,8 +346,10 @@ optionButtons.forEach((button, index) => {  // OPTION BUTTONS
             ElementEnabler(optionBtnT, true, "visible");
             ElementEnabler(optionBtnFO, true, "visible");
 
-            SceneChanger(part, "next");
-            DisplayQuestion(currentQuestionIndex);
+            setTimeout(() => {
+                SceneChanger(part, "next");
+                DisplayQuestion(currentQuestionIndex);
+            }, 2500);
         }
     });
 });
