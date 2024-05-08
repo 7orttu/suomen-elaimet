@@ -78,6 +78,11 @@ function DisplayScene(sceneIndex) {
         imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Paina ALOITA nappia";
+
+        ElementEnabler(optionBtnF, true, "hidden");
+        ElementEnabler(optionBtnS, true, "hidden");
+        ElementEnabler(optionBtnT, true, "hidden");
+        ElementEnabler(optionBtnFO, true, "hidden");
     } 
     else if (currentScene.name === "ohjeet") {
         ElementEnabler(fPartEnd, true, "hidden");
@@ -98,6 +103,11 @@ function DisplayScene(sceneIndex) {
         imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Tämä on ohje nappula! Paina JATKA niin voit jatkaa faktoihin!";
+
+        ElementEnabler(optionBtnF, true, "hidden");
+        ElementEnabler(optionBtnS, true, "hidden");
+        ElementEnabler(optionBtnT, true, "hidden");
+        ElementEnabler(optionBtnFO, true, "hidden");
     }
     else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
         ElementEnabler(fPartEnd, true, "hidden");
@@ -118,6 +128,11 @@ function DisplayScene(sceneIndex) {
         imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
+
+        ElementEnabler(optionBtnF, true, "hidden");
+        ElementEnabler(optionBtnS, true, "hidden");
+        ElementEnabler(optionBtnT, true, "hidden");
+        ElementEnabler(optionBtnFO, true, "hidden");
     } 
     else if (currentScene.name === "Susi" || currentScene.name === "Kettu" || currentScene.name === "Karhu" || currentScene.name === "Metsäkauris" || currentScene.name === "Hirvi" || currentScene.name === "Majava") {
         ElementEnabler(fPartEnd, true, "hidden");
@@ -138,6 +153,11 @@ function DisplayScene(sceneIndex) {
         imageContainer.style.textAlign = 'center';
 
         "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
+
+        ElementEnabler(optionBtnF, true, "hidden");
+        ElementEnabler(optionBtnS, true, "hidden");
+        ElementEnabler(optionBtnT, true, "hidden");
+        ElementEnabler(optionBtnFO, true, "hidden");
     }
     else if (currentScene.name === "end") {
         ElementEnabler(fPartEnd, false, "visible");
@@ -160,6 +180,11 @@ function DisplayScene(sceneIndex) {
         continueBtn.innerText = "JATKA";
 
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
+
+        ElementEnabler(optionBtnF, true, "hidden");
+        ElementEnabler(optionBtnS, true, "hidden");
+        ElementEnabler(optionBtnT, true, "hidden");
+        ElementEnabler(optionBtnFO, true, "hidden");
     } 
     // <-
 }
