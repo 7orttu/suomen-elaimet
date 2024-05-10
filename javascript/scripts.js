@@ -30,7 +30,6 @@ let optionContainer = document.getElementById('option-container');
 
 const optionButtons = document.querySelectorAll('.optionButtons');
 
-let endTxt = document.getElementById('end-txt');
 let endBtn = document.getElementById('end-btn');
 
 
@@ -53,7 +52,6 @@ function DisplayScene(sceneIndex) {
     ElementEnabler(optionContainer, true, "hidden");
         
     ElementEnabler(endBtn, true, "hidden");
-    ElementEnabler(endTxt, true, "hidden");
 
     // IF statements for each fact screen ->
     if (currentScene.name === "main") {
@@ -218,8 +216,6 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(fPartEnd, true, "hidden");
         
         ElementEnabler(endBtn, true, "hidden");
-        ElementEnabler(endTxt, true, "hidden");
-
         animalText.style.color = 'black';
     }
     if(currentQuestion.name === "wolfQuestion" || currentQuestion.name === "foxQuestion" || currentQuestion.name === "bearQuestion" || currentQuestion.name === "roedeerQuestion" || currentQuestion.name === "mooseQuestion" || currentQuestion.name === "beaverQuestion") {
@@ -228,8 +224,6 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(fPartEnd, true, "hidden");
         
         ElementEnabler(endBtn, true, "hidden");
-        ElementEnabler(endTxt, true, "hidden");
-
         animalText.style.color = 'black';
 
         instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein!";
