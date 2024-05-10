@@ -206,27 +206,34 @@ function DisplayQuestion(questionIndex) {
     ElementEnabler(optionBtnT, false, "visible");
     ElementEnabler(optionBtnFO, false, "visible");
 
+    ElementEnabler(endBtn, true, "hidden");
+
+    ElementEnabler(prevBtn, false, "visible");
+
+    ElementEnabler(fPartEnd, true, "hidden");
+
     optionButtons.forEach(function(optionButton) {
         optionButton.style.color = 'white';
     });
 
     if(currentQuestion.name === "wolfQuestion") {
-        ElementEnabler(optionContainer, false, "visible");
-
-        ElementEnabler(fPartEnd, true, "hidden");
-        
-        ElementEnabler(endBtn, true, "hidden");
         animalText.style.color = 'black';
     }
     if(currentQuestion.name === "wolfQuestion" || currentQuestion.name === "foxQuestion" || currentQuestion.name === "bearQuestion" || currentQuestion.name === "roedeerQuestion" || currentQuestion.name === "mooseQuestion" || currentQuestion.name === "beaverQuestion") {
-        ElementEnabler(optionContainer, false, "visible");
-
-        ElementEnabler(fPartEnd, true, "hidden");
-        
-        ElementEnabler(endBtn, true, "hidden");
         animalText.style.color = 'black';
 
         instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein!";
+    }
+    else if(currentQuestion.name === "questionEnd") {
+        ElementEnabler(endBtn, false, "visible");
+        ElementEnabler(nextBtn, true, "hidden");
+
+        endBtn.innerText = "LOPETA";
+
+        ElementEnabler(optionBtnF, true, "hidden");
+        ElementEnabler(optionBtnS, true, "hidden");
+        ElementEnabler(optionBtnT, true, "hidden");
+        ElementEnabler(optionBtnFO, true, "hidden");
     }
 }
 
@@ -322,6 +329,8 @@ optionButtons.forEach((button, index) => {  // OPTION BUTTONS
             ElementEnabler(optionBtnT, true, "visible");
             ElementEnabler(optionBtnFO, true, "visible");
 
+            ElementEnabler(prevBtn, true, "visible");
+
             setTimeout(() => {
                 SceneChanger(part, "next");
                 DisplayQuestion(currentQuestionIndex);
@@ -334,6 +343,8 @@ optionButtons.forEach((button, index) => {  // OPTION BUTTONS
                     optionButton.style.color = 'green';
                 }
             });
+
+            ElementEnabler(prevBtn, true, "visible");
 
             ElementEnabler(optionBtnF, true, "visible");
             ElementEnabler(optionBtnS, true, "visible");

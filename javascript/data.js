@@ -2,7 +2,7 @@
 // IMAGES
 const mainImagePath = "images/main.jpg";
 const instructionImagePath = "images/bear-instruction.jpg";
-const fPartEndImagePath = "images/bear-fpartend.jpg";
+const bearEnd = "images/bear-end.jpg";
 const wolfImagePath = "images/wolf.jpg";
 const foxImagePath = "images/fox.jpg";
 const bearImagePath = "images/bear.jpg";
@@ -209,6 +209,13 @@ const qaQuestions = [
         correctAnswerIndex: 3,
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: beaverCredit
+    },
+    {
+    name: "questionEnd",
+    image: "./" + bearEnd,
+    question: "Pääsit loppuun! Hyvä!",
+    buttonText: ["PALAA", ""],
+    creditText: ""
     }
 ];
 
