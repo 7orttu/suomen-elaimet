@@ -16,7 +16,9 @@ const lawnBGS = "images/lawn2.jpg";
 const lawnBGT = "images/lawn3.jpg";
 
 const wolfBG = "images/wolfbg.jpg";
+const foxBG = "images/foxbg.jpg";
 const bearBG = "images/bearbg.jpg";
+const roedeerBG = "images/roedeerbg.jpg"
 const mooseBGF = "images/moosebg.jpg";
 const mooseBGS = "images/moosebg2.jpg";
 const beaverBG = "images/beaverbg.jpg";
@@ -66,7 +68,7 @@ const scenes = [
     {   // preview
         name: "Kettu-pre",
         image: "./" + foxImagePath,
-        bgImage: "./" + lawnBGT,
+        bgImage: "./" + foxBG,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: foxCredit
@@ -74,7 +76,7 @@ const scenes = [
     {
         name: "Kettu",
         image: "./" + foxImagePath,
-        bgImage: "./" + lawnBGT,
+        bgImage: "./" + foxBG,
         text: "KETTU \n Noin 10% Suomen ketuista on 'hopeakettuja', niiden turkin väri vaihtelee hopeanvärisestä lähes mustaan.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: foxCredit
@@ -98,7 +100,7 @@ const scenes = [
     {   // preview
         name: "Metsäkauris-pre",
         image: "./" + roedeerImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + roedeerBG,
         text: "",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: roedeerCredit
@@ -106,7 +108,7 @@ const scenes = [
     {
         name: "Metsäkauris",
         image: "./" + roedeerImagePath,
-        bgImage: "./" + lawnBGF,
+        bgImage: "./" + roedeerBG,
         text: "METSÄKAURIS \n Metsäkauriit ovat taitavia uimareita!",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: roedeerCredit
