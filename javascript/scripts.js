@@ -166,7 +166,7 @@ function DisplayScene(sceneIndex) {
         ElementSizeModifier(textContainer, "600px");
         textContainer.style.backgroundColor = "white";
         textContainer.style.opacity = '75%';
-        animalText.style.color = 'blue';
+        animalText.style.color = 'black';
         animalText.style.opacity = '100%';
 
         ElementLocationModifier(animalImage, "0px");
