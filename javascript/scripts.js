@@ -234,6 +234,8 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(optionBtnS, true, "hidden");
         ElementEnabler(optionBtnT, true, "hidden");
         ElementEnabler(optionBtnFO, true, "hidden");
+
+        instructionText.innerText = "Paina LOPETA lopettaaksesi tai mene takaisin kysymyksiin painamalla PALAA";
     }
 }
 
