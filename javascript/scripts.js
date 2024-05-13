@@ -313,6 +313,10 @@ document.getElementById('continue-btn').addEventListener('click', function() {  
     DisplayQuestion(currentQuestionIndex);
 });
 
+document.getElementById('end-btn').addEventListener('click', function() {
+    window.location.reload();
+});
+
 
 // OPTION BUTTON EVENTS
 optionButtons.forEach((button, index) => {  // OPTION BUTTONS
