@@ -3,11 +3,7 @@
     height: 650px;
     text-align: center;
 }
-#question {
-    font-size: 35px;
-    background-color: rgb(255, 255, 255);
-}
-#text-container, #question-container {
+#text-container {
     position: absolute;
     top: 50px;
     width: 700px;
