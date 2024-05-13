@@ -6,6 +6,7 @@ let prevBtn = document.getElementById('prev-btn');
 let nextBtn = document.getElementById('next-btn');
 let restartBtn = document.getElementById('restart-btn');
 let continueBtn = document.getElementById('continue-btn');
+let xBtn = document.getElementById('x');
 
 let scene = document.getElementById('scene');
 let animalImage = document.getElementById('animal-image');
@@ -314,6 +315,10 @@ document.getElementById('continue-btn').addEventListener('click', function() {  
 });
 
 document.getElementById('end-btn').addEventListener('click', function() {
+    window.location.reload();
+});
+
+document.getElementById('x').addEventListener('click', function() {
     window.location.reload();
 });
 
