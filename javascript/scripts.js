@@ -64,8 +64,8 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(nextBtn, "", "-10px", "", "13%");
         ElementLocationModifier(prevBtn, "", "-80px", "", "-22%");
 
-        ElementLocationModifier(textContainer, "50px");
-        ElementSizeModifier(textContainer, "700px");
+        ElementLocationModifier(textContainer, "80px");
+        ElementSizeModifier(textContainer, "600px");
         textContainer.style.backgroundColor = 'transparent';
         textContainer.style.opacity = '100%';
         animalText.style.fontSize = '70px';
@@ -89,7 +89,7 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, false, "visible");
 
-        ElementLocationModifier(textContainer, "75px", "", "15px");
+        ElementLocationModifier(textContainer, "75px", "", "-20px");
         ElementSizeModifier(textContainer, "250px");
         textContainer.style.backgroundColor = 'white';
         textContainer.style.opacity = '100%';
@@ -114,8 +114,6 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, false, "visible");
 
-        ElementLocationModifier(textContainer, "50px", "", "0px");
-        ElementSizeModifier(textContainer, "700px");
         textContainer.style.backgroundColor = 'transparent';
         textContainer.style.opacity = '0%';
         animalText.style.fontSize = '35px';
@@ -139,8 +137,8 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, false, "visible");
 
-        ElementLocationModifier(textContainer, "220px");
-        ElementSizeModifier(textContainer, "700px");
+        ElementLocationModifier(textContainer, "220px", "", "0px");
+        ElementSizeModifier(textContainer, "600px");
         textContainer.style.backgroundColor = 'white';
         textContainer.style.opacity = '80%';
         animalText.style.fontSize = '22px';
@@ -164,8 +162,8 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, true, "hidden");
 
-        ElementLocationModifier(textContainer, "50px");
-        ElementSizeModifier(textContainer, "700px");
+        ElementLocationModifier(textContainer, "100px");
+        ElementSizeModifier(textContainer, "600px");
         textContainer.style.backgroundColor = "white";
         textContainer.style.opacity = '75%';
         animalText.style.color = 'blue';
@@ -212,6 +210,8 @@ function DisplayQuestion(questionIndex) {
     ElementEnabler(prevBtn, false, "visible");
 
     ElementEnabler(fPartEnd, true, "hidden");
+
+    ElementLocationModifier(textContainer, "100px");
 
     optionButtons.forEach(function(optionButton) {
         optionButton.style.color = 'white';
