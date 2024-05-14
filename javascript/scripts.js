@@ -1,7 +1,7 @@
 import { scenes } from '../javascript/data.js';
 import { qaQuestions } from '../javascript/data.js';
 
-// FACT PART
+// FACT PART TOP-LEVEL VARIABLES
 let prevBtn = document.getElementById('prev-btn');
 let nextBtn = document.getElementById('next-btn');
 let restartBtn = document.getElementById('restart-btn');
@@ -21,7 +21,7 @@ let languageContainer = document.getElementById('language-container');
 let fPartEnd = document.getElementById('fpartend-container');
 
 
-// QUESTION PART
+// QUESTION PART TOP-LEVEL VARIABLES
 let optionBtnF = document.getElementById('option1');
 let optionBtnS = document.getElementById('option2');
 let optionBtnT = document.getElementById('option3');
@@ -34,13 +34,13 @@ const optionButtons = document.querySelectorAll('.optionButtons');
 let endBtn = document.getElementById('end-btn');
 
 
-
 let currentSceneIndex = 0;
 let part;   // Just for determining if the user is in facts or questions part of the game.
 
 function DisplayScene(sceneIndex) {
     const currentScene = scenes[sceneIndex];
 
+    // Set elements properties to correspond to data.js
     animalImage.src = currentScene.image;
     scene.style.backgroundImage = "url('" + currentScene.bgImage + "')";
     animalText.innerText = currentScene.text;
@@ -213,6 +213,7 @@ function DisplayQuestion(questionIndex) {
 
     ElementLocationModifier(textContainer, "100px");
 
+    // Set option buttons color back to white
     optionButtons.forEach(function(optionButton) {
         optionButton.style.color = 'white';
     });
@@ -364,7 +365,7 @@ optionButtons.forEach((button, index) => {  // OPTION BUTTONS
             ElementEnabler(optionBtnT, true, "visible");
             ElementEnabler(optionBtnFO, true, "visible");
 
-            setTimeout(() => {
+            setTimeout(() => {  // Run SceneChanger and DisplayQuestion functions after 2500 ms timeout has passed
                 SceneChanger(part, "next");
                 DisplayQuestion(currentQuestionIndex);
             }, 2500);
