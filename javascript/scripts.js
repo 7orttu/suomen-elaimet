@@ -140,7 +140,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(textContainer, "220px", "", "0px");
         ElementSizeModifier(textContainer, "600px");
         textContainer.style.backgroundColor = 'white';
-        textContainer.style.opacity = '80%';
+        textContainer.style.opacity = '70%';
         animalText.style.fontSize = '22px';
         animalText.style.color = 'black';
         animalText.style.textShadow = '0 0 0';
@@ -222,6 +222,8 @@ function DisplayQuestion(questionIndex) {
     }
     if(currentQuestion.name === "wolfQuestion" || currentQuestion.name === "foxQuestion" || currentQuestion.name === "bearQuestion" || currentQuestion.name === "roedeerQuestion" || currentQuestion.name === "mooseQuestion" || currentQuestion.name === "beaverQuestion") {
         animalText.style.color = 'black';
+
+        textContainer.style.opacity = '70%';
 
         instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein!";
     }
