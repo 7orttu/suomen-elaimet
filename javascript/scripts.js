@@ -188,6 +188,7 @@ function DisplayScene(sceneIndex) {
 
 
 let currentQuestionIndex = 0;
+let totalRightAnswers = 0;
 
 function DisplayQuestion(questionIndex) {
     const currentQuestion = qaQuestions[questionIndex];
