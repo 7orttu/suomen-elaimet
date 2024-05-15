@@ -211,11 +211,11 @@ const qaQuestions = [
         creditText: beaverCredit
     },
     {
-    name: "questionEnd",
-    image: "./" + bearEnd,
-    question: "Pääsit loppuun! Hyvä!",
-    buttonText: ["PALAA", ""],
-    creditText: ""
+        name: "questionEnd",
+        image: "./" + bearEnd,
+        question: "Pääsit loppuun! Hyvä!",
+        buttonText: ["PALAA", ""],
+        creditText: "",
     }
 ];
 
