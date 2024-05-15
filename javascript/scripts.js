@@ -234,6 +234,7 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(nextBtn, true, "hidden");
 
         endBtn.innerText = "LOPETA";
+        animalText.innerText = currentQuestion.question + "\n" + totalRightAnswers + "/6 kysymystä oikein!";
 
         ElementEnabler(optionBtnF, true, "hidden");
         ElementEnabler(optionBtnS, true, "hidden");
@@ -346,7 +347,10 @@ optionButtons.forEach((button, index) => {  // OPTION BUTTONS
 
             ElementEnabler(prevBtn, true, "visible");
 
-            setTimeout(() => {
+            setTimeout(() => {  // Run SceneChanger and DisplayQuestion functions after 2500 ms timeout
+                if (totalRightAnswers < 6) {
+                    totalRightAnswers++;
+                }
                 SceneChanger(part, "next");
                 DisplayQuestion(currentQuestionIndex);
             }, 2500);
