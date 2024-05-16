@@ -336,9 +336,9 @@ optionButtons.forEach((button, index) => {  // OPTION BUTTONS
 
         if (index === currentQuestion.correctAnswerIndex) {
             optionButtons.forEach(function(optionButton) {
-                optionButton.style.color = 'red';
+                optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
             });
-            button.style.color = 'green';
+            button.style.backgroundImage = "linear-gradient(to right, green, green)";;
             
             ElementEnabler(optionBtnF, true, "visible");
             ElementEnabler(optionBtnS, true, "visible");
@@ -357,9 +357,9 @@ optionButtons.forEach((button, index) => {  // OPTION BUTTONS
         } 
         else {
             optionButtons.forEach(function(optionButton) {
-                optionButton.style.color = 'red';
+                optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
                 if (optionButton.index === currentQuestion.correctAnswerIndex) {
-                    optionButton.style.color = 'green';
+                    optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
                 }
             });
 
