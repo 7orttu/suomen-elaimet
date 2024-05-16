@@ -201,6 +201,11 @@ function DisplayQuestion(questionIndex) {
 
     part = "qa";
 
+    optionBtnF.style.backgroundImage = "linear-gradient(to right, black, cyan)";
+    optionBtnS.style.backgroundImage = "linear-gradient(to right, black, cyan)";
+    optionBtnT.style.backgroundImage = "linear-gradient(to right, black, cyan)";
+    optionBtnFO.style.backgroundImage =  "linear-gradient(to right, black, cyan)";
+
     ElementEnabler(optionBtnF, false, "visible");
     ElementEnabler(optionBtnS, false, "visible");
     ElementEnabler(optionBtnT, false, "visible");
