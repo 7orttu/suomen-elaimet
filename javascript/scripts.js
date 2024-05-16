@@ -201,10 +201,10 @@ function DisplayQuestion(questionIndex) {
 
     part = "qa";
 
-    optionBtnF.style.backgroundImage = "linear-gradient(to right, black, cyan)";
-    optionBtnS.style.backgroundImage = "linear-gradient(to right, black, cyan)";
-    optionBtnT.style.backgroundImage = "linear-gradient(to right, black, cyan)";
-    optionBtnFO.style.backgroundImage =  "linear-gradient(to right, black, cyan)";
+    optionBtnF.style.backgroundImage = "linear-gradient(to right, black, #1b4bab)";
+    optionBtnS.style.backgroundImage = "linear-gradient(to right, black, #1b4bab)";
+    optionBtnT.style.backgroundImage = "linear-gradient(to right, black, #1b4bab)";
+    optionBtnFO.style.backgroundImage =  "linear-gradient(to right, black, #1b4bab)";
 
     ElementEnabler(optionBtnF, false, "visible");
     ElementEnabler(optionBtnS, false, "visible");
