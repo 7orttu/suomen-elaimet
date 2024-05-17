@@ -333,53 +333,37 @@ document.getElementById('x').addEventListener('click', function() {
 });
 
 
+
 // OPTION BUTTON EVENTS
-optionButtons.forEach((button, index) => {  // OPTION BUTTONS
+optionButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
 
         const currentQuestion = qaQuestions[currentQuestionIndex];
+        const correctAnswerIndex = currentQuestion.correctAnswerIndex;
 
-        if (index === currentQuestion.correctAnswerIndex) {
-            optionButtons.forEach(function(optionButton) {
+        optionButtons.forEach((optionButton, btnIndex) => {
+            if (btnIndex === correctAnswerIndex) {
+                optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
+            } else {
                 optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
-            });
-            button.style.backgroundImage = "linear-gradient(to right, green, green)";;
-            
-            ElementEnabler(optionBtnF, true, "visible");
-            ElementEnabler(optionBtnS, true, "visible");
-            ElementEnabler(optionBtnT, true, "visible");
-            ElementEnabler(optionBtnFO, true, "visible");
+            }
+        });
 
-            ElementEnabler(prevBtn, true, "visible");
+        ElementEnabler(optionBtnF, true, "visible");
+        ElementEnabler(optionBtnS, true, "visible");
+        ElementEnabler(optionBtnT, true, "visible");
+        ElementEnabler(optionBtnFO, true, "visible");
+        ElementEnabler(prevBtn, true, "visible");
 
-            setTimeout(() => {  // Run SceneChanger and DisplayQuestion functions after 2500 ms timeout
-                if (totalRightAnswers < 6) {
-                    totalRightAnswers++;
-                }
-                SceneChanger(part, "next");
-                DisplayQuestion(currentQuestionIndex);
-            }, 2500);
-        } 
-        else {
-            optionButtons.forEach(function(optionButton) {
-                optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
-                if (optionButton.index === currentQuestion.correctAnswerIndex) {
-                    optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
-                }
-            });
-
-            ElementEnabler(prevBtn, true, "visible");
-
-            ElementEnabler(optionBtnF, true, "visible");
-            ElementEnabler(optionBtnS, true, "visible");
-            ElementEnabler(optionBtnT, true, "visible");
-            ElementEnabler(optionBtnFO, true, "visible");
-
-            setTimeout(() => {  // Run SceneChanger and DisplayQuestion functions after 2500 ms timeout has passed
-                SceneChanger(part, "next");
-                DisplayQuestion(currentQuestionIndex);
-            }, 2500);
+        if (index === correctAnswerIndex && totalRightAnswers < 6) {
+            totalRightAnswers++;
         }
+
+        // Run SceneChanger and DisplayQuestion functions after 2500 ms timeout
+        setTimeout(() => {
+            SceneChanger(part, "next");
+            DisplayQuestion(currentQuestionIndex);
+        }, 2500);
     });
 });
 
