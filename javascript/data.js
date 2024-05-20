@@ -109,7 +109,7 @@ const scenes = [
         name: "Metsäkauris",
         image: "./" + roedeerImagePath,
         bgImage: "./" + roedeerBG,
-        text: "METSÄKAURIS \n Metsäkauriit ovat taitavia uimareita!",
+        text: "METSÄKAURIS \n Metsäkauriit ovat taitavia uimareita! Niitä esiintyy eniten Etelä- ja Lounais-Suomessa. \n Metsäkauriit syövät marjoja, oksia, sieniä ja muita sellaisia.",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: roedeerCredit
     },
