@@ -61,7 +61,7 @@ const scenes = [
         name: "Susi",
         image: "./" + wolfImagePath,
         bgImage: "./" + wolfBG,
-        text: "SUSI \n Tiesitkö, että susi on yöeläin? Tämä tarkoittaa että ne liikkuvat pääosin öisin ja hämärällä. Sudet myös saalistavat usein yöllä.",
+        text: "SUSI \n Tiesitkö, että susi on yöeläin? Tämä tarkoittaa että ne liikkuvat pääosin öisin ja hämärällä. Sudet myös saalistavat usein yöllä. \n Vuonna 2021 Suomessa oli noin 250-350 sutta!",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: wolfCredit
     },
