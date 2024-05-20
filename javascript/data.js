@@ -141,7 +141,7 @@ const scenes = [
         name: "Majava",
         image: "./" + beaverImagePath,
         bgImage: "./" + beaverBG,
-        text: "MAJAVA \n Tiesitkö, että majavat voivat elää jopa yli 20 vuotiaiksi?",
+        text: "MAJAVA \n Tiesitkö, että majavat voivat elää jopa yli 20 vuotiaiksi? Majava on myös Suomen suurin jyrsijä!",
         buttonText: ["TAKAISIN", "SEURAAVA"],
         creditText: beaverCredit
     },
