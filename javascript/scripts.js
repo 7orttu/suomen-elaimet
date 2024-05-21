@@ -201,11 +201,19 @@ function DisplayQuestion(questionIndex) {
         optionButton.style.color = 'white';
     });
 
+
+
     if(currentQuestion.name === "wolfQuestion") {
         animalText.style.color = 'black';
+
+        ElementLocationModifier(textContainer, "220px");
+        ElementSizeModifier(textContainer, "600px");
     }
     if(currentQuestion.name === "wolfQuestion" || currentQuestion.name === "foxQuestion" || currentQuestion.name === "bearQuestion" || currentQuestion.name === "roedeerQuestion" || currentQuestion.name === "mooseQuestion" || currentQuestion.name === "beaverQuestion") {
         animalText.style.color = 'black';
+
+        ElementLocationModifier(textContainer, "100px");
+        ElementSizeModifier(textContainer, "600px");
 
         textContainer.style.opacity = '70%';
 
@@ -214,6 +222,9 @@ function DisplayQuestion(questionIndex) {
     else if(currentQuestion.name === "questionEnd") {
         ElementEnabler(endBtn, false, "visible");
         ElementEnabler(nextBtn, true, "hidden");
+
+        ElementLocationModifier(textContainer, "100px", "", "200px");
+        ElementSizeModifier(textContainer, "600px");
 
         endBtn.innerText = "LOPETA";
         animalText.innerText = currentQuestion.question + "\n" + totalRightAnswers + "/6 kysymystä oikein!";
