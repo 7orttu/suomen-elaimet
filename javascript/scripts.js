@@ -134,11 +134,6 @@ function DisplayScene(sceneIndex) {
         ElementSizeModifier(animalImage, "380px", "260px")
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
-
-        ElementEnabler(optionBtnF, true, "hidden");
-        ElementEnabler(optionBtnS, true, "hidden");
-        ElementEnabler(optionBtnT, true, "hidden");
-        ElementEnabler(optionBtnFO, true, "hidden");
     }
     // CONTINUE/FPARTEND(first part end) SCREEN
     else if (currentScene.name === "end") {
