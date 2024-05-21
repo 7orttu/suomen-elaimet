@@ -1,7 +1,7 @@
 import { scenes } from '../javascript/data.js';
 import { qaQuestions } from '../javascript/data.js';
 
-// FACT PART TOP-LEVEL VARIABLES
+// TOP-LEVEL ELEMENT VARIABLES ->
 let prevBtn = document.getElementById('prev-btn');
 let nextBtn = document.getElementById('next-btn');
 let restartBtn = document.getElementById('restart-btn');
@@ -21,7 +21,6 @@ let languageContainer = document.getElementById('language-container');
 let fPartEnd = document.getElementById('fpartend-container');
 
 
-// QUESTION PART TOP-LEVEL VARIABLES
 let optionBtnF = document.getElementById('option1');
 let optionBtnS = document.getElementById('option2');
 let optionBtnT = document.getElementById('option3');
@@ -32,6 +31,7 @@ let optionContainer = document.getElementById('option-container');
 const optionButtons = document.querySelectorAll('.optionButtons');
 
 let endBtn = document.getElementById('end-btn');
+// <-
 
 
 let currentSceneIndex = 0;
@@ -74,6 +74,7 @@ function DisplayScene(sceneIndex) {
 
 
     // IF statements for each fact screen ->
+    // MAIN SCREEN
     if (currentScene.name === "main") {
 
         ElementEnabler(prevBtn, true, "hidden");
@@ -112,6 +113,7 @@ function DisplayScene(sceneIndex) {
 
         instructionText.innerText = "Tämä on ohje nappula! Paina JATKA niin voit jatkaa faktoihin!";
     }
+    // PREVIEW SCREENS
     else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
 
         textContainer.style.backgroundColor = 'transparent';
@@ -120,6 +122,7 @@ function DisplayScene(sceneIndex) {
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     } 
+    // FACT SCREENS
     else if (currentScene.name === "Susi" || currentScene.name === "Kettu" || currentScene.name === "Karhu" || currentScene.name === "Metsäkauris" || currentScene.name === "Hirvi" || currentScene.name === "Majava") {
 
         ElementLocationModifier(textContainer, "220px", "", "0px");
@@ -137,6 +140,7 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(optionBtnT, true, "hidden");
         ElementEnabler(optionBtnFO, true, "hidden");
     }
+    // CONTINUE/FPARTEND(first part end) SCREEN
     else if (currentScene.name === "end") {
         ElementEnabler(fPartEnd, false, "visible");
 
