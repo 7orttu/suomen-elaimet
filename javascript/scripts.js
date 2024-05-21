@@ -50,13 +50,31 @@ function DisplayScene(sceneIndex) {
 
     part = "facts";
 
+    // SETTING GLOBAL MODIFICATIONS FOR ELEMENTS
+    ElementEnabler(prevBtn, false, "visible");
+    ElementEnabler(nextBtn, false, "visible");
+
+    animalText.style.color = 'black';
+    animalText.style.textShadow = '0 0 0';
+    textContainer.style.opacity = '70%';
+
+    imageContainer.style.textAlign = 'center';
+    ElementLocationModifier(animalImage, "0px");
+    ElementSizeModifier(animalImage, "700px", "650px");
+
+    // DISABLING ELEMENTS
+    ElementEnabler(fPartEnd, true, "hidden");
     ElementEnabler(optionContainer, true, "hidden");
-        
     ElementEnabler(endBtn, true, "hidden");
+
+    ElementEnabler(optionBtnF, true, "hidden");
+    ElementEnabler(optionBtnS, true, "hidden");
+    ElementEnabler(optionBtnT, true, "hidden");
+    ElementEnabler(optionBtnFO, true, "hidden");
+
 
     // IF statements for each fact screen ->
     if (currentScene.name === "main") {
-        ElementEnabler(fPartEnd, true, "hidden");
 
         ElementEnabler(prevBtn, true, "hidden");
         ElementEnabler(nextBtn, false, "visible");
@@ -74,17 +92,11 @@ function DisplayScene(sceneIndex) {
 
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "700px", "650px")
-        imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Paina ALOITA nappia";
-
-        ElementEnabler(optionBtnF, true, "hidden");
-        ElementEnabler(optionBtnS, true, "hidden");
-        ElementEnabler(optionBtnT, true, "hidden");
-        ElementEnabler(optionBtnFO, true, "hidden");
     } 
+    // INSTRUCTION SCREEN
     else if (currentScene.name === "ohjeet") {
-        ElementEnabler(fPartEnd, true, "hidden");
 
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, false, "visible");
@@ -94,60 +106,29 @@ function DisplayScene(sceneIndex) {
         textContainer.style.backgroundColor = 'white';
         textContainer.style.opacity = '100%';
         animalText.style.fontSize = '25px';
-        animalText.style.color = 'black';
-        animalText.style.textShadow = '0 0 0';
 
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "700px", "650px")
-        imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Tämä on ohje nappula! Paina JATKA niin voit jatkaa faktoihin!";
-
-        ElementEnabler(optionBtnF, true, "hidden");
-        ElementEnabler(optionBtnS, true, "hidden");
-        ElementEnabler(optionBtnT, true, "hidden");
-        ElementEnabler(optionBtnFO, true, "hidden");
     }
     else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
-        ElementEnabler(fPartEnd, true, "hidden");
-
-        ElementEnabler(prevBtn, false, "visible");
-        ElementEnabler(nextBtn, false, "visible");
 
         textContainer.style.backgroundColor = 'transparent';
         textContainer.style.opacity = '0%';
         animalText.style.fontSize = '35px';
-        animalText.style.color = 'black';
-        animalText.style.textShadow = '0 0 0';
-
-        ElementLocationModifier(animalImage, "0px");
-        ElementSizeModifier(animalImage, "700px", "650px")
-        imageContainer.style.textAlign = 'center';
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
-
-        ElementEnabler(optionBtnF, true, "hidden");
-        ElementEnabler(optionBtnS, true, "hidden");
-        ElementEnabler(optionBtnT, true, "hidden");
-        ElementEnabler(optionBtnFO, true, "hidden");
     } 
     else if (currentScene.name === "Susi" || currentScene.name === "Kettu" || currentScene.name === "Karhu" || currentScene.name === "Metsäkauris" || currentScene.name === "Hirvi" || currentScene.name === "Majava") {
-        ElementEnabler(fPartEnd, true, "hidden");
-
-        ElementEnabler(prevBtn, false, "visible");
-        ElementEnabler(nextBtn, false, "visible");
 
         ElementLocationModifier(textContainer, "220px", "", "0px");
         ElementSizeModifier(textContainer, "600px");
         textContainer.style.backgroundColor = 'white';
-        textContainer.style.opacity = '70%';
         animalText.style.fontSize = '22px';
-        animalText.style.color = 'black';
-        animalText.style.textShadow = '0 0 0';
 
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "380px", "260px")
-        imageContainer.style.textAlign = 'center';
 
         "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
 
@@ -162,26 +143,18 @@ function DisplayScene(sceneIndex) {
         ElementEnabler(prevBtn, false, "visible");
         ElementEnabler(nextBtn, true, "hidden");
 
-        ElementLocationModifier(textContainer, "100px");
-        ElementSizeModifier(textContainer, "600px");
+        ElementLocationModifier(textContainer, "85px", "", "-20px");
+        ElementSizeModifier(textContainer, "250px");
         textContainer.style.backgroundColor = "white";
-        textContainer.style.opacity = '75%';
-        animalText.style.color = 'black';
-        animalText.style.opacity = '100%';
 
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "700px", "650px")
-        imageContainer.style.textAlign = 'center';
+
 
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
 
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
-
-        ElementEnabler(optionBtnF, true, "hidden");
-        ElementEnabler(optionBtnS, true, "hidden");
-        ElementEnabler(optionBtnT, true, "hidden");
-        ElementEnabler(optionBtnFO, true, "hidden");
     } 
     // <-
 }
