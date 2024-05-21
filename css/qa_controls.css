@@ -16,7 +16,16 @@
     background-image: linear-gradient(to right, #1b4bab, rgb(49, 49, 49));
     z-index: 1;
 }
+#end-txt {
+    position: absolute;
+    top: -400px;
+    right: 220px;
+    width: 250px;
+    height: auto;
 
+    color: white;
+    z-index: 3;
+}
 
 .optionButtons {
     position: relative;

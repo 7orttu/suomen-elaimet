@@ -31,6 +31,7 @@ let optionContainer = document.getElementById('option-container');
 const optionButtons = document.querySelectorAll('.optionButtons');
 
 let endBtn = document.getElementById('end-btn');
+let endTxt = document.getElementById('end-txt');
 // <-
 
 
@@ -66,6 +67,7 @@ function DisplayScene(sceneIndex) {
     ElementEnabler(fPartEnd, true, "hidden");
     ElementEnabler(optionContainer, true, "hidden");
     ElementEnabler(endBtn, true, "hidden");
+    ElementEnabler(endTxt, true, "hidden");
 
     ElementEnabler(optionBtnF, true, "hidden");
     ElementEnabler(optionBtnS, true, "hidden");
@@ -149,7 +151,6 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "700px", "650px")
 
-
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
 
@@ -188,6 +189,7 @@ function DisplayQuestion(questionIndex) {
     ElementEnabler(prevBtn, false, "visible");
 
     ElementEnabler(fPartEnd, true, "hidden");
+    ElementEnabler(endTxt, true, "hidden");
 
     ElementLocationModifier(textContainer, "100px");
 
@@ -228,6 +230,8 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(optionBtnS, true, "hidden");
         ElementEnabler(optionBtnT, true, "hidden");
         ElementEnabler(optionBtnFO, true, "hidden");
+
+        ElementEnabler(endTxt, false, "visible");
 
         instructionText.innerText = "Paina LOPETA lopettaaksesi tai mene takaisin kysymyksiin painamalla PALAA";
     }
