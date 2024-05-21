@@ -247,6 +247,7 @@ function ElementSizeModifier(element, width, height) {
     element.style.height = height;
 }
 
+// SCENE CHANGER FUNCTION
 function SceneChanger(currentPart, whichButton) {
 
     // FOR FACTS
