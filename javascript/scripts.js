@@ -184,25 +184,24 @@ function DisplayQuestion(questionIndex) {
     ElementEnabler(optionBtnT, false, "visible");
     ElementEnabler(optionBtnFO, false, "visible");
 
-    ElementEnabler(endBtn, true, "hidden");
-
+    ElementEnabler(nextBtn, true, "hidden");
     ElementEnabler(prevBtn, false, "visible");
+    ElementLocationModifier(prevBtn, "", "-80px");
 
     ElementEnabler(fPartEnd, true, "hidden");
+    ElementEnabler(endBtn, true, "hidden");
     ElementEnabler(endTxt, true, "hidden");
 
+    animalText.style.color = 'black';
+    animalText.style.fontSize = '25px';
     ElementLocationModifier(textContainer, "100px");
 
     if(currentQuestion.name === "wolfQuestion") {
-        animalText.style.color = 'black';
-
-        ElementLocationModifier(textContainer, "220px");
+        ElementLocationModifier(textContainer, "220px", "", "0px");
         ElementSizeModifier(textContainer, "600px");
     }
     if(currentQuestion.name === "wolfQuestion" || currentQuestion.name === "foxQuestion" || currentQuestion.name === "bearQuestion" || currentQuestion.name === "roedeerQuestion" || currentQuestion.name === "mooseQuestion" || currentQuestion.name === "beaverQuestion") {
-        animalText.style.color = 'black';
-
-        ElementLocationModifier(textContainer, "100px");
+        ElementLocationModifier(textContainer, "100px", "", "0px");
         ElementSizeModifier(textContainer, "600px");
 
         textContainer.style.opacity = '70%';
@@ -210,20 +209,21 @@ function DisplayQuestion(questionIndex) {
         instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein!";
     }
     else if(currentQuestion.name === "questionEnd") {
-        ElementEnabler(endBtn, false, "visible");
-        ElementEnabler(nextBtn, true, "hidden");
-
-        ElementLocationModifier(textContainer, "100px", "", "200px");
+        ElementLocationModifier(textContainer, "100px", "", "0px");
         ElementSizeModifier(textContainer, "600px");
 
-        endBtn.innerText = "LOPETA";
-        animalText.innerText = currentQuestion.question + "\n" + totalRightAnswers + "/6 kysymystä oikein!";
+        endBtn.innerText = "ALOITA ALUSTA";
+        animalText.style.fontSize = '35px';
+        animalText.innerText = currentQuestion.question + "\n" + "\n" + totalRightAnswers + "/6 kysymystä oikein!";
+
+        ElementLocationModifier(prevBtn, "", "-90px");
 
         ElementEnabler(optionBtnF, true, "hidden");
         ElementEnabler(optionBtnS, true, "hidden");
         ElementEnabler(optionBtnT, true, "hidden");
         ElementEnabler(optionBtnFO, true, "hidden");
 
+        ElementEnabler(endBtn, false, "visible");
         ElementEnabler(endTxt, false, "visible");
 
         instructionText.innerText = "Paina LOPETA lopettaaksesi tai mene takaisin kysymyksiin painamalla PALAA";

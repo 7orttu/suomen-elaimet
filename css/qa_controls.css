@@ -8,12 +8,14 @@
 #end-btn {
     position: absolute;
     right: 220px;
+    bottom: 100px;
     width: 250px;
     height: 70px;
 
     border-radius: 5px;
-    font-size: 50px;
+    font-size: 30px;
     background-image: linear-gradient(to right, #1b4bab, rgb(49, 49, 49));
+    color: white;
     z-index: 1;
 }
 #end-txt {
