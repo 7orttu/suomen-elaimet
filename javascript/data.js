@@ -213,7 +213,7 @@ const qaQuestions = [
     {
         name: "questionEnd",
         image: "./" + bearEnd,
-        question: "Pääsit loppuun! Hyvä!",
+        question: "Olet päässyt pelin loppuun! Hyvin tehty!",
         buttonText: ["PALAA", ""],
         creditText: "",
     }
