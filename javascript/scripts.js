@@ -193,13 +193,6 @@ function DisplayQuestion(questionIndex) {
 
     ElementLocationModifier(textContainer, "100px");
 
-    // Set option buttons color back to white
-    optionButtons.forEach(function(optionButton) {
-        optionButton.style.color = 'white';
-    });
-
-
-
     if(currentQuestion.name === "wolfQuestion") {
         animalText.style.color = 'black';
 
