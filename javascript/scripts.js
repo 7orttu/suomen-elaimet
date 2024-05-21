@@ -133,7 +133,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "380px", "260px")
 
-        "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
+        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
 
         ElementEnabler(optionBtnF, true, "hidden");
         ElementEnabler(optionBtnS, true, "hidden");
