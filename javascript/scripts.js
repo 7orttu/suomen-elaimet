@@ -231,7 +231,7 @@ function DisplayQuestion(questionIndex) {
         instructionText.innerText = "Paina LOPETA lopettaaksesi tai mene takaisin kysymyksiin painamalla PALAA";
     }
 
-    // Check if the user has already answered this question
+    // Check if the user has answered
     if (userAnswers.hasOwnProperty(currentQuestion.name)) {
         const userAnswerIndex = userAnswers[currentQuestion.name];
         const correctAnswerIndex = currentQuestion.correctAnswerIndex;
@@ -351,7 +351,7 @@ optionButtons.forEach((button, index) => {
         const currentQuestion = qaQuestions[currentQuestionIndex];
         const correctAnswerIndex = currentQuestion.correctAnswerIndex;
 
-        // Save the user's answer
+        // Save answer
         userAnswers[currentQuestion.name] = index;
 
         optionButtons.forEach((optionButton, btnIndex) => {
