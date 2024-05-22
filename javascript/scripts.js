@@ -163,6 +163,7 @@ function DisplayScene(sceneIndex) {
 let currentQuestionIndex = 0;
 let totalRightAnswers = 0;
 let userAnswers = {};
+let clickedButton;
 
 function DisplayQuestion(questionIndex) {
     const currentQuestion = qaQuestions[questionIndex];
@@ -242,6 +243,13 @@ function DisplayQuestion(questionIndex) {
                 optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
             }
         });
+
+        if (clickedButton === correctAnswerIndex) {
+            optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
+        }
+        else {
+            clickedButton.style.backgroundImage = "linear-gradient(to right, darkred, darkred)";
+        }
 
         // Disable all option buttons
         optionButtons.forEach(button => button.disabled = true);
@@ -339,6 +347,7 @@ document.getElementById('x').addEventListener('click', function() {
 // OPTION BUTTON EVENTS
 optionButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
+        clickedButton = event.target;
         const currentQuestion = qaQuestions[currentQuestionIndex];
         const correctAnswerIndex = currentQuestion.correctAnswerIndex;
 
@@ -352,6 +361,13 @@ optionButtons.forEach((button, index) => {
                 optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
             }
         });
+
+        if (clickedButton === correctAnswerIndex) {
+            optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
+        }
+        else {
+            clickedButton.style.backgroundImage = "linear-gradient(to right, darkred, darkred)";
+        }
 
         ElementEnabler(optionBtnF, true, "visible");
         ElementEnabler(optionBtnS, true, "visible");
