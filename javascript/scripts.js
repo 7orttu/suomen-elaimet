@@ -229,7 +229,27 @@ function DisplayQuestion(questionIndex) {
 
         instructionText.innerText = "Paina LOPETA lopettaaksesi tai mene takaisin kysymyksiin painamalla PALAA";
     }
+
+    // Check if the user has already answered this question
+    if (userAnswers.hasOwnProperty(currentQuestion.name)) {
+        const userAnswerIndex = userAnswers[currentQuestion.name];
+        const correctAnswerIndex = currentQuestion.correctAnswerIndex;
+
+        optionButtons.forEach((optionButton, btnIndex) => {
+            if (btnIndex === correctAnswerIndex) {
+                optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
+            } else {
+                optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
+            }
+        });
+
+        // Disable all option buttons
+        optionButtons.forEach(button => button.disabled = true);
+
+        ElementEnabler(nextBtn, false, "visible");
+    }
 }
+
 
 
 // GENERAL FUNCTIONS
@@ -319,9 +339,11 @@ document.getElementById('x').addEventListener('click', function() {
 // OPTION BUTTON EVENTS
 optionButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-
         const currentQuestion = qaQuestions[currentQuestionIndex];
         const correctAnswerIndex = currentQuestion.correctAnswerIndex;
+
+        // Save the user's answer
+        userAnswers[currentQuestion.name] = index;
 
         optionButtons.forEach((optionButton, btnIndex) => {
             if (btnIndex === correctAnswerIndex) {
@@ -348,6 +370,7 @@ optionButtons.forEach((button, index) => {
         }, 2500);
     });
 });
+
 
 // DOM
 document.addEventListener('DOMContentLoaded', function() {
