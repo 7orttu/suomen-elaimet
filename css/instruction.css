@@ -1,0 +1,30 @@
+#instruction-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    z-index: 9;
+}
+#instruction {
+    position: inherit;
+    top: 0px;
+    left: 100px;
+
+    z-index: 10;
+    font-size: xx-large;
+    background-color: rgb(175, 175, 175);
+    opacity: 0;
+}
+#instruction-icon {
+    position: absolute;
+    top: -65px;
+    left: 0px;
+
+    padding-left: 25px;
+
+    font-size: 100px;
+    color: #1b4bab;
+}
+#instruction-icon:hover + #instruction {
+    opacity: 1;
+}

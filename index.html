@@ -3,35 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eläimet</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Suomen Eläimet</title>
+
+    <link rel="shortcut icon" href="#">
+    
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/scene.css">
+    <link rel="stylesheet" type="text/css" href="./css/language.css">
+    <link rel="stylesheet" type="text/css" href="./css/controls.css">
+    <link rel="stylesheet" type="text/css" href="./css/instruction.css">
+    <link rel="stylesheet" type="text/css" href="./css/qa_controls.css">
+
+    <script type="module" src="./javascript/scripts.js"></script>
 </head>
 
 
 <body>
-    <div id="language">
-        <img src="Materials/s-lippu.png" alt="SUOMI" width="150" height="100">
-    </div>
-    <div id="scene">
-        <div id="text-container">
-            <p id="animal-text"></p>
+    <div id="screen">
+
+        <div id="language-container">
+            <img src="./images/fin-flag.png" alt="SUOMI">
+
+            <button id="x">X</button>
         </div>
-        <div id="image-container">
-            <img id="animal-image" src="" alt="Eläin" width="200" height="200">
+        
+        <div id="scene">
+            <div id="text-container">
+                <p id="animal-text"></p>
+            </div>
+            <div id="image-container">
+                <img id="animal-image" src="" alt="Animal">
+                <h2 id="image-credit"></h2>
+            </div>
+        </div>
+
+        <div id="control-container">
+            <button class="buttons" id="prev-btn"></button>
+            <button class="buttons" id="next-btn"></button>
+        </div>
+    
+        <div id="fpartend-container">
+            <button class="buttons" id="restart-btn"></button>
+            <button class="buttons" id="continue-btn"></button>
+        </div>
+
+
+        <div id="instruction-container">
+            <h1 id="instruction-icon">?</h1>
+            <p id="instruction"></p>
+        </div>
+
+
+        <div id="option-container">
+            <button class="optionButtons" id="option1">1</button>
+            <button class="optionButtons" id="option2">2</button>
+            <button class="optionButtons" id="option3">3</button>
+            <button class="optionButtons" id="option4">4</button>
+
+            <button id="end-btn"></button>
+            <h1 id="end-txt">PELIN LOPPU</h1>
         </div>
     </div>
-
-    <div id="control-container">
-        <button class="buttons" id="prev-btn" onclick="DisplayScene()">EDELLINEN</button>
-        <button class="buttons" id="next-btn" onclick="DisplayScene()">SEURAAVA</button>
-    </div>
-
-    <div id="end-container">
-        <button class="buttons" id="restart-btn">ALOITA ALUSTA</button>
-        <button class="buttons" id="end-btn">LOPETA</button>
-    </div>
-
-    <script src="scripts.js"></script>
 </body>
 
 

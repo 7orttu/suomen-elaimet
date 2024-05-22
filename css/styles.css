@@ -1,0 +1,22 @@
+#screen {
+    position: relative;
+    width: 700px;
+    height: 650px;
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+/* GLOBAL */
+body,  html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+
+    border-radius: 10px;
+}
