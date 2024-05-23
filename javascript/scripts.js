@@ -17,7 +17,7 @@ let imageCredit = document.getElementById('image-credit');
 let textContainer = document.getElementById('text-container');
 let imageContainer = document.getElementById('image-container');
 let controlContainer = document.getElementById('control-container');
-let languageContainer = document.getElementById('language-container');
+let settingsContainer = document.getElementById('settings-container');
 let fPartEnd = document.getElementById('fpartend-container');
 
 
