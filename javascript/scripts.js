@@ -244,11 +244,10 @@ function DisplayQuestion(questionIndex) {
             }
         });
 
-        if (clickedButton === correctAnswerIndex) {
-            optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
-        }
-        else {
-            clickedButton.style.backgroundImage = "linear-gradient(to right, darkred, darkred)";
+        if (userAnswerIndex === correctAnswerIndex) {
+            optionButtons[userAnswerIndex].style.backgroundImage = "linear-gradient(to right, green, green)";
+        } else {
+            optionButtons[userAnswerIndex].style.backgroundImage = "linear-gradient(to right, #8a1800, #8a1800)";
         }
 
         // Disable all option buttons
@@ -347,7 +346,6 @@ document.getElementById('x').addEventListener('click', function() {
 // OPTION BUTTON EVENTS
 optionButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-        clickedButton = event.target;
         const currentQuestion = qaQuestions[currentQuestionIndex];
         const correctAnswerIndex = currentQuestion.correctAnswerIndex;
 
@@ -362,11 +360,11 @@ optionButtons.forEach((button, index) => {
             }
         });
 
-        if (clickedButton === correctAnswerIndex) {
-            optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
+        if (index === correctAnswerIndex) {
+            button.style.backgroundImage = "linear-gradient(to right, green, green)";
         }
         else {
-            clickedButton.style.backgroundImage = "linear-gradient(to right, darkred, darkred)";
+            button.style.backgroundImage = "linear-gradient(to right, #8a1800, #8a1800)";
         }
 
         ElementEnabler(optionBtnF, true, "visible");
