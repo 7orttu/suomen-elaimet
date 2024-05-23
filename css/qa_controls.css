@@ -18,6 +18,9 @@
     color: white;
     z-index: 1;
 }
+#end-btn:hover {
+    scale: 1.1;
+}
 #end-txt {
     position: absolute;
     top: -400px;
