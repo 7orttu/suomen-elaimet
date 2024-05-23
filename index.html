@@ -9,9 +9,8 @@
     
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" type="text/css" href="./css/scene.css">
-    <link rel="stylesheet" type="text/css" href="./css/language.css">
+    <link rel="stylesheet" type="text/css" href="./css/settings.css">
     <link rel="stylesheet" type="text/css" href="./css/controls.css">
-    <link rel="stylesheet" type="text/css" href="./css/instruction.css">
     <link rel="stylesheet" type="text/css" href="./css/qa_controls.css">
 
     <script type="module" src="./javascript/scripts.js"></script>
@@ -21,10 +20,13 @@
 <body>
     <div id="screen">
 
-        <div id="language-container">
-            <img src="./images/fin-flag.png" alt="SUOMI">
+        <div id="settings-container">
+            <img src="./images/fin-flag.png" id="language-flag" alt="SUOMI">
 
             <button id="x">X</button>
+
+            <button id="instruction-icon">?</button>
+            <p id="instruction"></p>
         </div>
         
         <div id="scene">
@@ -45,12 +47,6 @@
         <div id="fpartend-container">
             <button class="buttons" id="restart-btn"></button>
             <button class="buttons" id="continue-btn"></button>
-        </div>
-
-
-        <div id="instruction-container">
-            <h1 id="instruction-icon">?</h1>
-            <p id="instruction"></p>
         </div>
 
 

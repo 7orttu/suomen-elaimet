@@ -1,0 +1,62 @@
+
+#settings-container {
+    width: 700px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    z-index: 7;
+}
+
+/* X BUTTON */
+#x {
+    position: inherit;
+    right: 20px;
+    top: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    z-index: 4;
+    font-size: xx-large;
+    text-align: center;
+    background-color: rgb(117, 117, 117);
+}
+
+/* INSTRUCTIONS */
+#instruction {
+    position: inherit;
+    top: 0px;
+    left: 100px;
+
+    z-index: 8;
+    font-size: xx-large;
+    background-color: rgb(175, 175, 175);
+    opacity: 0;
+}
+#instruction-icon {
+    position: inherit;
+    right: 20px;
+    top: 90px;
+
+    width: 55px;
+    height: 55px;
+
+    z-index: 8;
+    font-size: xx-large;
+    color: #1b4bab;
+    background-color: grey;
+}
+#instruction-icon:hover + #instruction {
+    opacity: 1;
+}
+
+/* LANGUAGE */
+#language-flag {
+    position: inherit;
+    left: 20px;
+    top: 20px;
+
+    width: 100px;
+    height: 70px;
+}
