@@ -22,6 +22,9 @@
     text-align: center;
     background-color: rgb(117, 117, 117);
 }
+#x:hover {
+    scale: 1.1;
+}
 
 /* INSTRUCTIONS */
 #instruction {
@@ -46,6 +49,9 @@
     font-size: xx-large;
     color: #1b4bab;
     background-color: grey;
+}
+#instruction-icon:hover {
+    scale: 1.1;
 }
 #instruction-icon:hover + #instruction {
     opacity: 1;
