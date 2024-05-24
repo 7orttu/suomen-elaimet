@@ -120,7 +120,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "700px", "650px")
 
-        instructionText.innerText = "Tämä on ohje nappula! Paina JATKA niin voit jatkaa faktoihin!";
+        instructionText.innerText = "Tämä on ohje nappula! \n Täältä voit aina katsoa ohjeita jos niitä tarvitset!";
     }
     // PREVIEW SCREENS
     else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
@@ -129,7 +129,7 @@ function DisplayScene(sceneIndex) {
         textContainer.style.opacity = '0%';
         animalText.style.fontSize = '35px';
 
-        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
+        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja ja lue faktat!";
     } 
     // FACT SCREENS
     else if (currentScene.name === "Susi" || currentScene.name === "Kettu" || currentScene.name === "Karhu" || currentScene.name === "Metsäkauris" || currentScene.name === "Hirvi" || currentScene.name === "Majava") {
@@ -142,7 +142,7 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "380px", "260px")
 
-        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
+        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja ja lue faktat!";
     }
     // CONTINUE/first part ending SCREEN
     else if (currentScene.name === "end") {
@@ -161,7 +161,7 @@ function DisplayScene(sceneIndex) {
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
 
-        instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
+        instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alla olevilla painikkeilla.";
     } 
 }
 
@@ -215,7 +215,7 @@ function DisplayQuestion(questionIndex) {
 
         textContainer.style.opacity = '80%';
 
-        instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein!";
+        instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein lukemiesi faktojen perusteella!";
     }
     else if(currentQuestion.name === "questionEnd") {
         ElementLocationModifier(textContainer, "100px", "", "0px");
@@ -235,7 +235,7 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(endBtn, false, "visible");
         ElementEnabler(endTxt, false, "visible");
 
-        instructionText.innerText = "Paina LOPETA lopettaaksesi tai mene takaisin kysymyksiin painamalla PALAA";
+        instructionText.innerText = "Paina LOPETA lopettaaksesi tai palaa takaisin kysymyksiin painamalla PALAA";
     }
 
     // Check if the user has answered
@@ -379,6 +379,7 @@ optionButtons.forEach((button, index) => {
         // Save answer
         userAnswers[currentQuestion.name] = index;
 
+        // Set all button colors on click
         optionButtons.forEach((optionButton, btnIndex) => {
             if (btnIndex === correctAnswerIndex) {
                 optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
@@ -387,11 +388,12 @@ optionButtons.forEach((button, index) => {
             }
         });
 
+        // If right answer was clicked, set colors individually
         if (index === correctAnswerIndex) {
             button.style.backgroundImage = "linear-gradient(to right, green, green)";
         }
         else {
-            button.style.backgroundImage = "linear-gradient(to right, #8a1800, #8a1800)";
+            button.style.backgroundImage = "linear-gradient(to right, #8a1800, #8a1800)";   // DARK RED if the answer is wrong
         }
 
         ElementEnabler(optionBtnF, true, "visible");
