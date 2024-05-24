@@ -219,6 +219,5 @@ const qaQuestions = [
     }
 ];
 
-
 export { scenes };
 export { qaQuestions };

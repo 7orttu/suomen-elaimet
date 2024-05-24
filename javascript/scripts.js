@@ -32,11 +32,17 @@ const optionButtons = document.querySelectorAll('.optionButtons');
 
 let endBtn = document.getElementById('end-btn');
 let endTxt = document.getElementById('end-txt');
+
+let motiveContainer = document.getElementById('motive-container');
+let motiveText = document.getElementById('motive');
 // <-
 
 
 let currentSceneIndex = 0;
 let part;   // Just for determining if the user is in facts or questions part of the game.
+
+motiveText.innerText = "Web-suunnittelu: \n Niklas Hillman \n Ohjelmointi: \n Niklas Hillman \n \n Peli sisältää kiinnostavia faktoja erilaisista eläimistä! \n Se tehty on tehty sitä varten, että eläimistä voi oppia kiinnostavia asioita!"
+
 
 function DisplayScene(sceneIndex) {
     const currentScene = scenes[sceneIndex];
