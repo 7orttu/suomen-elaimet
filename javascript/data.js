@@ -46,7 +46,7 @@ const scenes = [
         name: "ohjeet",
         image: "./" + instructionImagePath,
         bgImage: "./" + lawnBGF,
-        text: "OHJEET \n Paina 'seuraava' ja 'edellinen' nappeja vaihtaaksesi ruutuja! \n Ylävasemmalla on myös nappula, josta voit nähdä ohjeet mikäli niitä tarvitset.",
+        text: "OHJEET \n Lue faktoja kaikenlaisista eläimistä ja siirry eteenpäin tai taaksepäin napeilla! \n Ole myös valmiina vastaamaan kysymyksiin! \n Ohjeet voit nähdä aina ? painikkeella.",
         buttonText: ["TAKAISIN", "JATKA"],
         creditText: ""
     },
