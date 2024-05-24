@@ -32,14 +32,20 @@ const optionButtons = document.querySelectorAll('.optionButtons');
 
 let endBtn = document.getElementById('end-btn');
 let endTxt = document.getElementById('end-txt');
+
+let motiveContainer = document.getElementById('motive-container');
+let motiveBtn = document.getElementById('motive-icon');
+let motiveTxt = document.getElementById('motive-txt');
 // <-
 
 
 let currentSceneIndex = 0;
 let part;   // Just for determining if the user is in facts or questions part of the game.
+let isMotiveDisabled = true;
 
 
 function DisplayScene(sceneIndex) {
+    DisplayMotive(true);
     const currentScene = scenes[sceneIndex];
 
     // Set elements properties to correspond to data.js
@@ -138,7 +144,7 @@ function DisplayScene(sceneIndex) {
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
     }
-    // CONTINUE/FPARTEND(first part end) SCREEN
+    // CONTINUE/first part ending SCREEN
     else if (currentScene.name === "end") {
         ElementEnabler(fPartEnd, false, "visible");
 
@@ -157,7 +163,6 @@ function DisplayScene(sceneIndex) {
 
         instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
     } 
-    // <-
 }
 
 
@@ -167,6 +172,7 @@ let userAnswers = {};
 let clickedButton;
 
 function DisplayQuestion(questionIndex) {
+    DisplayMotive(true);
     const currentQuestion = qaQuestions[questionIndex];
 
     animalImage.src = currentQuestion.image;
@@ -258,7 +264,27 @@ function DisplayQuestion(questionIndex) {
     }
 }
 
+// DISPLAY MOTIVE SCREEN
+function DisplayMotive(disabled) {
+    if(disabled === true) {
+        motiveContainer.disabled = true;
+        motiveContainer.style.visibility = "hidden";
+        motiveTxt.disabled = true;
+        motiveTxt.style.visibility = "hidden";
+        motiveTxt.innerText = "";
 
+        isMotiveDisabled = true;
+    }
+    else if(disabled === false) {
+        motiveContainer.disabled = false;
+        motiveContainer.style.visibility = "visible";
+        motiveTxt.disabled = false;
+        motiveTxt.style.visibility = "visible";
+        motiveTxt.innerText = "Tämä peli kertoo kiinnostavia faktoja Suomen eläimistä! \n Peli on tehty yksinkertaiseksi ja helpoksi ymmärtää. \n \n Web-suunnittelu: \n Niklas Hillman \n Ohjelmointi: \n Niklas Hillman";
+
+        isMotiveDisabled = false;
+    }
+}
 
 // GENERAL FUNCTIONS
 function ElementEnabler(element, isdisabled, visibility) {
@@ -384,6 +410,15 @@ optionButtons.forEach((button, index) => {
             DisplayQuestion(currentQuestionIndex);
         }, 2500);
     });
+});
+
+document.getElementById('motive-icon').addEventListener('click', function() {   // MOTIVE-ICON
+    if(isMotiveDisabled === true) {
+        DisplayMotive(false);
+    }
+    else if(isMotiveDisabled === false) {
+        DisplayMotive(true);
+    }
 });
 
 

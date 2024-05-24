@@ -40,6 +40,29 @@
     text-align: center;
     background-color: rgb(117, 117, 117);
 }
+#motive-txt {
+    position: inherit;
+    top: 140px;
+    right: 70px;
+
+    width: 250px;
+    height: 400px;
+
+    font-size: 28px;
+    background-color: white;
+    text-align: center;
+}
+#motive-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 700px;
+    height: 650px;
+
+    background-image: url(../images/bear-motive.jpg);
+    background-position: -300px;
+}
 #motive-icon:hover {
     scale: 1.1;
 }

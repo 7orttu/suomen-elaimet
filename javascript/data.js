@@ -218,13 +218,6 @@ const qaQuestions = [
         buttonText: ["PALAA", ""],
         creditText: "",
     },
-    {
-        name: "motive",
-        image: "./" + bearMotiveImagePath,
-        question: "",
-        buttonText: ["PALAA", ""],
-        creditText: "",
-    }
 ];
 
 export { scenes };
