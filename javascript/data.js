@@ -9,6 +9,7 @@ const bearImagePath = "images/bear.jpg";
 const roedeerImagePath = "images/roedeer.jpg";
 const mooseImagePath = "images/moose.jpg";
 const beaverImagePath = "images/beaver.jpg";
+const bearMotiveImagePath = "images/bear-motive.jpg";
 
 // BACKGROUNDS
 const lawnBGF = "images/lawn1.jpg";
@@ -214,6 +215,13 @@ const qaQuestions = [
         name: "questionEnd",
         image: "./" + bearEnd,
         question: "Olet päässyt pelin loppuun! Hyvin tehty!",
+        buttonText: ["PALAA", ""],
+        creditText: "",
+    },
+    {
+        name: "motive",
+        image: "./" + bearMotiveImagePath,
+        question: "",
         buttonText: ["PALAA", ""],
         creditText: "",
     }
