@@ -213,7 +213,7 @@ function DisplayQuestion(questionIndex) {
         ElementLocationModifier(textContainer, "100px", "", "0px");
         ElementSizeModifier(textContainer, "600px");
 
-        textContainer.style.opacity = '70%';
+        textContainer.style.opacity = '80%';
 
         instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein!";
     }
