@@ -26,7 +26,41 @@
     scale: 1.1;
 }
 
+/* MOTIVE */
+#motive-icon {
+    position: inherit;
+    left: 140px;
+    top: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    z-index: 4;
+    font-size: xx-large;
+    text-align: center;
+    background-color: rgb(117, 117, 117);
+}
+#motive {
+
+}
+#motive-icon:hover {
+    scale: 1.1;
+}
+
 /* INSTRUCTIONS */
+#instruction-icon {
+    position: inherit;
+    right: 20px;
+    top: 90px;
+
+    width: 55px;
+    height: 55px;
+
+    z-index: 4;
+    font-size: xx-large;
+    color: #1b4bab;
+    background-color: grey;
+}
 #instruction {
     position: inherit;
     top: 50px;
@@ -39,19 +73,6 @@
     font-size: xx-large;
     background-color: rgb(175, 175, 175);
     opacity: 0;
-}
-#instruction-icon {
-    position: inherit;
-    right: 20px;
-    top: 90px;
-
-    width: 55px;
-    height: 55px;
-
-    z-index: 8;
-    font-size: xx-large;
-    color: #1b4bab;
-    background-color: grey;
 }
 #instruction-icon:hover {
     scale: 1.1;
