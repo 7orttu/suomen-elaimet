@@ -17,7 +17,7 @@ let imageCredit = document.getElementById('image-credit');
 let textContainer = document.getElementById('text-container');
 let imageContainer = document.getElementById('image-container');
 let controlContainer = document.getElementById('control-container');
-let languageContainer = document.getElementById('language-container');
+let settingsContainer = document.getElementById('settings-container');
 let fPartEnd = document.getElementById('fpartend-container');
 
 
@@ -32,16 +32,23 @@ const optionButtons = document.querySelectorAll('.optionButtons');
 
 let endBtn = document.getElementById('end-btn');
 let endTxt = document.getElementById('end-txt');
+
+let motiveContainer = document.getElementById('motive-container');
+let motiveBtn = document.getElementById('motive-icon');
+let motiveTxt = document.getElementById('motive-txt');
 // <-
 
 
 let currentSceneIndex = 0;
 let part;   // Just for determining if the user is in facts or questions part of the game.
+let isMotiveDisabled = true;
+
 
 function DisplayScene(sceneIndex) {
+    DisplayMotive(true);
     const currentScene = scenes[sceneIndex];
 
-    // Set elements properties to correspond to data.js
+    // Get element properties from data.js
     animalImage.src = currentScene.image;
     scene.style.backgroundImage = "url('" + currentScene.bgImage + "')";
     animalText.innerText = currentScene.text;
@@ -51,7 +58,7 @@ function DisplayScene(sceneIndex) {
 
     part = "facts";
 
-    // SETTING GLOBAL MODIFICATIONS FOR ELEMENTS
+    // Global modifications for elements
     ElementEnabler(prevBtn, false, "visible");
     ElementEnabler(nextBtn, false, "visible");
 
@@ -63,7 +70,7 @@ function DisplayScene(sceneIndex) {
     ElementLocationModifier(animalImage, "0px");
     ElementSizeModifier(animalImage, "700px", "650px");
 
-    // DISABLING ELEMENTS
+    // Global element disabling
     ElementEnabler(fPartEnd, true, "hidden");
     ElementEnabler(optionContainer, true, "hidden");
     ElementEnabler(endBtn, true, "hidden");
@@ -75,7 +82,7 @@ function DisplayScene(sceneIndex) {
     ElementEnabler(optionBtnFO, true, "hidden");
 
 
-    // IF statements for each fact screen ->
+    // First part IF statements for each screen
     // MAIN SCREEN
     if (currentScene.name === "main") {
 
@@ -113,16 +120,16 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "700px", "650px")
 
-        instructionText.innerText = "Tämä on ohje nappula! Paina JATKA niin voit jatkaa faktoihin!";
+        instructionText.innerText = "Tämä on ohje nappula! \n Täältä voit aina katsoa ohjeita jos niitä tarvitset!";
     }
-    // PREVIEW SCREENS
+    // IMAGE PREVIEW SCREENS
     else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
 
         textContainer.style.backgroundColor = 'transparent';
         textContainer.style.opacity = '0%';
         animalText.style.fontSize = '35px';
 
-        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
+        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja ja lue faktat!";
     } 
     // FACT SCREENS
     else if (currentScene.name === "Susi" || currentScene.name === "Kettu" || currentScene.name === "Karhu" || currentScene.name === "Metsäkauris" || currentScene.name === "Hirvi" || currentScene.name === "Majava") {
@@ -135,9 +142,9 @@ function DisplayScene(sceneIndex) {
         ElementLocationModifier(animalImage, "0px");
         ElementSizeModifier(animalImage, "380px", "260px")
 
-        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja!";
+        instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja ja lue faktat!";
     }
-    // CONTINUE/FPARTEND(first part end) SCREEN
+    // CONTINUE SCREEN
     else if (currentScene.name === "end") {
         ElementEnabler(fPartEnd, false, "visible");
 
@@ -154,19 +161,21 @@ function DisplayScene(sceneIndex) {
         restartBtn.innerText = "ALOITA ALUSTA";
         continueBtn.innerText = "JATKA";
 
-        instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alhaalla olevilla painikkeilla.";
+        instructionText.innerText = "Valitse mitä haluat seuraavaksi tehdä alla olevilla painikkeilla.";
     } 
-    // <-
 }
 
 
 let currentQuestionIndex = 0;
 let totalRightAnswers = 0;
 let userAnswers = {};
+let clickedButton;
 
 function DisplayQuestion(questionIndex) {
+    DisplayMotive(true);
     const currentQuestion = qaQuestions[questionIndex];
 
+    // Get properties from data.js
     animalImage.src = currentQuestion.image;
     animalText.innerText = currentQuestion.question;
     prevBtn.innerText = currentQuestion.buttonText[0];
@@ -175,10 +184,10 @@ function DisplayQuestion(questionIndex) {
 
     part = "qa";
 
-    optionBtnF.style.backgroundImage = "linear-gradient(to right, black, #1b4bab)";
-    optionBtnS.style.backgroundImage = "linear-gradient(to right, black, #1b4bab)";
-    optionBtnT.style.backgroundImage = "linear-gradient(to right, black, #1b4bab)";
-    optionBtnFO.style.backgroundImage =  "linear-gradient(to right, black, #1b4bab)";
+    optionBtnF.style.backgroundImage = "linear-gradient(to right, white, #1b4bab)";
+    optionBtnS.style.backgroundImage = "linear-gradient(to right, white, #1b4bab)";
+    optionBtnT.style.backgroundImage = "linear-gradient(to right, white, #1b4bab)";
+    optionBtnFO.style.backgroundImage =  "linear-gradient(to right, white, #1b4bab)";
 
     ElementEnabler(optionBtnF, false, "visible");
     ElementEnabler(optionBtnS, false, "visible");
@@ -205,9 +214,9 @@ function DisplayQuestion(questionIndex) {
         ElementLocationModifier(textContainer, "100px", "", "0px");
         ElementSizeModifier(textContainer, "600px");
 
-        textContainer.style.opacity = '70%';
+        textContainer.style.opacity = '80%';
 
-        instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein!";
+        instructionText.innerText = "Lue kysymykset ja yritä vastata niihin oikein lukemiesi faktojen perusteella!";
     }
     else if(currentQuestion.name === "questionEnd") {
         ElementLocationModifier(textContainer, "100px", "", "0px");
@@ -227,10 +236,56 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(endBtn, false, "visible");
         ElementEnabler(endTxt, false, "visible");
 
-        instructionText.innerText = "Paina LOPETA lopettaaksesi tai mene takaisin kysymyksiin painamalla PALAA";
+        instructionText.innerText = "Paina LOPETA lopettaaksesi tai palaa takaisin kysymyksiin painamalla PALAA";
+    }
+
+    // Check if the user has answered
+    if (userAnswers.hasOwnProperty(currentQuestion.name)) {
+        const userAnswerIndex = userAnswers[currentQuestion.name];
+        const correctAnswerIndex = currentQuestion.correctAnswerIndex;
+
+        optionButtons.forEach((optionButton, btnIndex) => {
+            if (btnIndex === correctAnswerIndex) {
+                optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
+            } else {
+                optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
+            }
+        });
+
+        if (userAnswerIndex === correctAnswerIndex) {
+            optionButtons[userAnswerIndex].style.backgroundImage = "linear-gradient(to right, green, green)";
+        } else {
+            optionButtons[userAnswerIndex].style.backgroundImage = "linear-gradient(to right, #8a1800, #8a1800)";
+        }
+
+        // Disable all option buttons
+        optionButtons.forEach(button => button.disabled = true);
+
+        ElementEnabler(nextBtn, false, "visible");
     }
 }
 
+// DISPLAY MOTIVE SCREEN
+function DisplayMotive(disabled) {
+    if(disabled === true) {
+        motiveContainer.disabled = true;
+        motiveContainer.style.visibility = "hidden";
+        motiveTxt.disabled = true;
+        motiveTxt.style.visibility = "hidden";
+        motiveTxt.innerText = "";
+
+        isMotiveDisabled = true;
+    }
+    else if(disabled === false) {
+        motiveContainer.disabled = false;
+        motiveContainer.style.visibility = "visible";
+        motiveTxt.disabled = false;
+        motiveTxt.style.visibility = "visible";
+        motiveTxt.innerText = "Tämä peli kertoo kiinnostavia faktoja Suomen eläimistä! \n Peli on tehty yksinkertaiseksi ja helpoksi ymmärtää. \n \n Web-suunnittelu: \n Niklas Hillman \n Ohjelmointi: \n Niklas Hillman";
+
+        isMotiveDisabled = false;
+    }
+}
 
 // GENERAL FUNCTIONS
 function ElementEnabler(element, isdisabled, visibility) {
@@ -319,10 +374,13 @@ document.getElementById('x').addEventListener('click', function() {
 // OPTION BUTTON EVENTS
 optionButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-
         const currentQuestion = qaQuestions[currentQuestionIndex];
         const correctAnswerIndex = currentQuestion.correctAnswerIndex;
 
+        // Save answer
+        userAnswers[currentQuestion.name] = index;
+
+        // Set all button colors on click
         optionButtons.forEach((optionButton, btnIndex) => {
             if (btnIndex === correctAnswerIndex) {
                 optionButton.style.backgroundImage = "linear-gradient(to right, green, green)";
@@ -330,6 +388,14 @@ optionButtons.forEach((button, index) => {
                 optionButton.style.backgroundImage = "linear-gradient(to right, red, red)";
             }
         });
+
+        // If right answer was clicked, set colors individually
+        if (index === correctAnswerIndex) {
+            button.style.backgroundImage = "linear-gradient(to right, green, green)";
+        }
+        else {
+            button.style.backgroundImage = "linear-gradient(to right, #8a1800, #8a1800)";   // DARK RED if the answer is wrong
+        }
 
         ElementEnabler(optionBtnF, true, "visible");
         ElementEnabler(optionBtnS, true, "visible");
@@ -348,6 +414,16 @@ optionButtons.forEach((button, index) => {
         }, 2500);
     });
 });
+
+document.getElementById('motive-icon').addEventListener('click', function() {   // MOTIVE-ICON
+    if(isMotiveDisabled === true) {
+        DisplayMotive(false);
+    }
+    else if(isMotiveDisabled === false) {
+        DisplayMotive(true);
+    }
+});
+
 
 // DOM
 document.addEventListener('DOMContentLoaded', function() {

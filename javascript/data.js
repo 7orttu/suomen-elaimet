@@ -9,6 +9,7 @@ const bearImagePath = "images/bear.jpg";
 const roedeerImagePath = "images/roedeer.jpg";
 const mooseImagePath = "images/moose.jpg";
 const beaverImagePath = "images/beaver.jpg";
+const bearMotiveImagePath = "images/bear-motive.jpg";
 
 // BACKGROUNDS
 const lawnBGF = "images/lawn1.jpg";
@@ -45,7 +46,7 @@ const scenes = [
         name: "ohjeet",
         image: "./" + instructionImagePath,
         bgImage: "./" + lawnBGF,
-        text: "OHJEET \n Paina 'seuraava' ja 'edellinen' nappeja vaihtaaksesi ruutuja! \n Ylävasemmalla on myös nappula, josta voit nähdä ohjeet mikäli niitä tarvitset.",
+        text: "OHJEET \n Lue faktoja kaikenlaisista eläimistä ja siirry eteenpäin tai taaksepäin napeilla! \n Ole myös valmiina vastaamaan kysymyksiin! \n Ohjeet voit nähdä aina ? painikkeella.",
         buttonText: ["TAKAISIN", "JATKA"],
         creditText: ""
     },
@@ -216,9 +217,8 @@ const qaQuestions = [
         question: "Olet päässyt pelin loppuun! Hyvin tehty!",
         buttonText: ["PALAA", ""],
         creditText: "",
-    }
+    },
 ];
-
 
 export { scenes };
 export { qaQuestions };

@@ -1,0 +1,112 @@
+
+#settings-container {
+    width: 700px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    z-index: 7;
+}
+
+/* X BUTTON */
+#x {
+    position: inherit;
+    right: 20px;
+    top: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    z-index: 4;
+    font-size: xx-large;
+    text-align: center;
+    background-color: rgb(117, 117, 117);
+}
+#x:hover {
+    scale: 1.1;
+}
+
+/* MOTIVE */
+#motive-icon {
+    position: inherit;
+    right: 90px;
+    top: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    z-index: 4;
+    font-size: xx-large;
+    text-align: center;
+    background-color: rgb(117, 117, 117);
+}
+#motive-txt {
+    position: inherit;
+    top: 140px;
+    right: 70px;
+
+    width: 250px;
+    height: 400px;
+
+    font-size: 28px;
+    text-align: center;
+    text-shadow: rgb(0, 0, 0) 1px 0px 1px, rgb(0, 0, 0) 2px 0px 2px, rgb(121, 121, 121) 3px 0px 3px;
+}
+#motive-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 700px;
+    height: 650px;
+
+    background-image: url(../images/bear-motive.jpg);
+    background-position: -300px;
+}
+#motive-icon:hover {
+    scale: 1.1;
+}
+
+/* INSTRUCTIONS */
+#instruction-icon {
+    position: inherit;
+    right: 20px;
+    top: 90px;
+
+    width: 55px;
+    height: 55px;
+
+    z-index: 4;
+    font-size: xx-large;
+    color: #1b4bab;
+    background-color: grey;
+}
+#instruction {
+    position: inherit;
+    top: 50px;
+    right: 90px;
+
+    width: 200px;
+    height: auto;
+
+    z-index: 5;
+    font-size: xx-large;
+    background-color: rgb(175, 175, 175);
+    opacity: 0;
+}
+#instruction-icon:hover {
+    scale: 1.1;
+}
+#instruction-icon:hover + #instruction {
+    opacity: 1;
+}
+
+/* LANGUAGE */
+#language-flag {
+    position: inherit;
+    left: 20px;
+    top: 20px;
+
+    width: 100px;
+    height: 70px;
+}
