@@ -208,6 +208,7 @@ function DisplayQuestion(questionIndex) {
     animalText.style.color = 'black';
     animalText.style.fontSize = '25px';
     ElementLocationModifier(textContainer, "100px");
+    textContainer.style.backgroundColor = "white";
 
     if(currentQuestion.name === "wolfQuestion") {
         ElementLocationModifier(textContainer, "220px", "", "0px");
@@ -238,6 +239,10 @@ function DisplayQuestion(questionIndex) {
 
         ElementEnabler(endBtn, false, "visible");
         ElementEnabler(endTxt, false, "visible");
+
+        animalText.style.textShadow = '-1px 0px 0 #000, -2px 0px 0 #000, -3px 0px 0 #000, -4px 0px 0 #000, -5px 0px 0 #000';
+        textContainer.style.backgroundColor = "transparent";
+        animalText.style.color = "white";
 
         instructionText.innerText = "Paina LOPETA lopettaaksesi tai palaa takaisin kysymyksiin painamalla PALAA";
     }
