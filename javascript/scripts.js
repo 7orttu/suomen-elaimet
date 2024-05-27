@@ -39,6 +39,9 @@ let motiveTxt = document.getElementById('motive-txt');
 // <-
 
 
+// --------------- //
+// SCENE FUNCTIONS //
+// --------------- //
 let currentSceneIndex = 0;
 let part;   // Just for determining if the user is in facts or questions part of the game.
 let isMotiveDisabled = true;
@@ -264,6 +267,45 @@ function DisplayQuestion(questionIndex) {
         ElementEnabler(nextBtn, false, "visible");
     }
 }
+// --------------- //
+// SCENE FUNCTIONS //
+// --------------- //
+
+// GENERAL FUNCTIONS
+function ElementEnabler(element, isdisabled, visibility) {
+    element.disabled = isdisabled;
+    element.style.visibility = visibility;
+}
+function ElementLocationModifier(element, top, bottom, left, right) {
+    element.style.top = top;
+    element.style.bottom = bottom;
+    element.style.left = left;
+    element.style.right = right;
+}
+function ElementSizeModifier(element, width, height) {
+    element.style.width = width;
+    element.style.height = height;
+}
+
+// SCENE CHANGER FUNCTION
+function SceneChecker(currentPart, whichButton) {
+
+    // FOR FACTS
+    if(currentPart === "facts" && whichButton === "next") {
+        currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
+    }
+    else if(currentPart === "facts" && whichButton === "prev") {
+        currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
+    }
+
+    // FOR QUESTIONS
+    else if(currentPart === "qa" && whichButton === "next") {
+        currentQuestionIndex = (currentQuestionIndex + 1) % qaQuestions.length;
+    }
+    else if(currentPart === "qa" && whichButton === "prev") {
+        currentQuestionIndex = (currentQuestionIndex - 1) % qaQuestions.length;
+    }
+}
 
 // DISPLAY MOTIVE SCREEN
 function DisplayMotive(disabled) {
@@ -287,57 +329,23 @@ function DisplayMotive(disabled) {
     }
 }
 
-// GENERAL FUNCTIONS
-function ElementEnabler(element, isdisabled, visibility) {
-    element.disabled = isdisabled;
-    element.style.visibility = visibility;
-}
-function ElementLocationModifier(element, top, bottom, left, right) {
-    element.style.top = top;
-    element.style.bottom = bottom;
-    element.style.left = left;
-    element.style.right = right;
-}
-function ElementSizeModifier(element, width, height) {
-    element.style.width = width;
-    element.style.height = height;
-}
-
-// SCENE CHANGER FUNCTION
-function SceneChanger(currentPart, whichButton) {
-
-    // FOR FACTS
-    if(currentPart === "facts" && whichButton === "next") {
-        currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
-    }
-    else if(currentPart === "facts" && whichButton === "prev") {
-        currentSceneIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
-    }
-
-    // FOR QUESTIONS
-    else if(currentPart === "qa" && whichButton === "next") {
-        currentQuestionIndex = (currentQuestionIndex + 1) % qaQuestions.length;
-    }
-    else if(currentPart === "qa" && whichButton === "prev") {
-        currentQuestionIndex = (currentQuestionIndex - 1) % qaQuestions.length;
-    }
-}
-
-// EVENT LISTENERS
+// --------------- //
+// EVENT LISTENERS //
+// --------------- //
 document.getElementById('next-btn').addEventListener('click', function() {  // NEXT-BTN
     if (part === "facts") {
-        SceneChanger(part, "next");
+        SceneChecker(part, "next");
         DisplayScene(currentSceneIndex);
     }
     else if (part === "qa") {
-        SceneChanger(part, "next");
+        SceneChecker(part, "next");
         DisplayQuestion(currentQuestionIndex);
     }
 });
 
 document.getElementById('prev-btn').addEventListener('click', function() {  // PREVIOUS-BTN
     if (part === "facts") {
-        SceneChanger(part, "prev");
+        SceneChecker(part, "prev");
         DisplayScene(currentSceneIndex);
     }
     else if (part === "qa") {
@@ -346,7 +354,7 @@ document.getElementById('prev-btn').addEventListener('click', function() {  // P
             DisplayScene(currentSceneIndex);
         }
         else {
-            SceneChanger(part, "prev");
+            SceneChecker(part, "prev");
             DisplayQuestion(currentQuestionIndex);
         }
     }
@@ -371,7 +379,7 @@ document.getElementById('x').addEventListener('click', function() {
 
 
 
-// OPTION BUTTON EVENTS
+// OPTION BUTTONS
 optionButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         const currentQuestion = qaQuestions[currentQuestionIndex];
@@ -409,7 +417,7 @@ optionButtons.forEach((button, index) => {
 
         // Run SceneChanger and DisplayQuestion functions after 2500 ms timeout
         setTimeout(() => {
-            SceneChanger(part, "next");
+            SceneChecker(part, "next");
             DisplayQuestion(currentQuestionIndex);
         }, 2500);
     });
@@ -429,4 +437,7 @@ document.getElementById('motive-icon').addEventListener('click', function() {   
 document.addEventListener('DOMContentLoaded', function() {
     DisplayScene(currentSceneIndex);
 });
+// --------------- //
+// EVENT LISTENERS //
+// --------------- //
 
