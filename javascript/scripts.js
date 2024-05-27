@@ -48,7 +48,7 @@ function DisplayScene(sceneIndex) {
     DisplayMotive(true);
     const currentScene = scenes[sceneIndex];
 
-    // Set elements properties to correspond to data.js
+    // Get element properties from data.js
     animalImage.src = currentScene.image;
     scene.style.backgroundImage = "url('" + currentScene.bgImage + "')";
     animalText.innerText = currentScene.text;
@@ -58,7 +58,7 @@ function DisplayScene(sceneIndex) {
 
     part = "facts";
 
-    // SETTING GLOBAL MODIFICATIONS FOR ELEMENTS
+    // Global modifications for elements
     ElementEnabler(prevBtn, false, "visible");
     ElementEnabler(nextBtn, false, "visible");
 
@@ -70,7 +70,7 @@ function DisplayScene(sceneIndex) {
     ElementLocationModifier(animalImage, "0px");
     ElementSizeModifier(animalImage, "700px", "650px");
 
-    // DISABLING ELEMENTS
+    // Global element disabling
     ElementEnabler(fPartEnd, true, "hidden");
     ElementEnabler(optionContainer, true, "hidden");
     ElementEnabler(endBtn, true, "hidden");
@@ -82,7 +82,7 @@ function DisplayScene(sceneIndex) {
     ElementEnabler(optionBtnFO, true, "hidden");
 
 
-    // IF statements for each fact screen ->
+    // First part IF statements for each screen
     // MAIN SCREEN
     if (currentScene.name === "main") {
 
@@ -122,7 +122,7 @@ function DisplayScene(sceneIndex) {
 
         instructionText.innerText = "Tämä on ohje nappula! \n Täältä voit aina katsoa ohjeita jos niitä tarvitset!";
     }
-    // PREVIEW SCREENS
+    // IMAGE PREVIEW SCREENS
     else if (currentScene.name === "Susi-pre" || currentScene.name === "Kettu-pre" || currentScene.name === "Karhu-pre" || currentScene.name === "Metsäkauris-pre" || currentScene.name === "Hirvi-pre" || currentScene.name === "Majava-pre") {
 
         textContainer.style.backgroundColor = 'transparent';
@@ -144,7 +144,7 @@ function DisplayScene(sceneIndex) {
 
         instructionText.innerText = "Paina SEURAAVA ja EDELLINEN nappeja vaihtaaksesi ruutuja ja lue faktat!";
     }
-    // CONTINUE/first part ending SCREEN
+    // CONTINUE SCREEN
     else if (currentScene.name === "end") {
         ElementEnabler(fPartEnd, false, "visible");
 
@@ -175,6 +175,7 @@ function DisplayQuestion(questionIndex) {
     DisplayMotive(true);
     const currentQuestion = qaQuestions[questionIndex];
 
+    // Get properties from data.js
     animalImage.src = currentQuestion.image;
     animalText.innerText = currentQuestion.question;
     prevBtn.innerText = currentQuestion.buttonText[0];
