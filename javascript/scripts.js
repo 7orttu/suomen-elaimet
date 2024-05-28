@@ -328,7 +328,7 @@ function DisplayMotive(disabled) {
         motiveContainer.style.visibility = "visible";
         motiveTxt.disabled = false;
         motiveTxt.style.visibility = "visible";
-        motiveTxt.innerText = "Tämä peli kertoo kiinnostavia faktoja Suomen eläimistä! \n Peli on tehty yksinkertaiseksi ja helpoksi ymmärtää. \n \n Web-suunnittelu: \n Niklas Hillman \n Ohjelmointi: \n Niklas Hillman";
+        motiveTxt.innerText = "Tämä peli kertoo kiinnostavia faktoja Suomen eläimistä! \n Peli on tehty yksinkertaiseksi ja helpoksi ymmärtää. \n \n Web-suunnittelu: \n Niklas Hillman \n Ohjelmointi: \n Niklas Hillman \n Gradia, Tieto- ja viestintätekniikan perustutkinto, toinen vuosi";
 
         isMotiveDisabled = false;
     }
