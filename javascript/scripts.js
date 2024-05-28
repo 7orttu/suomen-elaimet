@@ -207,6 +207,7 @@ function DisplayQuestion(questionIndex) {
 
     animalText.style.color = 'black';
     animalText.style.fontSize = '25px';
+    animalText.style.textShadow = '0px 0px 0 #000';
     ElementLocationModifier(textContainer, "100px");
     textContainer.style.backgroundColor = "white";
 
