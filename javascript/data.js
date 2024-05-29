@@ -205,7 +205,7 @@ const qaQuestions = [
     {
         name: "beaverQuestion",
         image: "./" + beaverImagePath,
-        question: "Kuinka vanhoiksi majavat voivat elää? \n 1. Noin 10 vuotiaksi \n 2. Noin 5 vuotiaksi \n 3. Noin 15 vuotiaksi \n 4. Noin 20 vuotiaksi",
+        question: "Kuinka vanhoiksi majavat voivat elää? \n 1. Noin 10 vuotiaiksi \n 2. Noin 5 vuotiaiksi \n 3. Noin 15 vuotiaiksi \n 4. Noin 20 vuotiaiksi",
         options: ["1", "2", "3", "4"],
         correctAnswerIndex: 3,
         buttonText: ["TAKAISIN", "SEURAAVA"],
