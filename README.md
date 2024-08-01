@@ -1,2 +1,7 @@
 # SUOMEN ELÄIMET
-Suomen eläimistä tehty peli kielillä HTML, CSS ja JS.
+Suomen eläimistä tehty HTML peli.
+
+KIELET:
+- HTML.
+- CSS.
+- JS.
