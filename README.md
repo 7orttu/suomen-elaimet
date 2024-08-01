@@ -2,6 +2,6 @@
 Suomen eläimistä tehty HTML peli.
 
 KIELET:
-- HTML.
-- CSS.
-- JS.
+- HTML
+- CSS
+- JS
